@@ -1,0 +1,236 @@
+plugins {
+    id 'com.android.application'
+}
+def verCode = "4.0.6."
+def appName = "三盟智控"
+def vCode = 200101001//date.format("yyMMdd")
+
+/**
+ * apk文件初始化
+ * @param isNeedSign 是否使用系统签名
+ * @param filePath 生成的apk文件路径
+ * @param scriptPath 生成apk文件后，如果需要使用系统签名，这个参数表示为准备好签名后的输出路径
+ * @param outputSignFilePath 签名后的apk文件保存路径
+ * */
+def initApk(boolean isNeedSign, String filePath, String outputSignFilePath,
+            String scriptPath, String signJarPath, String pemPath, String pk8Path) {
+    String log = "正在部署：";
+    if (isNeedSign) {
+        log += "需要系统签名，未签名apk路径：" + filePath;
+        log += ",签名脚本路径：" + scriptPath;
+        log += ",签名后保存路径：" + outputSignFilePath;
+        String cmd = "java -jar " + signJarPath + " " + pemPath + " " + pk8Path + " " + filePath + " " + outputSignFilePath;
+        String command = "cmd.exe /c echo " + cmd + " > " + scriptPath;
+        log += "，脚本内容：" + cmd;
+        command.execute().text.trim();
+    } else {
+        log += "不需要系统签名，默认保存路径:" + filePath;
+    }
+    println log;
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.sunmnet.mediaroom.tabsp"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                versionDescription: getReleaseTime()
+        ]
+        versionCode vCode
+        resValue("string", "app_name", appName)
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+                includeCompileClasspath = true
+            }
+        }
+        multiDexEnabled true
+        ndk {
+            //abiFilters  'armeabi-v8a'
+            abiFilters 'armeabi-v7a'
+            //abiFilters  'armeabi'
+            //abiFilters  'x86'
+            //abiFilters  'x86_64'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+    signingConfigs {
+        release {
+            keyAlias 'sunmnet123'
+            keyPassword 'sunmnet123'
+            storeFile file(rootProject.ext.JarSign.jks)
+            //storeFile file('../../sunm.jks')
+            storePassword 'sunmnet123'
+        }
+        debug {
+            keyAlias 'sunmnet123'
+            keyPassword 'sunmnet123'
+            storeFile file(rootProject.ext.JarSign.jks)
+            //storeFile file('../../sunm.jks')
+            storePassword 'sunmnet123'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            defaultConfig.versionName "MR_TABSP_" + verCode + getReleaseDate() + "_debug"
+            manifestPlaceholders = [
+                    installer: "com.sunmnet.mediaroom.tabsp"
+            ]
+            //manifestPlaceholders.installer "com.sunmnet.mediaroom.tabsp"
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            defaultConfig.versionName "MR_TABSP_" + verCode + getReleaseDate() + "_release"
+            //manifestPlaceholders.installer "android.uid.system"
+            manifestPlaceholders = [
+                    installer: "android.uid.system"
+            ]
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName
+            def version_Name
+            version_Name = "MR_TABSP_" + verCode + new Date().format("yyMMdd")
+            if (variant.buildType.name.equals('release')) {
+                rootProject.ext.JarSign.outputVersionName = version_Name
+                version_Name += "_" + variant.flavorName + "_beta"
+            } else if (variant.buildType.name.equals('debug')) {
+                version_Name += "_" + variant.flavorName + "_debug"
+            }
+            versionNameOverride = version_Name
+            fileName = version_Name + ".apk"
+            /*
+            // 生成签名脚本
+            if (variant.buildType.name == 'release') {
+                String outputSignScript = variant.getPackageApplication().outputDirectory.toString() + "/${version_Name}.bat";
+                String signFilePath = variant.getPackageApplication().outputDirectory.toString() + "/${version_Name}_signed.apk"
+                String unSignPath = variant.getPackageApplication().outputDirectory.toString() + "/" + fileName
+                initApk(true, unSignPath, signFilePath, outputSignScript,
+                        "../../" + rootProject.ext.JarSign.jar, "../../" + rootProject.ext.JarSign.pem,
+                        "../../" + rootProject.ext.JarSign.pk8)
+            }
+             */
+            outputFileName = fileName
+        }
+    }
+
+    productFlavors {
+        flavorDimensions("customization", "matrixUi")//定义组合特性
+
+        standard {//标准版
+            dimension "customization"
+        }
+
+        jlu {//吉林大学 Jilin University (JLU)
+            dimension "customization"
+        }
+
+        zhengZhouInfoTech { // 郑州信息科技职业学院
+            dimension "customization"
+        }
+
+        commonMatrixUi { // 标准视频矩阵UI
+            dimension "matrixUi"
+            missingDimensionStrategy "ui", "standardUi"
+        }
+
+        secondMatrixUi { // 第二套视频矩阵UI
+            dimension "matrixUi"
+            missingDimensionStrategy "ui", "secondUi"
+        }
+    }
+
+    ndkVersion '20.0.5594570'
+}
+
+// 说明：先Build-> Generate Signed Bundle/APK(S) 后，才能执行这个任务
+task autoSign {
+    // dependsOn 'assembleRelease'
+    doLast {
+        println "开始执行自动签名"
+        android.applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                if (variant.buildType.name == 'release') {
+//                    def releasePath = "./${variant.flavorName}/release/"
+                    def releasePath = "./build/outputs/apk/${variant.flavorName}/release/"
+                    def unsignedFilePath = "${releasePath}${rootProject.ext.JarSign.outputVersionName}_${variant.flavorName}_beta.apk"
+                     println("未系统签名文件路径:" +  unsignedFilePath)
+                    if (file(unsignedFilePath).exists()) {
+                        println("进入自定签名环节")
+                        def cmd = "java -jar "
+                        cmd += rootProject.ext.JarSign.jar + " "
+                        cmd += rootProject.ext.JarSign.pem + " "
+                        cmd += rootProject.ext.JarSign.pk8 + " "
+                        cmd += unsignedFilePath + " "
+                        cmd += releasePath + rootProject.ext.JarSign.outputVersionName + "_" + variant.flavorName + "_beta_signed.apk"
+                        println("cmd 命令：" + cmd)
+                        exec {
+                            workingDir './'
+//                            commandLine 'cmd', '/c', cmd
+                            commandLine 'bash', '-c', cmd
+                        }
+                        println("自定签名执行完毕")
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+def getReleaseDate() {
+    return new Date().format("yyMMdd")
+}
+
+def getReleaseTime() {
+    return new Date().format("yyMMddHHmmss")
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //使用butterknife 不能在通用模块里面添加这个tag,必须由实际项目的build。gradle下添加
+    implementation project(path: ':Common')
+    implementation project(path: ':Device')
+    implementation project(path: ':Record')
+    implementation project(path: ':Matrix')
+    implementation project(path: ':WirelessProjection')
+    //    implementation project(path: ':Live')
+    //    implementation project(path: ':Conference')
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+    implementation 'com.android.support:cardview-v7:28.0.0';
+}
+
+configurations.all {
+    resolutionStrategy.preferProjectModules()
+}
+repositories {
+    mavenCentral()
+}

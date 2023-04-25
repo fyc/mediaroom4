@@ -1,0 +1,3 @@
+<resources>
+    <string name="msg_connect_camera_fail">打开摄像头失败，请检查设备摄像头情况。</string>
+</resources>

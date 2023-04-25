@@ -1,0 +1,5 @@
+将该文件夹下的所有文件迁移到linux服务器上，
+
+./keytool-importkeypair -k sunm.jks -p sunmnet123 -pk8 platform.pk8 -cert platform.x509.pem -alias sunmnet123
+
+进行签名

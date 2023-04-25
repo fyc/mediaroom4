@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="MatrixInterfaceBinding">
+
+        <import type="com.sunmnet.mediaroom.device.bean.MatrixInterface" />
+
+        <variable
+            name="inter"
+            type="MatrixInterface" />
+    </data>
+
+    <com.sunmnet.mediaroom.tabsp.ui.widget.RollingTextView
+        android:layout_width="@dimen/px_78"
+        android:layout_height="@dimen/px_78"
+        android:background="@drawable/circle_default_drawable"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxEms="6"
+        android:padding="@dimen/px_2"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@{inter.inputName}"
+        android:textColor="?version1_scene_text_color"
+        android:textSize="?common_menu_text_size"></com.sunmnet.mediaroom.tabsp.ui.widget.RollingTextView>
+</layout>

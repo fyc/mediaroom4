@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250px"
+    android:layout_height="350px"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/currentWeatherImage"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:scaleType="fitCenter"
+            android:src="@drawable/default_weather" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20px"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/currentTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="--"
+                android:textColor="@android:color/white"
+                android:textSize="90px" />
+
+            <TextView
+                android:id="@+id/temperatureUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="℃"
+                android:textColor="@android:color/white"
+                android:textSize="60px" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/temperatureRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentTemperature"
+            android:layout_marginTop="10px"
+            android:text="--℃/--℃"
+            android:textColor="@android:color/white"
+            android:textSize="35px" />
+    </LinearLayout>
+
+</RelativeLayout>

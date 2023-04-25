@@ -1,0 +1,322 @@
+package com.sunmnet.mediaroom.tabsp.ui;
+
+import static com.sunmnet.mediaroom.tabsp.ui.dispatch.LoginDispatcher.SUPER_ACCOUNT_SP_KEY;
+import static com.sunmnet.mediaroom.tabsp.ui.dispatch.LoginDispatcher.SUPER_PASSWORD_SP_KEY;
+import static com.sunmnet.mediaroom.tabsp.ui.dispatch.LoginDispatcher.SUPER_USER_SP_NAME;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+
+import android.os.PowerManager;
+import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.sunmnet.mediaroom.common.BaseApplication;
+import com.sunmnet.mediaroom.common.BaseDialogFragment;
+import com.sunmnet.mediaroom.common.bean.CommonStr;
+import com.sunmnet.mediaroom.common.events.Event;
+import com.sunmnet.mediaroom.common.events.EventType;
+import com.sunmnet.mediaroom.common.tools.OkHttpUtil;
+import com.sunmnet.mediaroom.common.tools.RunningLog;
+import com.sunmnet.mediaroom.common.tools.SharePrefUtil;
+import com.sunmnet.mediaroom.device.bean.MatrixConfig;
+import com.sunmnet.mediaroom.device.bean.OtherSetting;
+import com.sunmnet.mediaroom.device.bean.RegisterInfo;
+import com.sunmnet.mediaroom.device.controll.Controller;
+import com.sunmnet.mediaroom.tabsp.R;
+import com.sunmnet.mediaroom.tabsp.TabspApplication;
+import com.sunmnet.mediaroom.tabsp.bean.DialogInfo;
+import com.sunmnet.mediaroom.tabsp.bean.TabspConfig;
+import com.sunmnet.mediaroom.tabsp.common.Constants;
+import com.sunmnet.mediaroom.tabsp.controll.service.Dispatcher;
+import com.sunmnet.mediaroom.tabsp.controll.service.UIDispatcher;
+import com.sunmnet.mediaroom.tabsp.ui.dialog.SelectMatrixMainOutDialog;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import java.io.IOException;
+import java.util.Locale;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
+
+/**
+ * 用于分发使用了Arouter中实现了IProvider接口界面
+ */
+@Route(path = Constants.ROUTERPATH_ACTIVITY)
+public class DispatcherActivity extends AbstractDispatchActivity {
+    static final String DIALOG_TAG = "DIALOG_TAG";
+    //记录断网提示语弹窗状态
+    private boolean isDialogShowing;
+    private boolean isResumed;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        RunningLog.run(this.toString() + " onCreate");
+        Dispatcher dispatcher = TabspApplication.getInstance().getDispatcher();
+        Intent intent = getIntent();
+        String type = null;
+        if (intent != null) {
+            type = intent.getStringExtra(Dispatcher.PAGE_KEY) == null ? "" : intent.getStringExtra(Dispatcher.PAGE_KEY);
+        } else type = null;
+        //根据dispathcer中的分配方式获取不通activity|fragment的界面分发器
+        String routerPath = dispatcher.getPageByType(type);
+        RunningLog.run("DispatcherActivity routerPath = " + routerPath);
+        if (routerPath != null) {
+            //创建界面分发器
+            this.dispatcher = (UIDispatcher) ARouter.getInstance().build(routerPath).navigation();
+            if (this.dispatcher != null) {
+                this.dispatcher.dispatch(this);
+            }
+        }
+        RunningLog.run("UIDispatcher class name = " + (this.dispatcher == null ? "null" : this.dispatcher.getClass().getSimpleName()));
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+
+        // 上电后，设备电气连接没有建立好，发指令会导致问题，取消此功能
+        // 设置视频矩阵主显示通道
+        /*
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            if (!isFinishing()) {
+                String defaultChannel = SharePrefUtil.getString(
+                        this,
+                        TabspApplication.DB_NAME,
+                        TabspApplication.DEFAULT_MAIN_OUTPUT_CHANNEL
+                );
+                if (defaultChannel != null) {
+                    MatrixConfig matrixConfig = Controller.getInstance().getMatrixConfig();
+                    if (matrixConfig != null) {
+                        int inputCount = matrixConfig.getInputInterface().size();
+                        int outputCount = matrixConfig.getOutputInterface().size();
+                        int channel = Integer.parseInt(defaultChannel);
+                        SelectMatrixMainOutDialog.selectMainOutputChannel(channel, inputCount, outputCount);
+                    }
+                }
+            }
+        }, 10000);
+         */
+
+        // 获取超级账号和密码
+        // todo 后续需要优化代码，不能直接写在这里
+        RegisterInfo registerInfo = TabspApplication.getInstance().getConfig().getRegisterInfo();
+        if (registerInfo != null) {
+            String url = "http://" + registerInfo.getPlatformIp() + ":" + registerInfo.getPlatformPort() + "/sys-svr/api/getTabSpCustomConfig";
+            RunningLog.run("DispatcherActivity url = " + url);
+            OkHttpUtil.get(url, new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+
+                }
+
+                @Override
+                public void onResponse(Call call, Response response) throws IOException {
+                    if (response.isSuccessful()) {
+                        String res = response.body().string();
+                        JsonObject jsonObject = new JsonParser().parse(res).getAsJsonObject();
+                        JsonObject value = jsonObject.getAsJsonObject("obj");
+                        JsonElement superAccount = value.get("firstAidUsername");
+                        JsonElement superPassword = value.get("firstAidPassword");
+                        SharePrefUtil.saveValue(TabspApplication.getInstance(), SUPER_USER_SP_NAME, SUPER_ACCOUNT_SP_KEY, superAccount.getAsString());
+                        SharePrefUtil.saveValue(TabspApplication.getInstance(), SUPER_USER_SP_NAME, SUPER_PASSWORD_SP_KEY, superPassword.getAsString());
+                        RunningLog.run("加载超级账号成功");
+                    }
+                }
+            });
+        }
+    }
+
+    private void startNewActivity() {
+        Intent intent = getIntent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+    }
+
+    /**
+     * 接收系统性事件，此处主要用于切换语言和显示弹窗，
+     */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(Event<Object, EventType> languageSwitchEvent) {
+        if (languageSwitchEvent.getEventType() instanceof EventType) {
+            switch (languageSwitchEvent.getEventType()) {
+                case CHANGE_LANGUAGE:
+                    OtherSetting setting = new OtherSetting();
+                    TabspConfig config = TabspApplication.getInstance().getConfig();
+                    if (config.getLang() == Locale.ENGLISH) {
+                        switchLanguage(Locale.CHINA);
+                        setting.setEventType(1);
+                    } else if (config.getLang() == Locale.CHINA) {
+                        switchLanguage(Locale.ENGLISH);
+                        setting.setEventType(1);
+                    } else {
+                        Locale defaultLocale = Locale.getDefault();
+                        if (defaultLocale.getLanguage().equals(Locale.CHINA.getLanguage())) {
+                            switchLanguage(Locale.ENGLISH);
+                            setting.setEventType(1);
+                        } else if (defaultLocale.getLanguage().equals(Locale.ENGLISH.getLanguage())) {
+                            switchLanguage(Locale.CHINA);
+                            setting.setEventType(1);
+                        } else {
+                            switchLanguage(Locale.CHINA);
+                            setting.setEventType(1);
+                        }
+                    }
+                    EventBus.getDefault().post(setting);
+                    startNewActivity();
+                    break;
+                case DIALOG_EVENT://显示弹窗
+                    RunningLog.run(this.dispatcher + "  --> handle " + languageSwitchEvent.getEventType());
+                    BaseDialogFragment dialogFragment = null;
+                    if (languageSwitchEvent.getMessage() instanceof JsonObject) {
+                        JsonObject params = (JsonObject) languageSwitchEvent.getMessage();
+                        String action = params.get("action").getAsString();
+                        if (action != null) {
+                            if (action.equals(CommonStr.NETWORK_DISCONNECTED)) {
+                                //显示网络连接异常弹框
+                                isDialogShowing = true;
+                                checkNetworkDialogShowing();
+                            } else if (action.equals(CommonStr.NETWORK_CONNECTED)) {
+                                isDialogShowing = false;
+                                //网络连接正常，隐藏弹框
+                                checkNetworkDialogShowing();
+                            }
+                        }
+                    } else if (languageSwitchEvent.getMessage() instanceof DialogInfo) {
+                        DialogInfo dialogInfo = (DialogInfo) languageSwitchEvent.getMessage();
+                        String dialogTag = dialogInfo.getDialogName() == null ? DIALOG_TAG : dialogInfo.getDialogName();
+                        if (getSupportFragmentManager().findFragmentByTag(dialogTag) != null) {
+                            RunningLog.run("存在弹窗，开始隐藏！！");
+                            dialogFragment = (TabspDialogFragment) getSupportFragmentManager().findFragmentByTag(dialogTag);
+                            ((TabspDialogFragment) dialogFragment).interrupt();
+                            dialogFragment.dismiss();
+                        }
+                        dialogFragment = new TabspDialogFragment();
+                        ((TabspDialogFragment) dialogFragment).setDialogInfo(dialogInfo);
+                        dialogFragment.show(getSupportFragmentManager(), dialogTag);
+                    } else {
+                        RunningLog.warn("未匹配弹窗的类型！！");
+                    }
+                    break;
+                case SYSTEMEVENT_DEBUG_SWITCHER:
+                    //LiveBuilder.getInstance().setLiveState((Integer) languageSwitchEvent.getMessage(), this);
+                    break;
+            }
+        }
+    }
+
+    /* @Subscribe
+     public void onInfo(LiveInfo liveInfo) {
+         RunningLog.run(JsonUtils.objectToJson(liveInfo));
+     }
+    */
+
+    /**
+     * 接收功放音量设置事件
+     * @param setting
+     */
+    @Subscribe(threadMode = ThreadMode.MAIN_ORDERED, sticky = true)
+    public void loadPaSetting(OtherSetting setting) {
+        if (setting.getVolumn() != null && setting.getVgaMode() != null && setting.getVgaMode().equals("1")) {
+            SharePrefUtil.saveValue(BaseApplication.getInstance(), TabspApplication.DB_NAME, TabspApplication.LAST_PA_VOLUME_VALUE, setting.getVolumn());
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        isResumed = true;
+        RunningLog.run(this.toString() + " onResume");
+        RunningLog.run(this.dispatcher + "--->OnResume--->call OnReady()");
+        if (this.dispatcher != null) this.dispatcher.onReady();
+        checkNetworkDialogShowing();
+    }
+
+    public void onStart() {
+        super.onStart();
+        RunningLog.run(this.toString() + " onStart");
+    }
+
+    public void onPause() {
+        super.onPause();
+        isResumed = false;
+        RunningLog.run(this.toString() + " onPause");
+        RunningLog.run(this.dispatcher + "--->onPause()--->call release()");
+        if (this.dispatcher != null) this.dispatcher.release();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        RunningLog.run(this.toString() + " onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        RunningLog.run(this.toString() + " onDestroy");
+        if (EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().unregister(this);
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        /*if (LiveBuilder.getInstance().readyToLive()) {
+            LiveBuilder.getInstance().onActivityResult(resultCode, intent, TabspApplication.getInstance().getConfig().getExclusivePath());
+        }*/
+    }
+
+
+    private void checkNetworkDialogShowing() {
+        if (!isResumed)
+            return;
+        BaseDialogFragment dialogFragment = (BaseDialogFragment) getSupportFragmentManager().findFragmentByTag(CommonStr.NETWORK_DISCONNECTED);
+        if (isDialogShowing) {
+            RunningLog.run("isDialogShowing true");
+            if (dialogFragment == null) {
+                RunningLog.run("新建网络异常提示弹框并显示");
+                dialogFragment = new TabspLayoutDialog();
+                ((TabspLayoutDialog) dialogFragment).setLayout(R.layout.tabsp_network_disconnect_dialog);//网络开小差了,正在努力重连中！
+                try {
+                    dialogFragment.showNow(getSupportFragmentManager(), CommonStr.NETWORK_DISCONNECTED);
+                } catch (Exception e) {
+                    RunningLog.error(e);
+                }
+            } else if (dialogFragment.isDismissed()) {
+                RunningLog.run("存在已消除的网络异常提示弹框，重新显示");
+                try {
+                    dialogFragment.showNow(getSupportFragmentManager(), CommonStr.NETWORK_DISCONNECTED);
+                } catch (Exception e) {
+                    RunningLog.error(e);
+                }
+            }
+        } else {
+            RunningLog.run("isDialogShowing false");
+            if (dialogFragment != null) {
+                try {
+                    RunningLog.run("网络异常提示弹框正在显示，消除弹框");
+                    dialogFragment.dismiss();
+                    getSupportFragmentManager().executePendingTransactions();
+                } catch (Exception e) {
+                    RunningLog.error(e);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">device</string>
+    <string name="name_pc">Personal Computer</string>
+    <string name="name_curtain">Curtain</string>
+    <string name="name_light">light</string>
+    <string name="name_stupc">Student Computer</string>
+    <string name="name_matrix">Matrix</string>
+    <string name="name_fan">Fan</string>
+    <string name="name_recorded">Record</string>
+    <string name="name_airconditioner">Airconditioner</string>
+    <string name="name_dimmer">Dimmer</string>
+    <string name="name_projector">Projecotor</string>
+    <string name="name_screen">Screen</string>
+    <string name="name_interactive">Interactive</string>
+    <string name="name_freshair">FreshAir</string>
+    <string name="name_sound">Sound</string>
+    <string name="name_door">Door</string>
+    <string name="name_airquality">Airquality</string>
+    <string name="name_hygrothernograph">Hygrothernograph</string>
+    <string name="name_interceptacle">Interceptable</string>
+    <string name="name_ILLUMINANCE">Illuminance</string>
+    <string name="name_ROSTRUMLOCKER">Rostrumlocker</string>
+    <string name="name_REMOTEINTERACTION">Remote Interaction</string>
+    <string name="name_wireless">Wireless Projection</string>
+    <string name="name_smarttv">Smart TV</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mediaroom4_menu_selected_color">#2167DA</color>
+    <color name="matrix_layout_selected">#3fd9ff</color>
+    <color name="matrix_menu_select_color">#9000A1E9</color>
+    <color name="matrix_btn_disable_color">#50cccccc</color>
+    <color name="matrix_un_select_border_color">#C0D3FE</color>
+    <color name="matrix_btn_color_border_content">#5000A1E9</color>
+    <color name="matrix_btn_color_border">#00A1E9</color>
+    <color name="btn_disable_color">#20ffffff</color>
+    <color name="btn_disable_border_color">#ffffff</color>
+    <color name="btn_enabled_color">#200095ff</color>
+    <color name="btn_enable_border_color">#0095ff</color>
+    <color name="transparent_black_50">#50000000</color>
+    <color name="matrix_normal_color">#C0D2FF</color>
+    <color name="color_477ED7">#477ED7</color>
+    <color name="color_1B335B">#1B335B</color>
+    <color name="color_19233E">#19233E</color>
+    <color name="color_BBD0F4">#BBD0F4</color>
+    <color name="color_F8F9FB">#F8F9FB</color>
+    <color name="color_17C9D9F9">#17C9D9F9</color>
+    <color name="color_1A2747">#1A2747</color>
+    <color name="color_EFF3F9">#EFF3F9</color>
+    <color name="color_2253A4">#2253A4</color>
+    <color name="color_2167DA">#2167DA</color>
+    <color name="color_AAC6E2">#AAC6E2</color>
+</resources>

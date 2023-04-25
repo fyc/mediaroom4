@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="WlanDataBinding">
+        <variable
+            name="network"
+            type="com.sunmnet.mediaroom.tabsp.desktop.bean.WifiBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是wifi" />
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_platform_IP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/name_platform_ip"
+                app:text_color="@android:color/white" app:value="@{network.platformIP}"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_platform_port"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/name_platform_port"
+                app:text_color="@android:color/white" app:value="@{network.platformPort}"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_ssid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/ssid_name"
+                app:text_color="@android:color/white" app:value="@{network.ssid}"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/wifipwd_name"
+                app:text_color="@android:color/white" app:value="@{network.password}"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/name_ip"
+                app:text_color="@android:color/white" app:value="@{network.localIP}"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_gateway"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/name_gateway"
+                app:text_color="@android:color/white" app:value="@{network.gateway}"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_netmask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/name_netmask"
+                app:text_color="@android:color/white" app:value="@{network.netmask}"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_dns1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/name_dns1" app:value="@{network.dns1}"
+                app:text_color="@android:color/white"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <com.sunmnet.mediaroom.common.custom.EditLayout
+                android:id="@id/id_dns2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout="@layout/setting_ip_layout"
+                app:text="@string/name_dns2" app:value="@{network.dns2}"
+                app:text_color="@android:color/white"
+                app:text_size="36dp"></com.sunmnet.mediaroom.common.custom.EditLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_enable"
+                    android:id="@id/id_enable"
+                    android:textSize="24dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_check"
+                    android:id="@id/id_enable"
+                    android:textSize="24dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></FrameLayout>

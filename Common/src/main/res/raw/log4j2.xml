@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration
+    monitorInterval="1800"
+    status="INFO">
+    <properties>
+        <property name="LOG_HOME">${android:log_home}</property>
+        <property name="LOG_BACKUP_HOME">${LOG_HOME}/${date:yyyy-MM}</property>
+        <property name="LOG_BACKUP_FILE_NAME_PATTERN">%d{yyyy-MM-dd}-%i.log.zip</property>
+        <property name="LOG_PATTERN">[%-5level][%d{yyyy-MM-dd HH:mm:ss.SSS}][%t]:%m%n%n</property>
+        <property name="LOG_SIZE">4MB</property>
+
+        <!--最多备份n天以内的日志-->
+        <property name="LOG_SAVE_DAYS">14d</property>
+
+        <!--压缩包文件数量%i上限，即一天内日志数量上限-->
+        <property name="LOG_MAX">20</property>
+
+        <!-- TimeBasedTriggeringPolicy需要和filePattern配套使用，filePattern配置的时间最小粒度是dd天时，表示每n天新建一个文件保存日志。-->
+        <property name="INTERVAL_TIME">7</property>
+    </properties>
+
+    <!--     OFF(0), -->
+    <!--     FATAL(100), -->
+    <!--     ERROR(200), -->
+    <!--     WARN(300), -->
+    <!--     INFO(400), -->
+
+    <!--     COMMU(410), -->
+
+    <!--     RUN(450), -->
+
+    <!--     DEBUG(500), -->
+    <!--     TRACE(600), -->
+    <!--     ALL(Integer.MAX_VALUE); -->
+
+    <CustomLevels>
+        <CustomLevel
+            name="COMMU"
+            intLevel="410" />
+        <CustomLevel
+            name="RUN"
+            intLevel="450" />
+    </CustomLevels>
+
+    <appenders>
+        <Logcat name="Logcat">
+            <ThresholdFilter
+                level="ALL"
+                onMatch="ACCEPT"
+                onMismatch="DENY" />
+            <PatternLayout pattern="[%t-thread] %m" />
+        </Logcat>
+
+        <!-- 错误以上数据日志  -->
+        <ActionRollingFile
+            name="LogError"
+            fileName="${LOG_HOME}/error.log"
+            filePattern="${LOG_BACKUP_HOME}/error-${LOG_BACKUP_FILE_NAME_PATTERN}">
+            <ThresholdFilter
+                level="ERROR"
+                onMatch="ACCEPT"
+                onMismatch="DENY" />
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy
+                    interval="${INTERVAL_TIME}"
+                    modulate="true" />
+                <SizeBasedTriggeringPolicy size="${LOG_SIZE}" />
+            </Policies>
+            <ActionRolloverStrategy max="${LOG_MAX}">
+                <Delete
+                    basePath="${LOG_HOME}"
+                    maxDepth="2">
+                    <IfFileName regex="*/error-*.log.zip" />
+                    <IfLastModified age="${LOG_SAVE_DAYS}" />
+                </Delete>
+            </ActionRolloverStrategy>
+        </ActionRollingFile>
+
+        <!-- 消息日志  记录INFO到WARN信息-->
+        <ActionRollingFile
+            name="LogInfo"
+            fileName="${LOG_HOME}/info.log"
+            filePattern="${LOG_BACKUP_HOME}/info-${LOG_BACKUP_FILE_NAME_PATTERN}">
+            <Filters>
+                <ThresholdFilter
+                    level="INFO"
+                    onMatch="NEUTRAL"
+                    onMismatch="DENY" />
+                <ThresholdFilter
+                    level="ERROR"
+                    onMatch="DENY"
+                    onMismatch="NEUTRAL" />
+            </Filters>
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy
+                    interval="${INTERVAL_TIME}"
+                    modulate="true" />
+                <SizeBasedTriggeringPolicy size="${LOG_SIZE}" />
+            </Policies>
+            <ActionRolloverStrategy max="${LOG_MAX}">
+                <Delete
+                    basePath="${LOG_HOME}"
+                    maxDepth="2">
+                    <IfFileName regex="*/info-*.log.zip" />
+                    <IfLastModified age="${LOG_SAVE_DAYS}" />
+                </Delete>
+            </ActionRolloverStrategy>
+        </ActionRollingFile>
+
+        <!-- 通信日志  -->
+        <ActionRollingFile
+            name="LogCommu"
+            fileName="${LOG_HOME}/commu.log"
+            filePattern="${LOG_BACKUP_HOME}/commu-${LOG_BACKUP_FILE_NAME_PATTERN}">
+            <Filters>
+                <ThresholdFilter
+                    level="COMMU"
+                    onMatch="NEUTRAL"
+                    onMismatch="DENY" />
+                <ThresholdFilter
+                    level="INFO"
+                    onMatch="DENY"
+                    onMismatch="NEUTRAL" />
+            </Filters>
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy
+                    interval="${INTERVAL_TIME}"
+                    modulate="true" />
+                <SizeBasedTriggeringPolicy size="${LOG_SIZE}" />
+            </Policies>
+            <ActionRolloverStrategy max="${LOG_MAX}">
+                <Delete
+                    basePath="${LOG_HOME}"
+                    maxDepth="2">
+                    <IfFileName regex="*/commu-*.log.zip" />
+                    <IfLastModified age="${LOG_SAVE_DAYS}" />
+                </Delete>
+            </ActionRolloverStrategy>
+        </ActionRollingFile>
+
+        <!-- 运行日志  -->
+        <ActionRollingFile
+            name="LogRun"
+            fileName="${LOG_HOME}/run.log"
+            filePattern="${LOG_BACKUP_HOME}/run-${LOG_BACKUP_FILE_NAME_PATTERN}">
+            <ThresholdFilter
+                level="RUN"
+                onMatch="NEUTRAL"
+                onMismatch="DENY" />
+            <ThresholdFilter
+                level="COMMU"
+                onMatch="DENY"
+                onMismatch="NEUTRAL" />
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy
+                    interval="${INTERVAL_TIME}"
+                    modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <ActionRolloverStrategy max="${LOG_MAX}">
+                <Delete
+                    basePath="${LOG_HOME}"
+                    maxDepth="2">
+                    <IfFileName regex="*/run-*.log.zip" />
+                    <IfLastModified age="${LOG_SAVE_DAYS}" />
+                </Delete>
+            </ActionRolloverStrategy>
+        </ActionRollingFile>
+
+        <!-- 调试日志  -->
+        <ActionRollingFile
+            name="LogDebug"
+            fileName="${LOG_HOME}/debug.log"
+            filePattern="${LOG_BACKUP_HOME}/debug-${LOG_BACKUP_FILE_NAME_PATTERN}">
+            <Filters>
+                <ThresholdFilter
+                    level="DEBUG"
+                    onMatch="NEUTRAL"
+                    onMismatch="DENY" />
+                <ThresholdFilter
+                    level="RUN"
+                    onMatch="DENY"
+                    onMismatch="NEUTRAL" />
+            </Filters>
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy
+                    interval="${INTERVAL_TIME}"
+                    modulate="true" />
+                <SizeBasedTriggeringPolicy size="${LOG_SIZE}" />
+            </Policies>
+            <ActionRolloverStrategy max="${LOG_MAX}">
+                <Delete
+                    basePath="${LOG_HOME}"
+                    maxDepth="2">
+                    <IfFileName regex="*/debug-*.log.zip" />
+                    <IfLastModified age="${LOG_SAVE_DAYS}" />
+                </Delete>
+            </ActionRolloverStrategy>
+        </ActionRollingFile>
+
+
+        <!--跟踪日志 记录以上所有日志信息 -->
+        <ActionRollingFile
+            name="LogTrace"
+            fileName="${LOG_HOME}/trace.log"
+            filePattern="${LOG_BACKUP_HOME}/trace-${LOG_BACKUP_FILE_NAME_PATTERN}">
+            <ThresholdFilter
+                level="TRACE"
+                onMatch="ACCEPT"
+                onMismatch="DENY" />
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy
+                    interval="${INTERVAL_TIME}"
+                    modulate="true" />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <ActionRolloverStrategy max="${LOG_MAX}">
+                <Delete
+                    basePath="${LOG_HOME}"
+                    maxDepth="2">
+                    <IfFileName regex="*/trace-*.log.zip" />
+                    <IfLastModified age="${LOG_SAVE_DAYS}" />
+                </Delete>
+            </ActionRolloverStrategy>
+        </ActionRollingFile>
+    </appenders>
+
+    <Loggers>
+        <root level="TRACE">
+            <AppenderRef ref="Logcat" />
+            <AppenderRef ref="LogError" />
+            <AppenderRef ref="LogInfo" />
+            <AppenderRef ref="LogCommu" />
+            <AppenderRef ref="LogRun" />
+            <AppenderRef ref="LogDebug" />
+            <AppenderRef ref="LogTrace" />
+        </root>
+    </Loggers>
+
+</configuration>

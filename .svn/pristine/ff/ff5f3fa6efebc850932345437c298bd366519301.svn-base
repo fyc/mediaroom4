@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#009688</color>
+    <color name="half_transparent_30">#30000000</color>
+    <color name="half_transparent_50">#50000000</color>
+    <color name="controll_panel_color">#3CEABF</color>
+
+    <color name="control_device_open">#FFFFFF</color>
+    <color name="control_device_close">#4A84E3</color>
+
+
+    <color name="template_dialog_title_color">#5C948C</color>
+
+    <item name="search_textColor" type="color">#448AFF</item>
+    <item name="search_default_color" type="color">#617AA3</item>
+
+    <item name="dialog_spinner_color" type="color">#19233E</item>
+
+
+    <item name="attend_normal" type="color">#15B4E5</item>
+    <item name="attend_ask_for_leave" type="color">#477AF9</item>
+    <item name="attend_cut_school" type="color">#E54D2F</item>
+    <item name="attend_late" type="color">#F0BB1A</item>
+    <item name="attend_leave_early" type="color">#F0BB1A</item>
+    <item name="attend_no_data" type="color">#A0A0A0</item>
+
+    <!--有课-->
+    <item name="status_has_course" type="color">#16B4E5</item>
+    <!--被借用-->
+    <item name="status_borrowed" type="color">#FF684A</item>
+    <!--被预约-->
+    <item name="status_reserved" type="color">#F0BC1A</item>
+    <!--空闲-->
+    <item name="status_unused" type="color">#36C2CF</item>
+
+
+    <item name="bg_template_content" type="color">#7F7F8499</item>
+
+</resources>

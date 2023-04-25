@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                   
+
+    
+
+                 
+                         
+                                                                             
+
+           
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/device_off_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/px_18"
+        android:paddingEnd="@dimen/px_18" android:tag="layout-land/tabsp_version1_course_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:id="@+id/courseholder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_310"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/px_18"
+            android:layout_toStartOf="@id/ll_one_key"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_10"
+            tools:background="@drawable/black_board">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:tag="binding_1"            
+                android:textColor="?common_title_text_color"
+                android:textSize="?title_important_text_size"
+                tools:text="测试长度高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学高等数学" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_12"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:tag="binding_2"         
+                android:textColor="?common_title_text_color"
+                android:textSize="?common_menu_text_size"
+                tools:text="第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节第八节" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_12"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:tag="binding_3"            
+                android:textColor="?common_title_text_color"
+                android:textSize="?common_menu_text_size"
+                tools:text="16:00-16:50" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_12"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:tag="binding_4"             
+                android:textColor="?common_title_text_color"
+                android:textSize="?common_menu_text_size"
+                tools:text="测试边老师测试边老师测试边老师测试边老师测试边老师测试边老师测试边老师测试边老师测试边老师测试边老师测试边老师测试边老师" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_12"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:tag="binding_5"           
+                android:textColor="?common_title_text_color"
+                android:textSize="?common_menu_text_size"
+                tools:text="终极一班439257r349759349823479297终极一班终极一班终极一班终极一班435034850348" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_one_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/classon_onekey"
+                android:layout_width="@dimen/px_127"
+                android:layout_height="@dimen/px_127"
+                android:background="@drawable/btn_reverse_effective_two"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_class_on_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/px_5"
+                    android:src="@drawable/drawable_one_key_on_class_unselect" />
+
+                <TextView
+                    android:id="@+id/tv_class_on_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/px_5"
+                    android:gravity="center_horizontal"
+                    android:text="@string/onekey_class_on"
+                    android:textColor="@color/color_one_key_class_text_unselect_color"
+                    android:textSize="@dimen/px_21"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/classover_onekey"
+                android:layout_width="@dimen/px_127"
+                android:layout_height="@dimen/px_127"
+                android:layout_marginTop="@dimen/px_20"
+                android:background="@drawable/btn_reverse_effective_two"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_class_over_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/px_14"
+                    android:src="@drawable/drawable_one_key_over_class_unselect" />
+
+                <TextView
+                    android:id="@+id/tv_class_over_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/px_5"
+                    android:gravity="center_horizontal"
+                    android:text="@string/onekey_class_over"
+                    android:textColor="@color/color_one_key_class_text_unselect_color"
+                    android:textSize="@dimen/px_21"
+                    tools:ignore="SpUsage" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+         

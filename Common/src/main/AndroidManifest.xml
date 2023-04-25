@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sunmnet.mediaroom.common" >
+
+    <uses-permission android:name="android.permission.REBOOT" />
+    <application>
+        <service android:name="com.sunmnet.mediaroom.common.service.BellService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+                 
+                            
+                                                                       
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/device_off_background"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/px_10" android:tag="layout-land/tabsp_version1_envirment_layout_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/px_2"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_16"
+                android:text="@string/name_classroom_detect"
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_20"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/px_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_1"            
+                android:textColor="?version1_scene_text_color"
+                android:textSize="?common_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_2"             
+                android:textColor="?version1_scene_text_color"
+                android:textSize="?common_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_3"             
+                android:textColor="?version1_scene_text_color"
+                android:textSize="?common_text_size" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_4"       
+                android:textColor="?version1_scene_text_color"
+                android:textSize="?common_text_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+         

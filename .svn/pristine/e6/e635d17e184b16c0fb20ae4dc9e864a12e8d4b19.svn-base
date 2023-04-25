@@ -1,0 +1,35 @@
+计算公式
+px= density*dp
+density = dpi/160
+
+dpi与文件夹对应关系
+drawable-ldpi (dpi=120, density=0.75)
+drawable-mdpi (dpi=160, density=1)
+drawable-hdpi (dpi=240, density=1.5)
+drawable-xhdpi (dpi=320, density=2)
+drawable-xxhdpi (dpi=480, density=3)
+
+
+按照常用分辨率，常见density的适配文件夹列举
+分辨率      density       适配文件夹
+1920x1080 density=1    sw1080dp  mdpi
+1920x1080 density=1.5  sw720dp   hdpi
+1920x1080 density=2    sw540dp   xhdpi
+
+1280x720  density=1    sw720dp   mdpi
+1280x720  density=1.5  sw480dp   hdpi
+1280x720  density=2    sw360dp   xhdpi
+
+七寸屏(小)的分辨率是:1024x600
+九寸屏(大)的分辨率是：1280x800
+
+使用插件ScreenMatch生成对应dimens，默认是以360dp为基准。
+以屏幕分辨率1280x800的设备为基准开发，设计稿上1px像素对应sw720dp是1dp
+
+现在分两种单位，一种是以360dp为基准缩放的dp_dimens，另一种是以设计稿上px为单位换算的px_dimens。
+
+参考链接
+https://www.jianshu.com/p/1302ad5a4b04
+https://www.jianshu.com/p/5e57aa3c22bf
+https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md
+https://blog.csdn.net/duanchuanzhi/article/details/81065011

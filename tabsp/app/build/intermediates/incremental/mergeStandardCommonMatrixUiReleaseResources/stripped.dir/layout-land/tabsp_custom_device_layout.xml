@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                                                               
+
+                 
+                            
+                            
+
+                 
+                                
+                                    
+
+                 
+                                  
+                                    
+
+                 
+                                
+                                    
+           
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/px_20" android:tag="layout-land/tabsp_custom_device_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/px_10"
+            android:layout_marginBottom="@dimen/px_20"
+            app:layout_constraintBottom_toTopOf="@id/deviceListView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="@dimen/px_14"
+                android:layout_height="@dimen/px_25"
+                android:background="@drawable/mediaroom4_back_image" />
+
+            <TextView
+                android:id="@+id/device_setting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:tag="binding_1"    
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/deviceListView"
+            android:layout_width="@dimen/px_153"
+            android:layout_height="0dp"
+            android:tag="binding_2"           
+            android:background="@drawable/device_off_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_btn" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/control_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:background="@drawable/device_off_background"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/px_20"
+            android:paddingBottom="@dimen/px_20"
+            app:layout_constraintLeft_toRightOf="@id/deviceListView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/deviceListView">
+
+            <Button
+                android:id="@+id/switcher_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/device_on_corner_background"
+                android:paddingLeft="@dimen/px_45"
+                android:paddingTop="@dimen/px_15"
+                android:paddingRight="@dimen/px_45"
+                android:paddingBottom="@dimen/px_15"
+                android:text="@string/name_opt_open"
+                android:textSize="?common_menu_text_size"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/switcher_close"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/switcher_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_disable"
+                android:paddingLeft="@dimen/px_45"
+                android:paddingTop="@dimen/px_15"
+                android:paddingRight="@dimen/px_45"
+                android:paddingBottom="@dimen/px_15"
+                android:text="@string/name_opt_close"
+                android:textSize="?common_menu_text_size"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/switcher_open"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/customControlLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_marginTop="@dimen/px_20"
+            android:background="@drawable/device_off_background"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/px_20"
+            android:paddingBottom="@dimen/px_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/deviceListView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/control_layout">
+
+            <LinearLayout
+                android:id="@+id/functionLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/sourceLayout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="1">
+
+                <TextView
+                    android:id="@+id/title_function"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_16"
+                    android:text="@string/name_function"
+                    android:textColor="?colorPrimary"
+                    android:textSize="?common_menu_text_size"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="1" />
+
+                <GridView
+                    android:id="@+id/function"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/px_16"
+                    android:tag="binding_3"             
+                    android:horizontalSpacing="@dimen/px_15"
+                    android:numColumns="4"
+                    android:padding="@dimen/px_20"
+                    android:verticalSpacing="@dimen/px_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sourceLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/functionLayout"
+                app:layout_constraintVertical_weight="1">
+
+                <TextView
+                    android:id="@+id/title_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_16"
+                    android:text="@string/name_video_source"
+                    android:textColor="?colorPrimary"
+                    android:textSize="?common_menu_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <GridView
+                    android:id="@+id/source"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="binding_4"           
+                    android:horizontalSpacing="@dimen/px_15"
+                    android:numColumns="4"
+                    android:padding="@dimen/px_20"
+                    android:verticalSpacing="@dimen/px_15" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+         

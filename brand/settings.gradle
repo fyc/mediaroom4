@@ -1,0 +1,9 @@
+include ':app'
+include ':brand-common'
+include ':libvlc-android'
+include ':face'
+
+include ':Common'
+project(':Common').projectDir = file('../Common')
+include ':device'
+project(':device').projectDir = file('../device')

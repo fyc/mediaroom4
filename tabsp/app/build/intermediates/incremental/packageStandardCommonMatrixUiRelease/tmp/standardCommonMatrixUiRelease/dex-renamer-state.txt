@@ -1,0 +1,10 @@
+#Fri Apr 14 17:58:41 CST 2023
+path.2=classes3.dex
+path.1=classes2.dex
+path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/dex/standardCommonMatrixUiRelease/mergeDexStandardCommonMatrixUiRelease/classes3.dex
+base.1=/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/dex/standardCommonMatrixUiRelease/mergeDexStandardCommonMatrixUiRelease/classes2.dex
+base.0=/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/dex/standardCommonMatrixUiRelease/mergeDexStandardCommonMatrixUiRelease/classes.dex

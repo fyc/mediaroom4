@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="SceneItem">
+
+        <import type="com.sunmnet.mediaroom.device.bean.DeviceScene" />
+
+        <variable
+            name="scene"
+            type="DeviceScene" />
+    </data>
+
+    <com.sunmnet.mediaroom.tabsp.ui.widget.RollingTextView
+        android:id="@+id/sceneName"
+        android:layout_width="@dimen/px_134"
+        android:layout_height="@dimen/px_60"
+        android:background="@drawable/scene_item_background"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxEms="8"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@{scene.getSceneName()}"
+        android:textColor="?device_black_text_color"
+        android:textSize="?common_text_size"></com.sunmnet.mediaroom.tabsp.ui.widget.RollingTextView>
+</layout>

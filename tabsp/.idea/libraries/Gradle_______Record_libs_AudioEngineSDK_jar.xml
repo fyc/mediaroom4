@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./../Record/libs/AudioEngineSDK.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Record/libs/AudioEngineSDK.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

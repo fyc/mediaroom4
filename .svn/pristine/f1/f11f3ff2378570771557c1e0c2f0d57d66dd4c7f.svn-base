@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="START_PLAY_PROGRAM" type="id"/>
+    <item name="STOP_PLAY_PROGRAM" type="id"/>
+
+    <item name="START_PLAY_NOTIFICATION" type="id"/>
+    <item name="STOP_PLAY_NOTIFICATION" type="id"/>
+
+    <item name="START_TIMED_TASK_SERVICE" type="id"/>
+
+
+    <item name="POWER_LOCK_ACQUIRE" type="id"></item>
+    <item name="POWER_LOCK_RELEASE" type="id"></item>
+
+    <item name="EXAM_CONTROL_REFRESH" type="id"></item>
+
+</resources>

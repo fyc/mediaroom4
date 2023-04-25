@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="@dimen/dp_288"
+            android:layout_height="@dimen/dp_240"
+            android:layout_gravity="center"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/device_off_background"
+                android:paddingLeft="@dimen/px_20"
+                android:paddingTop="@dimen/px_10"
+                android:paddingBottom="@dimen/px_10"
+                android:textSize="@dimen/px_30"
+                android:textColor="?device_black_text_color"
+                android:text="@string/channel_name"/>
+
+            <EditText
+                android:id="@+id/edt_dialog_channel_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_dialog_title"
+                app:layout_constraintBottom_toTopOf="@id/ll_dialog_buttons"
+                android:layout_marginLeft="@dimen/px_50"
+                android:layout_marginRight="@dimen/px_50"
+                android:singleLine="true"
+                android:textSize="@dimen/px_30"
+                android:textColor="?device_black_text_color"
+                android:textColorHint="@color/transparent_black_30"
+                android:hint="@string/input_channel_name" />
+
+            <LinearLayout
+                android:id="@+id/ll_dialog_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:gravity="center">
+
+                <Button
+                    android:id="@id/confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:background="@drawable/btn_enable_no_padding"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_7_5"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_7_5"
+                    android:text="@string/confirm"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dp_11" />
+
+                <Button
+                    android:id="@id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_enable_no_padding"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_7_5"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_7_5"
+                    android:text="@string/cancel"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dp_11" />
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

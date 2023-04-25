@@ -1,0 +1,354 @@
+package com.sunmnet.mediaroom.common.tools;
+
+import android.app.ActivityManager;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.os.PowerManager;
+import android.support.annotation.DrawableRes;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.text.TextUtils;
+import android.util.SparseArray;
+import android.util.TypedValue;
+import android.view.View;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestBuilder;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.transition.Transition;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.EncodeHintType;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
+import com.sunmnet.mediaroom.util.FileUtils;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class CommonUtil {
+    static SparseArray<String> resourceCache;
+
+    static {
+        resourceCache = new SparseArray<>();
+    }
+
+    public static void resourceInitialize(int res, String file) {
+        resourceCache.put(res, file);
+    }
+
+    public static RequestBuilder<Drawable> loadImageWithGlide(Context context, String fileName, int defaultDrawable) {
+        return Glide.with(context).load(fileName).error(defaultDrawable);
+    }
+
+    public static void loadResourceIntoImage(Context context, String fileName, int drawableId, ImageView logo) {
+        if (fileName != null && FileUtils.isFileExist(fileName)) {
+            loadResourceIntoImage(context, fileName, logo);
+        } else loadResourceIntoImage(context, drawableId, logo);
+    }
+
+    /**
+     * 不带缓存加载图片
+     * @param context
+     * @param fileName
+     * @param drawableId
+     * @param logo
+     */
+    public static void loadResourceIntoImageWithoutCache(Context context, String fileName, int drawableId, ImageView logo) {
+        if (fileName != null && FileUtils.isFileExist(fileName)) {
+            loadResourceIntoImageWithoutCache(context, fileName, logo);
+        } else loadResourceIntoImageWithoutCache(context, drawableId, logo);
+    }
+
+    public static void loadResourceIntoImage(Context context, String fileName, ImageView imageView) {
+        if (imageView != null && fileName != null) {
+            Glide.with(context).load(fileName).into(imageView);
+        }
+    }
+
+    /**
+     * 不带缓存加载图片
+     * @param context
+     * @param fileName
+     * @param imageView
+     */
+    public static void loadResourceIntoImageWithoutCache(Context context, String fileName, ImageView imageView) {
+        if (imageView != null && fileName != null) {
+            Glide.with(context).load(fileName).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageView);
+        }
+    }
+
+    /**
+     * 主要用于图片覆盖
+     */
+    public static void loadResourceIntoImage(Context context, int res, ImageView imageView) {
+        if (imageView != null) {
+            String filePath = resourceCache.get(res);
+            if (filePath != null) {
+                Glide.with(context).load(filePath).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageView);
+            } else {
+                Glide.with(context).load(res).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageView);
+            }
+        }
+    }
+
+    /**
+     * 不带缓存加载图片
+     * @param context
+     * @param res
+     * @param imageView
+     */
+    public static void loadResourceIntoImageWithoutCache(Context context, int res, ImageView imageView) {
+        if (imageView != null) {
+            String filePath = resourceCache.get(res);
+            if (filePath != null) {
+                Glide.with(context).load(filePath).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageView);
+            } else {
+                Glide.with(context).load(res).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).into(imageView);
+            }
+        }
+    }
+
+    public static void loadBackgroundImage(Context context, @DrawableRes int drawableID, final View contentView) {
+        Glide.with(context).load(drawableID).into(new CustomTarget<Drawable>() {
+            @Override
+            public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                Drawable drawable = resource.getCurrent();
+                if (Build.VERSION.SDK_INT >= 16) {
+                    contentView.setBackground(drawable);
+                } else {
+                    contentView.setBackgroundDrawable(drawable);
+                }
+            }
+
+            @Override
+            public void onLoadCleared(@Nullable Drawable placeholder) {
+
+            }
+        });
+    }
+
+    /**
+     * 不带缓存得加载图片
+     * @param context
+     * @param drawableID
+     * @param contentView
+     */
+    public static void loadBackgroundImageWithoutCache(Context context, @DrawableRes int drawableID, final View contentView) {
+        Glide.with(context).load(drawableID).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).into(new CustomTarget<Drawable>() {
+            @Override
+            public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                Drawable drawable = resource.getCurrent();
+                if (Build.VERSION.SDK_INT >= 16) {
+                    contentView.setBackground(drawable);
+                } else {
+                    contentView.setBackgroundDrawable(drawable);
+                }
+            }
+
+            @Override
+            public void onLoadCleared(@Nullable Drawable placeholder) {
+
+            }
+        });
+    }
+
+    public static boolean isColor(String color) {
+        String regx = "/^#[0-9a-fA-F]{6}$/";
+        Pattern pattern = Pattern.compile(regx);
+        Matcher matcher = pattern.matcher(color);
+        return matcher.matches();
+    }
+
+    public static void loadBackgroundImage(Context context, String fileName, final View contentView) {
+        if (!TextUtils.isEmpty(fileName)) {
+            if (isColor(fileName)) {
+                contentView.setBackgroundColor(Color.parseColor(fileName));
+            } else {
+                Glide.with(context).load(fileName).into(new CustomTarget<Drawable>() {
+                    @Override
+                    public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                        Drawable drawable = resource.getCurrent();
+                        if (Build.VERSION.SDK_INT >= 16) {
+                            contentView.setBackground(drawable);
+                        } else {
+                            contentView.setBackgroundDrawable(drawable);
+                        }
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) {
+
+                    }
+                });
+            }
+        } else {
+            contentView.setBackgroundColor(Color.TRANSPARENT);
+        }
+
+    }
+
+    /**
+     * 加载背景图，不带缓存的
+     * @param context
+     * @param fileName
+     * @param contentView
+     */
+    public static void loadBackgroundImageWithoutCache(Context context, String fileName, final View contentView) {
+        if (!TextUtils.isEmpty(fileName)) {
+            if (isColor(fileName)) {
+                contentView.setBackgroundColor(Color.parseColor(fileName));
+            } else {
+                Glide.with(context).load(fileName).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).into(new CustomTarget<Drawable>() {
+                    @Override
+                    public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                        Drawable drawable = resource.getCurrent();
+                        if (Build.VERSION.SDK_INT >= 16) {
+                            contentView.setBackground(drawable);
+                        } else {
+                            contentView.setBackgroundDrawable(drawable);
+                        }
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) {
+
+                    }
+                });
+            }
+        } else {
+            contentView.setBackgroundColor(Color.TRANSPARENT);
+        }
+
+    }
+
+    public static void loadBackgroundImage(Context context, String fileName, @DrawableRes int drawableId, View contentView) {
+        if (fileName != null && FileUtils.isFileExist(fileName)) {
+            loadBackgroundImage(context, fileName, contentView);
+        } else loadBackgroundImage(context, drawableId, contentView);
+    }
+
+    /**
+     * 设置背景图片，不带缓存的
+     * @param context
+     * @param fileName
+     * @param drawableId
+     * @param contentView
+     */
+    public static void loadBackgroundImageWithoutCache(Context context, String fileName, @DrawableRes int drawableId, View contentView) {
+        if (fileName != null && FileUtils.isFileExist(fileName)) {
+            loadBackgroundImageWithoutCache(context, fileName, contentView);
+        } else loadBackgroundImageWithoutCache(context, drawableId, contentView);
+    }
+
+    public static byte[] createQRCode(String content, int width, int height) {
+        try {
+            QRCodeWriter qrCodeWriter = new QRCodeWriter();
+            Map<EncodeHintType, Object> hints = new HashMap<>();
+            hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
+            hints.put(EncodeHintType.MARGIN, 0);
+            BitMatrix encode = qrCodeWriter.encode(content, BarcodeFormat.QR_CODE, width, height, hints);
+            final int[] pixels = new int[width * height];
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
+                    if (encode.get(j, i)) {
+                        pixels[i * width + j] = 0x00000000;
+                    } else {
+                        pixels[i * width + j] = 0xffffffff;
+                    }
+                }
+            }
+            Bitmap bitmap = Bitmap.createBitmap(pixels, 0, width, width, height, Bitmap.Config.RGB_565);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+            return baos.toByteArray();
+        } catch (Exception e) {
+            RunningLog.warn(e);
+        }
+        return new byte[0];
+    }
+
+    public static int getResourceByAttribute(Context context, int attrId) {
+        TypedValue outValue = new TypedValue();
+        context.getTheme().resolveAttribute(attrId, outValue, true);
+        return outValue.resourceId;
+    }
+
+    public static int getColorByAttribute(Context context, int attrId) {
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(attrId, typedValue, true);
+        return typedValue.data;
+    }
+
+    /**
+     * 从整型中读取配置
+     *
+     * @param position 需要查找整型所占字节位中的第几位值，数值必须大于0，否则将会一直返回fales
+     * @param value    原值
+     */
+    public static boolean getSetting(int value, int position) {
+        if (position > 0) {
+            int cache = value >> (position - 1);
+            int isMatch = cache & 1;
+            return isMatch == 1;
+        } else return false;
+    }
+
+    public static int setSetting(int resource, int position, boolean isTrue) {
+        int cache = isTrue ? 1 : 0;
+        cache = cache << (position - 1);
+        resource = resource | cache;
+        return resource;
+    }
+
+    public static void deleteDirectory(File directory) {
+        if (directory.isDirectory()) {
+            File[] files = directory.listFiles();
+            for (int i = 0; i < files.length; ++i) {
+                deleteDirectory(files[i]);
+            }
+            directory.delete();
+        } else directory.delete();
+    }
+
+    public static void deleteDirectory(String directoryPath) {
+        deleteDirectory(new File(directoryPath));
+    }
+
+    /**重启系统*/
+    public static void restartAppSystem(Context context){
+        RunningLog.run("重新启动系统");
+        PowerManager manager = (PowerManager)context.getSystemService(Context.POWER_SERVICE);
+        manager.reboot("重新启动系统");
+    }
+
+    /**重启app*/
+    public static void restartApp(Context context){
+        RunningLog.run("重启app");
+//        final Intent intent = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        context.startActivity(intent);
+        // release版本 无反应
+//          ActivityManager manager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+//          manager.restartPackage("com.sunmnet.mediaroom.tabsp");
+
+            Intent intent = context.getPackageManager()
+                    .getLaunchIntentForPackage(context.getPackageName());
+            PendingIntent restartIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+            AlarmManager mgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 1000, restartIntent); // 1秒钟后重启应用
+            System.exit(0);
+    }
+
+}

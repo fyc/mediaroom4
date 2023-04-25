@@ -1,0 +1,616 @@
+package com.sunmnet.mediaroom.tabsp.ui.dispatch.fragmentDispatcher;
+
+import android.content.Context;
+import android.databinding.DataBindingUtil;
+import android.support.annotation.NonNull;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.util.SparseBooleanArray;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.CheckedTextView;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.bozee.managerappsdk.models.AnDisplayInfo;
+import com.bozee.managerappsdk.models.ClientDevice;
+import com.sunmnet.mediaroom.common.BaseActivity;
+import com.sunmnet.mediaroom.common.tools.CommonUtil;
+import com.sunmnet.mediaroom.common.tools.RunningLog;
+import com.sunmnet.mediaroom.common.tools.ToastUtil;
+import com.sunmnet.mediaroom.tabsp.R;
+import com.sunmnet.mediaroom.tabsp.bean.DialogInfo;
+import com.sunmnet.mediaroom.tabsp.common.Constants;
+import com.sunmnet.mediaroom.tabsp.databinding.RadioButtonItem;
+import com.sunmnet.mediaroom.tabsp.databinding.WirelessData;
+import com.sunmnet.mediaroom.tabsp.databinding.WirelessItem;
+import com.sunmnet.mediaroom.tabsp.interfaces.DialogListener;
+import com.sunmnet.mediaroom.tabsp.ui.TipsDialogFragment;
+import com.sunmnet.mediaroom.tabsp.ui.adapter.AbstractHolder;
+import com.sunmnet.mediaroom.tabsp.ui.adapter.BindingAdapter;
+import com.sunmnet.mediaroom.tabsp.ui.adapter.IHolder;
+import com.sunmnet.mediaroom.wirelessprojection.WirelessOperator;
+import com.sunmnet.mediaroom.wirelessprojection.bean.WirelessOpenBroadcast;
+import com.sunmnet.mediaroom.wirelessprojection.bean.WirelessParam;
+import com.warkiz.widget.IndicatorSeekBar;
+import com.warkiz.widget.OnSeekChangeListener;
+import com.warkiz.widget.SeekParams;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 无线投屏
+ */
+@Route(path = Constants.ROUTERPATH_CONTROLL_DEVICE_WIRELESS)
+public class WirelessDispatcher extends AbstractFragmentDispatcher implements IHolder.HolderFactory, AdapterView.OnItemClickListener {
+    static final int WIRELESS_MODE_SINGLETON = 1;
+    static final int WIRELESS_MODE_MUILTIPLE = 2;
+    static final int WIRELESS_MODE_BROADCAST = 3;
+    BaseActivity activity;
+    WirelessData data;
+    WirelessOperator operator;
+    BindingAdapter adapter;
+    BindingAdapter drawerAdapter;
+    WirelessParam param;
+    @BindView(R.id.singleton)
+    View single;
+    @BindView(R.id.muiltiple)
+    View muilt;
+    @BindView(R.id.showing_mode)
+    TextView title;
+    @BindView(R.id.wire_device_drawer)
+    DrawerLayout drawerLayout;
+    @BindView(R.id.volumn_drawerLayout)
+    DrawerLayout volumn_drawerLayout;
+    @BindView(R.id.volumn_seeker)
+    IndicatorSeekBar volumn;
+
+    @BindView(R.id.drawer_listview)
+    ListView drawer_listview;
+    View contentView;
+    AnDisplayInfo displays;
+    ClientDevice teacherDevice;
+    //展示列表，除开教师机
+    List<ClientDevice> displayDevices = new ArrayList<>();
+    @BindView(R.id.bottom_content)
+    View bottomView;
+
+    @BindView(R.id.tv_stop)
+    TextView tv_stop;
+
+    @BindView(R.id.icon_stop)
+    ImageView icon_stop;
+
+    @Override
+    public int getLayout() {
+        return R.layout.tabsp_wireless_layout;
+    }
+
+    @Override
+    public void dispatch(View view) {
+        this.contentView = view;
+        RunningLog.run("WirelessDispatcher.onDispatch....");
+        //data = DataBindingUtil.bind(view);
+        data = DataBindingUtil.bind(view);
+        ButterKnife.bind(this, view);
+        if (drawerLayout != null) {
+            drawerLayout.addDrawerListener(new DrawerListener(drawerLayout));
+        }
+        if (volumn_drawerLayout != null && volumn != null) {
+            volumn_drawerLayout.addDrawerListener(new SeekBarUnionDrawerListener(volumn_drawerLayout, volumn));
+        }
+        drawer_listview.setOnItemClickListener(this);
+    }
+
+    @Subscribe(sticky = true)
+    public void onOperatorCreated(WirelessOperator operator) {
+        RunningLog.run("WirelessDispatcher.onOperatorCreated....");
+        this.operator = operator;
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onDeviceLoad(AnDisplayInfo displayInfo) {
+        this.displays = displayInfo;
+        if (adapter == null) {
+            adapter = new BindingAdapter(R.layout.tabsp_wireless_item_layout, this);
+            data.wirelessDevices.setAdapter(adapter);
+        }
+        adapter.setData(displayInfo.mDevices);
+        adapter.notifyDataSetChanged();
+        displayDevices.clear();
+        teacherDevice = null;
+        tv_stop.setText(R.string.name_stop);
+        for (ClientDevice device : displayInfo.mDevices) {
+            RunningLog.run(device.toString());
+            if (device.mClientType != 10) {
+                displayDevices.add(device);
+            } else {
+                //判断教师机投屏状态
+                teacherDevice = device;
+                if (device.mDisplayStatus == ClientDevice.STATUS_SHARING) {
+                    tv_stop.setText(R.string.name_stop);
+                    icon_stop.setImageResource(R.drawable.tabsp_wireless_option_stop);
+                } else {
+                    tv_stop.setText(R.string.name_resume);
+                    icon_stop.setImageResource(R.drawable.tabsp_wireless_option_resume);
+                }
+            }
+        }
+        notifyDrawerData();
+    }
+
+    private void setSingle(boolean single) {
+        int enable = R.drawable.wireless_functional_effective, disable = R.drawable.wireless_functional_disabled_effective;
+        if (this.single != null) {
+            //this.single.setEnabled(!single);
+            this.single.setBackgroundResource(single ? disable : enable);
+        }
+        if (this.muilt != null) {
+            //this.muilt.setEnabled(single);
+            this.muilt.setBackgroundResource(single ? enable : disable);
+        }
+        String mode = activity.getString(R.string.name_shown_mode);
+        mode += "--";
+        mode += (single) ? activity.getString(R.string.name_singleton) : activity.getString(R.string.name_muiltiple);
+        title.setText(mode);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onParamChanged(WirelessParam param) {
+        this.param = param;
+        setSingle(param.isSingle());
+        setLocker(param.isLock());
+        if (param.isConnected()) {//服务器连接情况
+            data.wirelessDisconnectText.setVisibility(View.GONE);
+            data.wirelessDisconnectBtn.setVisibility(View.GONE);
+            data.wirelessDisconnectBtn.setText("重启连接");
+            data.wirelessContent.setVisibility(View.VISIBLE);
+        } else {
+            data.wirelessContent.setVisibility(View.GONE);
+            data.wirelessDisconnectText.setVisibility(View.VISIBLE);
+            data.wirelessDisconnectBtn.setVisibility(View.VISIBLE);
+            data.wirelessDisconnectBtn.setText("重启连接");
+            data.wirelessDisconnectBtn.setOnClickListener(view -> {
+                DialogInfo dialogInfo = new DialogInfo(DialogInfo.DialogType.DEVICE_CLOSING,
+                        new DialogListener() {
+                            @Override
+                            public <T> void onConfirmed(T t) {
+                                CommonUtil.restartApp(data.wirelessDisconnectBtn.getContext());
+                            }
+
+                            @Override
+                            public void onCancel() {
+
+                            }
+
+                            @Override
+                            public void onTick(int count) {
+
+                            }
+                        },3);
+
+                dialogInfo.setDialogContent("正在重启...");
+                TipsDialogFragment dialogFragment = new TipsDialogFragment();
+                dialogFragment.setDialogInfo(dialogInfo);
+                dialogFragment.show(activity.getSupportFragmentManager(), "DIALOG_TAG");
+            });
+        }
+        if (volumn != null) {
+            volumn.setProgress(param.getVolumn());
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onOpenAllBroadcast(WirelessOpenBroadcast param) {
+        ToastUtil.show(activity, "打开无线投屏全部广播");
+        RunningLog.run("WirelessDispatcher.打开无线投屏全部广播...."+operator.toString());
+        if (operator != null) operator.broadcast();
+    }
+
+    private void setLocker(boolean isLock) {
+        TextView text = contentView.findViewById(R.id.locker_text);
+        ImageView img = contentView.findViewById(R.id.locker_img);
+        if (text != null && img != null) {
+            Context context = text.getContext();
+            String lockerText = isLock ? context.getString(R.string.name_status_unlock) : context.getString(R.string.name_status_lock);
+            int drawable = isLock ? R.drawable.tabsp_wireless_option_unlock : R.drawable.tabsp_wireless_option_lock;
+            text.setText(lockerText);
+            CommonUtil.loadResourceIntoImage(context, drawable, img);
+        }
+    }
+
+    @Override
+    public void onReady() {
+        RunningLog.run("WirelessDispatcher.onReady....");
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Override
+    public <E> void dispatch(View view, E e) {
+        RunningLog.run("WirelessDispatcher.dispatch....");
+        if (e instanceof BaseActivity) this.activity = (BaseActivity) e;
+        this.dispatch(view);
+    }
+
+    @Override
+    public IHolder newHolder() {
+        return new AbstractHolder<WirelessItem, ClientDevice>() {
+            TextView status;
+
+            private void setView() {
+                this.binding.setDevice(this.property);
+                if (property.mWorkOutStatus == ClientDevice.WORK_OUT) {
+                    //授课中
+                    if (this.property.mDisplayStatus == ClientDevice.STATUS_READY) {
+                        status.setText(status.getContext().getString(R.string.name_status_connected));
+                    } else if (this.property.mDisplayStatus == ClientDevice.STATUS_SHARING) {
+                        status.setText(status.getContext().getString(R.string.name_status_showing));
+                    }
+                } else if (property.mWorkOutStatus == ClientDevice.WORK_ON) {
+                    status.setText(status.getContext().getString(R.string.name_status_sharing));
+                }
+            }
+
+            @Override
+            public void bindView(View view) {
+                status = view.findViewById(R.id.wireless_state);
+            }
+
+            @Override
+            public void setProperty(WirelessItem wirelessItem, ClientDevice clientDevice) {
+                this.binding = wirelessItem;
+                this.property = clientDevice;
+                setView();
+            }
+        };
+    }
+
+    private void holdViewState(View view, boolean set) {
+        if (view != null) {
+            view.setEnabled(set);
+            int drawable = set ? R.drawable.wireless_option_click_effective : R.drawable.wireless_functional_disabled_effective;
+            view.setBackgroundResource(drawable);
+            if (!set) {
+                view.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        holdViewState(view, true);
+                    }
+                }, 2000);
+            }
+        }
+
+    }
+
+    @OnClick({R.id.muiltiple, R.id.singleton, R.id.broadcast_all,
+            R.id.broadcast_part, R.id.finish, R.id.mark, R.id.whiteboard, R.id.file, R.id.stop, R.id.locker, R.id.volumn,R.id.restart_app})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.mark:
+                if (operator != null) {
+                    RunningLog.run("打开mark");
+                    operator.invokeNote();
+                    holdViewState(view, false);
+                }
+                break;
+            case R.id.whiteboard:
+                if (operator != null) {
+                    RunningLog.run("打开白板");
+                    operator.invokeWhiteBoard();
+                    holdViewState(view, false);
+                }
+                break;
+            case R.id.file:
+                if (operator != null) {
+                    RunningLog.run("打开文件");
+                    operator.invokeFile();
+                    holdViewState(view, false);
+                }
+                break;
+            case R.id.stop:
+                if (operator != null) {
+                    //判断教师机投屏状态
+                    RunningLog.run("触发停止");
+                    if (teacherDevice != null) {
+                        if (teacherDevice.mDisplayStatus == ClientDevice.STATUS_SHARING) {
+                            operator.invokeStop();
+                            tv_stop.setText(R.string.name_resume);
+                            icon_stop.setImageResource(R.drawable.tabsp_wireless_option_resume);
+                        } else {
+                            operator.invokeResume();
+                            tv_stop.setText(R.string.name_stop);
+                            icon_stop.setImageResource(R.drawable.tabsp_wireless_option_stop);
+                        }
+                    }
+                    holdViewState(view, false);
+                }
+                break;
+            case R.id.locker:
+                if (operator != null) {
+                    RunningLog.run("触发锁定");
+                    operator.reverseLock();
+                    holdViewState(view, false);
+                }
+                break;
+            case R.id.volumn:
+                volumn_drawerLayout.openDrawer(GravityCompat.END);
+                if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                    drawerLayout.closeDrawers();
+                }
+                break;
+            case R.id.restart_app:
+                DialogInfo dialogInfo = new DialogInfo(DialogInfo.DialogType.CONFIRM_CLASSOVER,
+                        new DialogListener() {
+                            @Override
+                            public <T> void onConfirmed(T t) {
+                                CommonUtil.restartApp(data.wirelessDisconnectBtn.getContext());
+                            }
+
+                            @Override
+                            public void onCancel() {
+
+                            }
+
+                            @Override
+                            public void onTick(int count) {
+
+                            }
+                        });
+
+                dialogInfo.setDialogContent("是否重启？");
+                TipsDialogFragment dialogFragment = new TipsDialogFragment();
+                dialogFragment.setDialogInfo(dialogInfo);
+                dialogFragment.show(activity.getSupportFragmentManager(), "DIALOG_TAG");
+                break;
+            case R.id.muiltiple:
+                if (operator != null) {
+                    RunningLog.run("触发多人模式");
+                    operator.setShowingMode(false);
+                    switchMode(WIRELESS_MODE_MUILTIPLE);
+                }
+                break;
+            case R.id.singleton:
+                if (operator != null) {
+                    RunningLog.run("触发单人模式");
+                    operator.setShowingMode(true);
+                    switchMode(WIRELESS_MODE_SINGLETON);
+                }
+                break;
+            case R.id.broadcast_all:
+                RunningLog.run("广播所有");
+                if (operator != null) operator.broadcast();
+                break;
+            case R.id.broadcast_part:
+                RunningLog.run("广播部分");
+                if (operator != null) {
+                    switchMode(WIRELESS_MODE_BROADCAST);
+                }
+                break;
+            case R.id.finish:
+                RunningLog.run("结束");
+                if (operator != null){
+                    operator.reset();
+                }
+                break;
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        //监听点击drawer_listview 点击事件
+        //如果是单选，则要记录下上一个的选择状态
+        if (operator != null) {
+            boolean checked = ((CheckedTextView) view).isChecked();
+            AbstractHolder holder = (AbstractHolder) view.getTag();
+            switch (creator.getMode()) {
+                case WIRELESS_MODE_BROADCAST:
+                    operator.broadcast((ClientDevice) holder.getProperty(), checked);
+                    break;
+                case WIRELESS_MODE_SINGLETON:
+                case WIRELESS_MODE_MUILTIPLE:
+                    operator.setShowingDevice((ClientDevice) holder.getProperty(), checked);
+                    break;
+            }
+        }
+    }
+
+    /**
+     * 抽屉类监听
+     */
+    private class DrawerListener implements DrawerLayout.DrawerListener, Runnable {
+        protected DrawerLayout drawerLayout;
+
+        public DrawerListener(DrawerLayout drawerLayout) {
+            this.drawerLayout = drawerLayout;
+        }
+
+        @Override
+        public void onDrawerSlide(@NonNull View view, float v) {
+
+        }
+
+        @Override
+        public void onDrawerOpened(@NonNull View view) {
+            //打开列表时，延时10秒自动关闭
+            drawerLayout.postDelayed(this, 10000);
+        }
+
+        @Override
+        public void onDrawerClosed(@NonNull View view) {
+            //列表关闭时，移除监听
+            drawerLayout.removeCallbacks(this);
+        }
+
+        @Override
+        public void onDrawerStateChanged(int i) {
+
+        }
+
+        @Override
+        public void run() {
+            drawerLayout.closeDrawers();
+        }
+    }
+
+    private class SeekBarUnionDrawerListener extends DrawerListener implements OnSeekChangeListener {
+        IndicatorSeekBar seekBar;
+
+        public SeekBarUnionDrawerListener(DrawerLayout drawerLayout, IndicatorSeekBar seekBar) {
+            super(drawerLayout);
+            this.seekBar = seekBar;
+            seekBar.setOnSeekChangeListener(this);
+        }
+
+        @Override
+        public void onSeeking(SeekParams seekParams) {
+        }
+
+        @Override
+        public void onStartTrackingTouch(IndicatorSeekBar seekBar) {
+            this.drawerLayout.removeCallbacks(this);
+        }
+
+        @Override
+        public void onStopTrackingTouch(IndicatorSeekBar seekBar) {
+            int progress = seekBar.getProgress();
+            drawerLayout.postDelayed(this, 10000);
+            if (param != null && param.getVolumn() != progress && operator != null) {
+                operator.invokeVolumn(progress);
+            }
+        }
+    }
+
+    DrawerCreator creator = null;
+
+    private void switchMode(int mode) {
+        if (creator == null) {
+            creator = new DrawerCreator(mode);
+        } else {
+            creator.setMode(mode);
+        }
+        drawerAdapter = new BindingAdapter<>(R.layout.tabsp_wireless_selection_item, creator);
+        drawer_listview.setAdapter(drawerAdapter);
+        notifyDrawerData();
+        if (volumn_drawerLayout.isDrawerOpen(GravityCompat.END)) {
+            drawerLayout.closeDrawers();
+        }
+        drawerLayout.openDrawer(GravityCompat.END);
+    }
+
+    private void notifyDrawerData() {
+        if (drawerAdapter != null) {
+            int mode = creator.getMode();
+            SparseBooleanArray checkList = new SparseBooleanArray();
+            drawerAdapter.setData(this.displayDevices);
+            switch (mode) {
+                case WIRELESS_MODE_SINGLETON:
+                    drawer_listview.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+                    for (int i = 0; i < displayDevices.size(); i++) {
+                        ClientDevice device = displayDevices.get(i);
+                        checkList.put(i, device.mDisplayStatus == ClientDevice.STATUS_SHARING);
+                    }
+                    break;
+                case WIRELESS_MODE_BROADCAST:
+                    drawer_listview.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+                    for (int i = 0; i < displayDevices.size(); i++) {
+                        ClientDevice device = displayDevices.get(i);
+                        checkList.put(i, device.mWorkOutStatus == ClientDevice.WORK_ON);
+                    }
+                    break;
+                case WIRELESS_MODE_MUILTIPLE:
+                    drawer_listview.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+                    for (int i = 0; i < displayDevices.size(); i++) {
+                        ClientDevice device = displayDevices.get(i);
+                        checkList.put(i, device.mDisplayStatus == ClientDevice.STATUS_SHARING);
+                    }
+                    break;
+            }
+            drawerAdapter.notifyDataSetChanged();
+            for (int i = 0; i < checkList.size(); i++) {
+                drawer_listview.setItemChecked(i, checkList.get(i, false));
+            }
+        }
+    }
+
+    private class DrawerCreator implements IHolder.HolderFactory {
+        int mode;
+
+        public int getMode() {
+            return mode;
+        }
+
+        public void setMode(int mode) {
+            this.mode = mode;
+        }
+
+        public DrawerCreator(int mode) {
+            this.mode = mode;
+        }
+
+        @Override
+        public IHolder newHolder() {
+            return new AbstractHolder<RadioButtonItem, ClientDevice>() {
+                CheckedTextView checkedTextView;
+
+                @Override
+                public void bindView(View view) {
+                    checkedTextView = (CheckedTextView) view;
+                    int resId = 0;
+                    switch (mode) {
+                        case WIRELESS_MODE_SINGLETON:
+                            resId = R.drawable.abc_btn_radio_material;
+                            break;
+                        case WIRELESS_MODE_BROADCAST:
+                        case WIRELESS_MODE_MUILTIPLE:
+                            resId = R.drawable.abc_btn_check_material;
+                            break;
+                    }
+                    checkedTextView.setCheckMarkDrawable(resId);
+                }
+
+                @Override
+                public void setProperty(RadioButtonItem radioButtonItem, ClientDevice clientDevice) {
+                    super.setProperty(radioButtonItem, clientDevice);
+                    radioButtonItem.setDevive(clientDevice);
+                    switch (mode) {
+                        case WIRELESS_MODE_BROADCAST:
+                            if (clientDevice.mWorkOutStatus == ClientDevice.WORK_ON) {
+                                setSelected(true);
+                            } else
+                                setSelected(false);
+                            break;
+                        case WIRELESS_MODE_SINGLETON:
+                        case WIRELESS_MODE_MUILTIPLE:
+                            if (clientDevice.mDisplayStatus == ClientDevice.STATUS_SHARING) {
+                                setSelected(true);
+                            } else {
+                                setSelected(false);
+                            }
+                            break;
+                        default:
+                            setSelected(false);
+                            break;
+                    }
+                }
+
+                @Override
+                public void setSelected(boolean selected) {
+                    checkedTextView.setChecked(selected);
+                }
+            };
+        }
+    }
+}

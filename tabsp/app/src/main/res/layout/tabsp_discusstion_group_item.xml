@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="NumberItem">
+
+        <import type="com.sunmnet.mediaroom.tabsp.interfaces.ICommonItem" />
+
+        <variable
+            name="item"
+            type="ICommonItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@id/device_image_holder"
+            android:layout_width="@dimen/px_64"
+            android:layout_height="@dimen/px_64"
+            android:background="@drawable/device_off_background">
+
+            <TextView
+                android:id="@id/device_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="?colorPrimary"
+                android:textSize="?title_important_text_size" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_12"
+            android:text="@{item.getName()}"
+            android:textColor="?device_black_text_color"
+            android:textSize="?common_menu_text_size" />
+    </LinearLayout>
+</layout>

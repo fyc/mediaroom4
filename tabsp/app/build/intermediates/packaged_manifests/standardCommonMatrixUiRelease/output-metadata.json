@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "PACKAGED_MANIFESTS",
+    "kind": "Directory"
+  },
+  "applicationId": "com.sunmnet.mediaroom.tabsp",
+  "variantName": "standardCommonMatrixUiRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 200101001,
+      "versionName": "MR_TABSP_4.0.6.230414_standardCommonMatrixUi_beta",
+      "outputFile": "AndroidManifest.xml"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tv_content"
+        layout="@layout/tabsp_wireless_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--左侧滑菜单栏
+    <include
+        layout="@layout/tabsp_wireless_drawer_item"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right" />
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp" android:id="@+id/seekerContainer"
+        >
+
+        <SeekBar
+            android:id="@+id/volumn_seeker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="15"
+            android:progress="10" />
+    </FrameLayout>
+    -->
+</android.support.v4.widget.DrawerLayout>

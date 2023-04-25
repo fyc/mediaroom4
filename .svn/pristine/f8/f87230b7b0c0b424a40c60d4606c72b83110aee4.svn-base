@@ -1,0 +1,67 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+
+    ext.greendaoVersion = '3.3.0'
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath "org.greenrobot:greendao-gradle-plugin:$greendaoVersion"
+    }
+}
+ext {
+    COMPILE_SDK_VERSION = compileSdkVersion = 30
+    BUILD_TOOLS_VERSION = buildToolsVersion = "30.0.3"
+    TARGET_SDK_VERSION = targetSdkVersion = 30
+    MIN_SDK_VERSION = minSdkVersion = 21
+    ANDROID_SUPPORT_VERSION = "28.+"
+}
+
+allprojects {
+    configurations.all {
+        // check for updates every build
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+            name 'aliyun-google'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+            name 'aliyun-jcenter'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+            name 'aliyun-central'
+        }
+        maven {
+            url 'https://www.jitpack.io'
+            name 'jitpack'
+        }
+        maven {
+            url 'http://rd.sunmnet.com:9002/nexus/content/repositories/public/'
+            name 'sunmnet'
+        }
+        google()
+        jcenter()
+        mavenCentral()
+    }
+//    configurations.all {
+//        // check for updates every build
+//        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+//    }
+
+    // gradlew build --refresh-dependencies
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

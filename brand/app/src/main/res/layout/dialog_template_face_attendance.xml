@@ -1,0 +1,321 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/template_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/px_205"
+        android:layout_marginRight="@dimen/px_400"
+        android:text="人脸签到"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/px_36"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/px_150"
+        android:layout_height="@dimen/px_82"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/px_30"
+        android:layout_marginRight="@dimen/px_30"
+        android:background="@drawable/btn_background_confirm"
+        android:text="返回"
+        android:textColor="#FFFEFFFF"
+        android:textSize="@dimen/px_18"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_365"
+        android:background="@drawable/template_background_corner2"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintRight_toRightOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_circle1"
+            android:layout_width="@dimen/px_300"
+            android:layout_height="@dimen/px_300"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_face_preview_circle1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_circle2"
+            android:layout_width="@dimen/px_370"
+            android:layout_height="@dimen/px_370"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bg_face_preview_circle2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.sunmnet.mediaroom.brand.view.RoundCvCameraView
+            android:id="@+id/camera_view"
+            android:layout_width="@dimen/px_300"
+            android:layout_height="@dimen/px_300"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleX="-1"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="请对准摄像头，确保人脸清晰"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/px_18"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintRight_toRightOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/layout_camera" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="@dimen/px_472"
+        android:layout_height="@dimen/px_720"
+        android:layout_margin="@dimen/px_30"
+        android:background="@drawable/template_dialog_background"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/px_60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.sunmnet.mediaroom.brand.control.media.TemplateTeacherPortraitControl
+            android:id="@+id/portrait"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/template_default_portrait"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_not_arrive_no"
+            android:layout_marginLeft="@dimen/px_27"
+            android:layout_marginTop="@dimen/px_28"
+            android:text="任课老师"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_20"
+            app:layout_constraintLeft_toRightOf="@id/portrait"
+            app:layout_constraintTop_toTopOf="@id/portrait" />
+
+        <com.sunmnet.mediaroom.brand.control.text.CourseTeacherControl
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_late_no"
+            android:layout_marginTop="10dp"
+            android:text="刘老师"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_36"
+            app:layout_constraintLeft_toLeftOf="@id/title_teacher"
+            app:layout_constraintTop_toBottomOf="@id/title_teacher" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/px_30"
+            android:background="#FFE9ECF5"
+            app:layout_constraintLeft_toLeftOf="@id/portrait"
+            app:layout_constraintTop_toBottomOf="@id/portrait" />
+
+        <com.sunmnet.mediaroom.brand.control.text.CourseNameControl
+            android:id="@+id/tv_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_60"
+            android:text="C语言"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toLeftOf="@id/portrait"
+            app:layout_constraintTop_toBottomOf="@id/portrait" />
+
+        <com.sunmnet.mediaroom.brand.control.text.GradeNameControl
+            android:id="@+id/tv_grade_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:text="计算机1班"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toRightOf="@id/tv_course_name"
+            app:layout_constraintTop_toTopOf="@id/tv_course_name" />
+
+        <TextView
+            android:id="@+id/title_class_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26"
+            android:text="当前课节："
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toLeftOf="@id/portrait"
+            app:layout_constraintTop_toBottomOf="@id/tv_course_name" />
+
+        <com.sunmnet.mediaroom.brand.control.text.ClassNoControl
+            android:id="@+id/tv_class_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:text="第10节"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toRightOf="@id/title_class_no"
+            app:layout_constraintTop_toTopOf="@id/title_class_no" />
+
+        <TextView
+            android:id="@+id/title_should_arrive_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26"
+            android:text="应到人数："
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toLeftOf="@id/portrait"
+            app:layout_constraintTop_toBottomOf="@id/title_class_no" />
+
+        <com.sunmnet.mediaroom.brand.control.text.ShouldArriveNoControl
+            android:id="@+id/tv_should_arrive_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:text="40"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toRightOf="@id/title_should_arrive_no"
+            app:layout_constraintTop_toTopOf="@id/title_should_arrive_no" />
+
+        <TextView
+            android:id="@+id/title_arrive_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26"
+            android:text="已到人数："
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toLeftOf="@id/portrait"
+            app:layout_constraintTop_toBottomOf="@id/title_should_arrive_no" />
+
+        <com.sunmnet.mediaroom.brand.control.text.ArriveNoControl
+            android:id="@+id/tv_arrive_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:text="30"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toRightOf="@id/title_arrive_no"
+            app:layout_constraintTop_toTopOf="@id/title_arrive_no" />
+
+        <TextView
+            android:id="@+id/title_not_arrive_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26"
+            android:text="未到人数："
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toLeftOf="@id/portrait"
+            app:layout_constraintTop_toBottomOf="@id/title_arrive_no"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_not_arrive_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:text="10"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toRightOf="@id/title_not_arrive_no"
+            app:layout_constraintTop_toTopOf="@id/title_not_arrive_no"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/title_late_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26"
+            android:text="迟到人数："
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toLeftOf="@id/portrait"
+            app:layout_constraintTop_toBottomOf="@id/title_arrive_no" />
+
+        <com.sunmnet.mediaroom.brand.control.text.LateNoControl
+            android:id="@+id/tv_late_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:text="10"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toRightOf="@id/title_late_no"
+            app:layout_constraintTop_toTopOf="@id/title_late_no" />
+
+        <TextView
+            android:id="@+id/title_leave_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_26"
+            android:text="请假人数："
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toLeftOf="@id/portrait"
+            app:layout_constraintTop_toBottomOf="@id/title_late_no" />
+
+        <com.sunmnet.mediaroom.brand.control.text.LeaveNoControl
+            android:id="@+id/tv_leave_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_20"
+            android:text="0"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintLeft_toRightOf="@id/title_leave_no"
+            app:layout_constraintTop_toTopOf="@id/title_leave_no" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_recog_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/px_30"
+        android:paddingStart="@dimen/px_50"
+        android:paddingEnd="@dimen/px_50"
+        android:paddingTop="@dimen/px_10"
+        android:paddingBottom="@dimen/px_10"
+        android:background="#1F000000"
+        android:textSize="@dimen/px_30"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        tools:text="识别成功"/>
+
+</android.support.constraint.ConstraintLayout>

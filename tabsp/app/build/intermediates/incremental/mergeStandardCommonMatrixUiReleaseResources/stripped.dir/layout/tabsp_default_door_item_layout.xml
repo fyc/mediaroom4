@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+                 
+                           
+                                                                      
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_140"
+        android:background="@drawable/radius_15_transparent_drawable"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5" android:tag="layout/tabsp_default_door_item_layout_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@id/device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:tag="binding_1"                   
+            android:textColor="?attr/common_text_color"
+            android:textSize="?attr/common_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/door_image"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.375"
+                android:padding="@dimen/dp_5"
+                android:scaleType="centerInside"
+                android:src="@drawable/door_close" />
+
+            <LinearLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.625"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/door_magnetic_status"
+                            android:layout_width="@dimen/dp_18"
+                            android:layout_height="@dimen/dp_18"
+                            android:layout_marginRight="@dimen/dp_7_5"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/door_magnetic_status_close" />
+
+                        <TextView
+                            android:id="@+id/device_door_megnet_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="门磁"
+                            android:textColor="?attr/common_text_color" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/device_state"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="已开启"
+                        android:textColor="?attr/common_text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/door_lock_status"
+                            android:layout_width="@dimen/dp_18"
+                            android:layout_height="@dimen/dp_18"
+                            android:layout_marginRight="@dimen/dp_7_5"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/door_lock" />
+
+                        <TextView
+                            android:id="@+id/device_door_lockName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="门锁"
+                            android:textColor="?attr/common_text_color" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ProgressBar
+                            android:id="@+id/door_operating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:indeterminateTint="#5ADAFF"
+                            android:indeterminateTintMode="src_atop"
+                            android:padding="@dimen/dp_5"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/device_doorlock_state"
+                            android:layout_width="@dimen/dp_36"
+                            android:layout_height="@dimen/dp_18"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/doorlock_close" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+         

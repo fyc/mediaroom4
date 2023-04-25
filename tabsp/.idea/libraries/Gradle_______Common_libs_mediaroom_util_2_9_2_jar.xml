@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./../Common/libs/mediaroom_util-2.9.2.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Common/libs/mediaroom_util-2.9.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

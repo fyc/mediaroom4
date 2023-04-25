@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="template_btn_text_size">@dimen/px_20</dimen>
+
+    <dimen name="query_dialog_text_size">@dimen/px_24</dimen>
+    <dimen name="query_dialog_btn_text_size">@dimen/px_16</dimen>
+    <dimen name="query_dialog_input_padding">@dimen/px_6</dimen>
+
+    <dimen name="dialog_padding_top">@dimen/px_30</dimen>
+    <dimen name="dialog_margin_top">@dimen/px_30</dimen>
+    <dimen name="dialog_padding_bottom">@dimen/px_30</dimen>
+    <dimen name="dialog_padding_left_right">@dimen/px_30</dimen>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                                                              
+
+                 
+                               
+                                   
+           
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/px_10" android:tag="layout-land/tabsp_matrix_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <HorizontalScrollView
+            android:id="@+id/matrixSceneGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/device_off_background"
+            android:scrollbars="none"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/scene_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/px_10" />
+        </HorizontalScrollView>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/px_20"
+            android:background="@drawable/device_off_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/matrixSceneGrid"
+            app:layout_constraintWidth_percent="0.41">
+
+            <GridView
+                android:id="@+id/matrix_input_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tag="binding_1"          
+                android:horizontalSpacing="@dimen/px_20"
+                android:numColumns="4"
+                android:verticalSpacing="@dimen/px_20" />
+        </FrameLayout>
+
+        <com.sunmnet.mediaroom.matrix.MatrixView
+            android:id="@+id/matrixview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_marginTop="@dimen/px_20"
+            android:background="@drawable/device_off_background"
+            app:center_view_selected="@drawable/matrix_output_select"
+            app:dashed_color="?colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/matrixSceneGrid"
+            app:layout_constraintWidth_percent="0.57"
+            app:selected_background="@drawable/circle_selected_drawable"
+            app:selected_text_color="?common_text_color"
+            app:unselect_background="@drawable/circle_default_drawable"
+            app:unselect_text_color="?device_black_text_color" />
+    </android.support.constraint.ConstraintLayout>
+         

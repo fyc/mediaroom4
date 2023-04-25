@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
+    <com.sunmnet.mediaroom.matrix.anotherUi.ui.MarqueTextView
+        android:id="@+id/value"
+        android:layout_width="@dimen/px_220"
+        android:layout_height="@dimen/px_120"
+        android:gravity="center"
+        android:paddingStart="@dimen/px_10"
+        android:paddingEnd="@dimen/px_10"
+        android:background="@drawable/rectangle_six_sided_unselected"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textSize="@dimen/px_29"
+        android:textColor="@color/color_1B335B"
+        tools:text="外接HDMI"/>
+
+</LinearLayout>

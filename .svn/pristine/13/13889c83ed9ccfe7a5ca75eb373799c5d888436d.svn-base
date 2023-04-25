@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/px_10">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="@dimen/px_800"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_50"
+                android:layout_marginTop="@dimen/px_80"
+                android:gravity="center_horizontal"
+                android:text="@string/fault_description"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/px_30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage" />
+
+            <LinearLayout
+                android:id="@+id/ll_fault_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_20"
+                android:background="@drawable/fault_description_rg_bg"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/tv_title"
+                app:layout_constraintTop_toTopOf="@id/tv_title">
+
+                <RadioGroup
+                    android:id="@+id/rg_fault_description"
+                    android:layout_width="@dimen/px_500"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_20"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:layout_marginBottom="@dimen/px_20"
+                    android:orientation="vertical"
+                    android:padding="@dimen/px_10">
+
+                    <RadioButton
+                        android:id="@+id/environmental_equipment_failure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/color_fault_description_rb"
+                        android:padding="@dimen/px_5"
+                        android:text="@string/environmental_equipment_failure"
+                        android:textColor="@color/color_fault_description_rb"
+                        android:textSize="@dimen/px_30"
+                        tools:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/multimedia_device_failure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_10"
+                        android:buttonTint="@color/color_fault_description_rb"
+                        android:padding="@dimen/px_5"
+                        android:text="@string/multimedia_device_failure"
+                        android:textColor="@color/color_fault_description_rb"
+                        android:textSize="@dimen/px_30" />
+
+                    <RadioButton
+                        android:id="@+id/audio_device_failure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_10"
+                        android:buttonTint="@color/color_fault_description_rb"
+                        android:padding="@dimen/px_5"
+                        android:text="@string/audio_device_failure"
+                        android:textColor="@color/color_fault_description_rb"
+                        android:textSize="@dimen/px_30" />
+
+                    <RadioButton
+                        android:id="@+id/equipment_circuit_failure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_10"
+                        android:buttonTint="@color/color_fault_description_rb"
+                        android:padding="@dimen/px_5"
+                        android:text="@string/equipment_circuit_failure"
+                        android:textColor="@color/color_fault_description_rb"
+                        android:textSize="@dimen/px_30" />
+
+                    <RadioButton
+                        android:id="@+id/other_equipment_issues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_10"
+                        android:buttonTint="@color/color_fault_description_rb"
+                        android:padding="@dimen/px_5"
+                        android:text="@string/other_equipment_issues"
+                        android:textColor="@color/color_fault_description_rb"
+                        android:textSize="@dimen/px_30" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gl_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_50"
+                android:layout_marginTop="@dimen/px_40"
+                android:layout_marginEnd="@dimen/px_30"
+                android:layout_marginBottom="@dimen/px_50"
+                android:background="@color/color_2167DA"
+                android:paddingStart="@dimen/px_40"
+                android:paddingEnd="@dimen/px_40"
+                android:text="@string/submit"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/px_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gl_one"
+                app:layout_constraintTop_toBottomOf="@id/ll_fault_description" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_50"
+                android:layout_marginStart="@dimen/px_30"
+                android:layout_marginTop="@dimen/px_40"
+                android:layout_marginBottom="@dimen/px_50"
+                android:background="@color/color_FF989BA8"
+                android:paddingStart="@dimen/px_40"
+                android:paddingEnd="@dimen/px_40"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/px_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/gl_one"
+                app:layout_constraintTop_toBottomOf="@id/ll_fault_description" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

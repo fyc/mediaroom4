@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="ModeItem">
+
+        <import type="com.sunmnet.mediaroom.tabsp.interfaces.ICommonItem" />
+
+        <variable
+            name="mode"
+            type="ICommonItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@id/device_image_holder"
+            android:layout_width="@dimen/px_96"
+            android:layout_height="@dimen/px_96"
+            android:background="@drawable/device_off_background">
+
+            <ImageView
+                android:id="@id/device_img"
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:layout_gravity="center"
+                android:scaleType="centerInside" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="@dimen/px_30"
+            android:text="@{mode.getName()}"
+            android:textColor="?device_black_text_color"
+            android:textSize="?common_menu_text_size" />
+    </LinearLayout>
+</layout>

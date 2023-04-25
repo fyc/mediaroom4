@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_dark"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/template_background" />
+
+        <ImageView
+            android:layout_width="1870px"
+            android:layout_height="121px"
+            android:layout_marginLeft="25px"
+            android:layout_marginTop="0px"
+            android:src="@drawable/template_title_background" />
+
+        <com.sunmnet.mediaroom.brand.control.text.ClassroomControl
+            android:layout_width="360px"
+            android:layout_height="54px"
+            android:layout_marginLeft="780px"
+            android:layout_marginTop="37px"
+            android:gravity="center"
+            android:text="T1-0101"
+            android:textColor="#ffffffff"
+            android:textSize="44px"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:layout_marginLeft="45px"
+            android:layout_marginTop="45px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="80px"
+                android:scaleType="fitStart"
+                android:src="@drawable/template_sunmnet_logo" />
+
+            <ImageView
+                android:layout_width="128px"
+                android:layout_height="36px"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/logo"
+                android:src="@drawable/template_logo_ornament" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="368px"
+            android:layout_height="42px"
+            android:layout_marginLeft="1515px"
+            android:layout_marginTop="77px"
+            android:src="@drawable/template_line" />
+
+        <com.sunmnet.mediaroom.brand.control.text.TimeControl
+            android:layout_width="124px"
+            android:layout_height="28px"
+            android:layout_marginLeft="1595px"
+            android:layout_marginTop="59px"
+            android:gravity="center"
+            android:text="09:55:55"
+            android:textColor="#ffffffff"
+            android:textSize="28px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.WeekControl
+            android:layout_width="42px"
+            android:layout_height="15px"
+            android:layout_marginLeft="1597px"
+            android:layout_marginTop="95px"
+            android:gravity="center"
+            android:text="星期一"
+            android:textColor="#ffffffff"
+            android:textSize="12px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.DateControl
+            android:layout_width="67px"
+            android:layout_height="15px"
+            android:layout_marginLeft="1650px"
+            android:layout_marginTop="95px"
+            android:gravity="center"
+            android:text="2019.1.1"
+            android:textColor="#ffffffff"
+            android:textSize="12px" />
+
+        <com.sunmnet.mediaroom.brand.control.weather.WeatherControl
+            android:id="@+id/weatherControl"
+            android:layout_width="120px"
+            android:layout_height="50px"
+            android:layout_marginLeft="1740px"
+            android:layout_marginTop="59px" />
+
+        <ImageView
+            android:layout_width="166px"
+            android:layout_height="94px"
+            android:layout_marginLeft="35px"
+            android:layout_marginTop="158px"
+            android:src="@drawable/template_class_no_background" />
+
+        <ImageView
+            android:layout_width="12px"
+            android:layout_height="12px"
+            android:layout_marginLeft="64px"
+            android:layout_marginTop="183px"
+            android:src="@drawable/template_triangle" />
+
+        <ImageView
+            android:layout_width="12px"
+            android:layout_height="12px"
+            android:layout_marginLeft="164px"
+            android:layout_marginTop="183px"
+            android:rotation="180"
+            android:src="@drawable/template_triangle" />
+
+        <TextView
+            android:layout_width="70px"
+            android:layout_height="18px"
+            android:layout_marginLeft="84px"
+            android:layout_marginTop="181px"
+            android:gravity="center"
+            android:text="当前课节"
+            android:textColor="#FFFFFF"
+            android:textSize="14px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.ClassNoControl
+            android:id="@+id/class_no"
+            android:layout_width="68px"
+            android:layout_height="18px"
+            android:layout_marginLeft="83px"
+            android:layout_marginTop="209px"
+            android:gravity="center"
+            android:text="第7节"
+            android:textColor="#FFE519"
+            android:textSize="14px" />
+
+        <com.sunmnet.mediaroom.brand.control.media.TemplateTeacherPortraitControl
+            android:id="@+id/portrait"
+            android:layout_width="94px"
+            android:layout_height="94px"
+            android:layout_marginLeft="296px"
+            android:layout_marginTop="159px" />
+
+        <TextView
+            android:layout_width="82px"
+            android:layout_height="20px"
+            android:layout_marginLeft="436px"
+            android:layout_marginTop="179px"
+            android:gravity="center"
+            android:text="任课老师："
+            android:textColor="#FFFFFF"
+            android:textSize="15px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.CourseTeacherControl
+            android:layout_width="100px"
+            android:layout_height="20px"
+            android:layout_marginLeft="520px"
+            android:layout_marginTop="179px"
+            android:gravity="center_vertical"
+            android:text="刘静思"
+            android:textColor="#FFE519"
+            android:textSize="15px" />
+
+        <TextView
+            android:layout_width="82px"
+            android:layout_height="20px"
+            android:layout_marginLeft="436px"
+            android:layout_marginTop="227px"
+            android:gravity="center"
+            android:text="课程名称："
+            android:textColor="#FFFFFF"
+            android:textSize="15px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.CourseNameControl
+            android:layout_width="100px"
+            android:layout_height="20px"
+            android:layout_marginLeft="520px"
+            android:layout_marginTop="227px"
+            android:gravity="center_vertical"
+            android:text="图形图像处理"
+            android:textColor="#FFE519"
+            android:textSize="15px" />
+
+        <TextView
+            android:layout_width="82px"
+            android:layout_height="20px"
+            android:layout_marginLeft="712px"
+            android:layout_marginTop="179px"
+            android:gravity="center"
+            android:text="上课时间："
+            android:textColor="#FFFFFF"
+            android:textSize="15px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.CourseTimeControl
+            android:layout_width="100px"
+            android:layout_height="20px"
+            android:layout_marginLeft="796px"
+            android:layout_marginTop="179px"
+            android:gravity="center_vertical"
+            android:text="16:00-17:45"
+            android:textColor="#FFE519"
+            android:textSize="15px" />
+
+        <TextView
+            android:layout_width="82px"
+            android:layout_height="20px"
+            android:layout_marginLeft="712px"
+            android:layout_marginTop="227px"
+            android:gravity="center"
+            android:text="上课班级："
+            android:textColor="#FFFFFF"
+            android:textSize="15px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.GradeNameControl
+            android:layout_width="100px"
+            android:layout_height="20px"
+            android:layout_marginLeft="796px"
+            android:layout_marginTop="227px"
+            android:gravity="center_vertical"
+            android:text="计算机1班"
+            android:textColor="#FFE519"
+            android:textSize="15px" />
+
+        <TextView
+            android:layout_width="82px"
+            android:layout_height="20px"
+            android:layout_marginLeft="993px"
+            android:layout_marginTop="179px"
+            android:gravity="center"
+            android:text="应到人数："
+            android:textColor="#FFFFFF"
+            android:textSize="15px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.ShouldArriveNoControl
+            android:layout_width="30px"
+            android:layout_height="20px"
+            android:layout_marginLeft="1077px"
+            android:layout_marginTop="179px"
+            android:gravity="center_vertical"
+            android:text="50"
+            android:textColor="#FFE519"
+            android:textSize="15px" />
+
+        <TextView
+            android:layout_width="22px"
+            android:layout_height="20px"
+            android:layout_marginLeft="1110px"
+            android:layout_marginTop="179px"
+            android:gravity="center_vertical"
+            android:text="人"
+            android:textColor="#FFFFFF"
+            android:textSize="15px" />
+
+        <TextView
+            android:layout_width="82px"
+            android:layout_height="20px"
+            android:layout_marginLeft="993px"
+            android:layout_marginTop="227px"
+            android:gravity="center"
+            android:text="实到人数："
+            android:textColor="#FFFFFF"
+            android:textSize="15px" />
+
+        <com.sunmnet.mediaroom.brand.control.text.ArriveNoControl
+            android:layout_width="30px"
+            android:layout_height="20px"
+            android:layout_marginLeft="1077px"
+            android:layout_marginTop="227px"
+            android:gravity="center_vertical"
+            android:text="31"
+            android:textColor="#FFE519"
+            android:textSize="15px" />
+
+        <TextView
+            android:layout_width="22px"
+            android:layout_height="20px"
+            android:layout_marginLeft="1110px"
+            android:layout_marginTop="227px"
+            android:gravity="center_vertical"
+            android:text="人"
+            android:textColor="#FFFFFF"
+            android:textSize="15px" />
+
+        <ImageView
+            android:layout_width="284px"
+            android:layout_height="40px"
+            android:layout_marginLeft="1446px"
+            android:layout_marginTop="153px"
+            android:src="@drawable/template_login_icon"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_face_uname"
+            android:layout_width="190px"
+            android:layout_height="70px"
+            android:layout_marginLeft="1290px"
+            android:layout_marginTop="194px"
+            android:background="@drawable/template_btn_background_disable"
+            android:gravity="center"
+            android:text="个人门户登录"
+            android:textColor="#D0FFFA"
+            android:textSize="18px" />
+
+        <Button
+            android:id="@+id/btn_face_login"
+            android:layout_width="190px"
+            android:layout_height="70px"
+            android:layout_marginLeft="1490px"
+            android:layout_marginTop="194px"
+            android:background="@drawable/template_btn_background_enable"
+            android:gravity="center"
+            android:text="人脸快速签到"
+            android:textColor="#FEFFFF"
+            android:textSize="18px" />
+
+        <Button
+            android:id="@+id/btn_swipe_card_login"
+            android:layout_width="190px"
+            android:layout_height="70px"
+            android:layout_marginLeft="1690px"
+            android:layout_marginTop="194px"
+            android:background="@drawable/template_btn_background_enable"
+            android:gravity="center"
+            android:text="刷卡快速签到"
+            android:textColor="#FEFFFF"
+            android:textSize="18px" />
+
+        <FrameLayout
+            android:layout_width="1221px"
+            android:layout_height="767px"
+            android:layout_marginLeft="44px"
+            android:layout_marginTop="268px"
+            android:background="@color/bg_template_content"
+            android:scaleType="fitXY">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/template_background_corner" />
+
+            <com.sunmnet.mediaroom.brand.control.table.TemplateCourseTableControl
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1px" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="594px"
+            android:layout_height="200px"
+            android:layout_marginLeft="1288px"
+            android:layout_marginTop="268px"
+            android:background="@color/bg_template_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/template_background_corner2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16px"
+                android:orientation="vertical">
+
+                <com.sunmnet.mediaroom.brand.view.AutoScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="140px"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:text="博学之、审问之、慎思之、明辨之、笃行之\n\n"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="24px"
+                        android:textStyle="bold" />
+
+                </com.sunmnet.mediaroom.brand.view.AutoScrollView>
+
+                <TextView
+                    android:id="@+id/sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="———— 教务处"
+                    android:textColor="#FF3EF2C3"
+                    android:textSize="16px" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="594px"
+            android:layout_height="550px"
+            android:layout_marginLeft="1287px"
+            android:layout_marginTop="485px"
+            android:background="@color/bg_template_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/template_background_corner2" />
+
+            <com.sunmnet.mediaroom.brand.control.media.PictureControl
+                android:id="@+id/picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16px" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

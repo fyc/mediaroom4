@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/DEPENDENCIES' // will not include DEPENDENCIES file
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    /*api 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    api 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'*/
+    api 'org.greenrobot:eventbus:3.1.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api project(path: ':Common')
+    /* api files('libs/mediaroom-socket-1.0.6.jar')
+     api project(path: ':Common')*/
+}

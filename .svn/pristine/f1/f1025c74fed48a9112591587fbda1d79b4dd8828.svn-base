@@ -1,0 +1,281 @@
+package com.sunmnet.mediaroom.wirelessprojection;
+
+import android.util.Log;
+
+import com.bozee.managerappsdk.ConnectionManager;
+import com.bozee.managerappsdk.IConnectListener;
+import com.bozee.managerappsdk.models.ClientDevice;
+import com.sunmnet.mediaroom.common.tools.RunningLog;
+import com.sunmnet.mediaroom.common.tools.ThreadUtils;
+import com.sunmnet.mediaroom.wirelessprojection.bean.WirelessParam;
+import com.sunmnet.mediaroom.wirelessprojection.interfaces.CallbackAdapter;
+import com.sunmnet.mediaroom.wirelessprojection.interfaces.IWirelessOperator;
+
+import org.greenrobot.eventbus.EventBus;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+public class WirelessOperator implements IConnectListener, IWirelessOperator<ClientDevice> {
+    static final String COMMON_KEY = "com.bozee.adminclient";
+    ConnectionManager mConnectionManager;
+    String ip;
+    int serverPort;
+    WirelessParam param;
+    CallbackAdapter adapter;
+    int PROTOCOL_VERSION = 1;
+    String password;
+    String mAppKey = null;
+    Reconnector reconnector = null;
+    AtomicBoolean isConnecting = new AtomicBoolean(false);
+    AtomicBoolean isReconnecting = new AtomicBoolean(false);
+
+    public WirelessParam getParam() {
+        return param;
+    }
+
+    public static String getMd5(String text) {
+        final String MD5 = "MD5";
+        try {
+            // Create MD5 Hash
+            MessageDigest digest = MessageDigest
+                    .getInstance(MD5);
+            digest.update(text.getBytes());
+            byte messageDigest[] = digest.digest();
+
+            // Create Hex String
+            StringBuilder hexString = new StringBuilder();
+            for (byte aMessageDigest : messageDigest) {
+                String h = Integer.toHexString(0xFF & aMessageDigest);
+                while (h.length() < 2)
+                    h = "0" + h;
+                hexString.append(h);
+            }
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    public WirelessOperator(String ip) {
+        this(ip, 10023);
+    }
+
+    public WirelessOperator(String ip, String password) {
+        this(ip, 10023, password);
+    }
+
+    public WirelessOperator(String ip, int port) {
+        this(ip, port, "123456");
+    }
+
+    public WirelessOperator(String ip, int port, String password) {
+        this(ip, port, COMMON_KEY, getMd5(password));
+    }
+
+    public WirelessOperator(String ip, int port, String key, String password) {
+        this.mConnectionManager = ConnectionManager.getInstance();
+        this.ip = ip;
+        this.serverPort = port;
+        this.mAppKey = key;
+        this.password = password;
+        param = new WirelessParam();
+        adapter = new WirelessCallBacks(param, mConnectionManager, this);
+        this.serverPort = port;
+        connect();
+    }
+
+    private void connect() {
+        if (isConnecting.compareAndSet(false, true)) {
+            this.mConnectionManager.connect(ip, serverPort, this);
+        }
+    }
+
+    private boolean check() {
+        boolean isCheck = this.param.isAuthorization();
+        if (!isCheck) {
+            //发送提示
+        }
+        return isCheck;
+    }
+
+    private class Reconnector implements Runnable {
+
+        @Override
+        public void run() {
+            boolean reachable = false;
+            InetAddress address = null;
+            while (!Thread.currentThread().isInterrupted() || !reachable) {
+                try {
+                    if (address == null) {
+                        address = InetAddress.getByName(ip);
+                    }
+                    reachable = address.isReachable(5000);
+                } catch (UnknownHostException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (!reachable) {
+                    RunningLog.run("无线投屏IP地址[" + ip + "]无法访问，等待60秒后重新测试IP");
+                    try {
+                        Thread.sleep(60000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            RunningLog.run("5秒后重连无线投屏");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            RunningLog.run("开始重连无线投屏");
+            connect();
+            isReconnecting.compareAndSet(true, false);
+        }
+    }
+
+
+    @Override
+    public void onConnectStarted() {
+        Log.i(getClass().getName(), "无线投屏开始连接！");
+    }
+
+    @Override
+    public void onConnectSuccess() {
+        isConnecting.compareAndSet(true, false);
+        this.reconnector = null;
+        param.setConnected(true);
+        EventBus.getDefault().postSticky(param);
+        Log.i(getClass().getName(), "无线投屏连接成功！");
+        init();
+        ThreadUtils.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Log.i(WirelessOperator.this.getClass().getName(), "开始授权！");
+                mConnectionManager.requestAuthorize(mAppKey, password, PROTOCOL_VERSION);
+            }
+        });
+    }
+
+    void onAuthFail() {
+        Log.i(WirelessOperator.this.getClass().getName(), "无线投屏重新授权！");
+        mConnectionManager.requestAuthorize(mAppKey, password, PROTOCOL_VERSION);
+    }
+
+    private void init() {
+        mConnectionManager.setAuthorizeListener(adapter);
+        mConnectionManager.setRemoteCallback(adapter);
+        mConnectionManager.setClassRoomRemoteCallback(adapter);
+        mConnectionManager.setReceiveSystemInfoListener(adapter);
+        mConnectionManager.setReceiveSettingListener(adapter);
+        mConnectionManager.setMainActivityEvenListener(adapter);
+    }
+
+    @Override
+    public void onConnectFailed(int i) {
+        isConnecting.compareAndSet(true, false);
+        Log.e(getClass().getName(), "无线投屏连接失败！");
+        param.setConnected(false);
+        EventBus.getDefault().postSticky(param);
+        if (reconnector == null) {
+            this.reconnector = new Reconnector();
+        }
+        if (isReconnecting.compareAndSet(false, true)) {
+            ThreadUtils.execute(this.reconnector);
+        }
+    }
+
+    @Override
+    public List<ClientDevice> getScreens() {
+        return param.getClientDevices();
+    }
+
+    @Override
+    public void invokeNote() {
+        if (check()) mConnectionManager.requestOpenToolAppData(ClientDevice.APP_MARK);
+    }
+
+    @Override
+    public void invokeWhiteBoard() {
+        if (check()) mConnectionManager.requestOpenToolAppData(ClientDevice.APP_WHITEBOARD);
+    }
+
+    @Override
+    public void invokeFile() {
+        if (check()) mConnectionManager.requestOpenToolAppData(ClientDevice.APP_FILE_FINDER);
+    }
+
+    @Override
+    public void invokeStop() {
+        //有可能是存在
+        if (check())
+            mConnectionManager.requestClassroomUpdateTeacherDeviceStateData(ClientDevice.TEACHER_DEVICE_CONNECTED);
+    }
+
+    @Override
+    public void invokeResume() {
+        //有可能是存在
+        if (check())
+            mConnectionManager.requestClassroomUpdateTeacherDeviceStateData(ClientDevice.TEACHER_DEVICE_SHARING);
+    }
+
+    @Override
+    public void reverseLock() {
+        if (check()) mConnectionManager.requestLockRootDevice(!param.isLock());
+    }
+
+    @Override
+    public void invokeVolumn(int column) {
+        if (check()) {
+            mConnectionManager.requestUpdateVolumeData(column);
+            mConnectionManager.requestGetCurrentVolumeData();
+        }
+    }
+
+    @Override
+    public void setShowingMode(boolean isSingleton) {
+        if (check()) mConnectionManager.requestClassroomUpdateSharingModeData(isSingleton);
+    }
+
+    @Override
+    public void setShowingDevice(ClientDevice clientDevice, boolean show) {
+        mConnectionManager.requestSwitchDeviceState(clientDevice.mStrIp, show);
+    }
+
+
+    @Override
+    public void broadcast() {
+        mConnectionManager.requestClassRoomAllClientsWorkOnOut(ClientDevice.ALL_CLIENTS_WORK_ON);
+    }
+
+    @Override
+    public void broadcast(ClientDevice clientDevice, boolean show) {
+        mConnectionManager.requestClassroomStudentDeviceWorkOnOffData(clientDevice.mStrIp, show ? ClientDevice.WORK_ON : ClientDevice.WORK_OUT);
+    }
+
+    @Override
+    public void stopBroadcast() {
+        mConnectionManager.requestClassRoomAllClientsWorkOnOut(ClientDevice.ALL_CLIENTS_WORK_OUT);
+    }
+
+    @Override
+    public void reset() {
+        mConnectionManager.requestClassroomAllClientsOnOffScreen(ClientDevice.ALL_CLIENTS_OFF_SCREEN);
+        stopBroadcast();
+    }
+}

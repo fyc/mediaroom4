@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/px_30">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_20"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_dialog_header"
+            app:layout_constraintBottom_toBottomOf="@id/layout_search"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layout_search" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_10"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/layout_search"
+            app:layout_constraintLeft_toRightOf="@id/header"
+            app:layout_constraintTop_toTopOf="@id/layout_search">
+
+            <Spinner
+                android:id="@+id/searchType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/dp_60" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/search_textColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="@dimen/px_270"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px_10"
+                android:background="@drawable/bg_input_query"
+                android:maxLines="1"
+                android:padding="@dimen/px_4"
+                android:textColor="#FF19233E"
+                android:textSize="@dimen/px_20" />
+
+            <Button
+                android:id="@+id/searchConfirm"
+                android:layout_width="@dimen/px_106"
+                android:layout_height="@dimen/px_40"
+                android:background="@drawable/bg_btn_query_confirm"
+                android:drawableStart="@drawable/icon_search"
+                android:drawableLeft="@drawable/icon_search"
+                android:paddingLeft="@dimen/px_16"
+                android:text="搜索"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/px_16" />
+
+            <Button
+                android:id="@+id/searchClear"
+                android:layout_width="@dimen/px_106"
+                android:layout_height="@dimen/px_40"
+                android:layout_marginLeft="@dimen/px_10"
+                android:background="@drawable/bg_btn_query_clear"
+                android:text="清空"
+                android:textSize="@dimen/px_16" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dialog_margin_top"
+        android:background="@drawable/round_rect_shadow"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dialog_padding_left_right"
+        android:paddingTop="@dimen/dialog_padding_top"
+        android:paddingRight="@dimen/dialog_padding_left_right"
+        android:paddingBottom="@dimen/dialog_padding_bottom">
+
+        <LinearLayout
+            android:id="@+id/dataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px_30"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="证件号："
+                    android:textColor="#FF19233E"
+                    android:textSize="@dimen/px_16" />
+
+                <TextView
+                    android:id="@+id/text_id_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3902930123901823091"
+                    android:textColor="#FF19233E"
+                    android:textSize="@dimen/px_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_38"
+                    android:text="准考证号："
+                    android:textColor="#FF19233E"
+                    android:textSize="@dimen/px_16" />
+
+                <TextView
+                    android:id="@+id/text_examinee_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9809300202"
+                    android:textColor="#FF19233E"
+                    android:textSize="@dimen/px_16" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/searchingTips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/search_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_query_course_no_data" />
+
+            <ProgressBar
+                android:id="@+id/search_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

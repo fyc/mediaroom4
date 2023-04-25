@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="MainpageBinding">
+
+        <import type="com.sunmnet.mediaroom.common.bean.course.CourseSchedule" />
+
+        <import type="com.sunmnet.mediaroom.device.bean.EnvirmentDevice" />
+
+        <import type="com.sunmnet.mediaroom.tabsp.ui.adapter.HolderAdapter" />
+
+        <variable
+            name="course"
+            type="CourseSchedule" />
+
+        <variable
+            name="envirment"
+            type="EnvirmentDevice" />
+
+        <variable
+            name="constrollSceneAdapter"
+            type="HolderAdapter" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/px_20">
+
+        <include
+            android:id="@+id/course_layout"
+            layout="@layout/tabsp_version1_course_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="@dimen/px_18"
+            app:course="@{course}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintHeight_percent="0.54"/>
+
+        <include
+            android:id="@+id/envirment_layout"
+            layout="@layout/tabsp_version1_envirment_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:envirment="@{envirment}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHeight_percent="0.54"
+            app:layout_constraintWidth_percent="0.27" />
+
+        <include
+            android:id="@+id/device_scene_layout"
+            layout="@layout/tabsp_version1_scene_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/px_18"
+            android:adapter="@{constrollSceneAdapter}"
+            app:layout_constraintLeft_toLeftOf="@id/course_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintHeight_percent="0.42"/>
+
+        <include
+            android:id="@+id/tabsp_volumn_layout"
+            layout="@layout/tabsp_version1_volumn_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.42"
+            app:layout_constraintWidth_percent="0.27"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

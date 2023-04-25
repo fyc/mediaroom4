@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">桌面管理</string>
+    <string name="name_platform_ip">平台地址:</string>
+    <string name="name_platform_port">平台端口:</string>
+    <string name="name_ip">本地IP:</string>
+    <string name="name_dns1">dns1:</string>
+    <string name="name_dns2">dns2:</string>
+    <string name="name_gateway">网关:</string>
+    <string name="name_netmask">netmask</string>
+    <string name="ethernet_name">有线网络</string>
+    <string name="wireless_name">无线网络</string>
+    <string name="version_name">版本</string>
+    <string name="ssid_name">SSID:</string>
+    <string name="wifipwd_name">WIFI密码:</string>
+    <string name="name_check">检查</string>
+    <string name="name_enable">启用</string>
+    <string name="text_download_file">文件名称：</string>
+    <string name="text_download_path">下载路径：</string>
+    <string name="opt_download">下载</string>
+    <string name="name_checkupdate">检查更新</string>
+</resources>

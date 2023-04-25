@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tabsp_logo" type="id"></item>
+    <item name="back" type="id"></item>
+    <item name="login" type="id"></item>
+    <item name="all_turn_off" type="id"></item>
+    <item name="all_turn_on" type="id"></item>
+    <item name="interfaceInfo" type="id"></item>
+    <item name="tag_name_cn" type="id"></item>
+    <item name="mode_container" type="id"></item>
+    <item name="powerswitcher" type="id"></item>
+    <item name="operation_layout" type="id"></item>
+    <item name="stateless_devices" type="id"></item>
+    <item name="stateless_mode" type="id"></item>
+    <item name="device_image" type="id"></item>
+    <item name="device_name" type="id"></item>
+    <item name="device_img" type="id"></item>
+    <item name="allowcard" type="id"></item>
+    <item name="spinning" type="id"></item>
+    <item name="switchLogintype" type="id"></item>
+    <item name="qrcode" type="id"></item>
+    <item name="dialog_confirm" type="id"></item>
+    <item name="dialog_cancel" type="id"></item>
+    <item name="dialog_close" type="id"></item>
+    <item name="dialog_countdown" type="id" />
+</resources>

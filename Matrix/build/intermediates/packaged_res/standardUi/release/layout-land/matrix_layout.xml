@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+           
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" android:tag="layout-land/matrix_layout_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <include
+            layout="@layout/matrix_layout_main"
+            android:id="@+id/matrix_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            layout="@layout/matrix_layout_edit"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:id="@+id/matrix_edit"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+         

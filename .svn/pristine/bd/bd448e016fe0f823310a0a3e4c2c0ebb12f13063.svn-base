@@ -1,0 +1,246 @@
+package com.sunmnet.mediaroom.tabsp.ui.dispatch;
+
+import android.content.res.Configuration;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.sunmnet.mediaroom.common.BaseActivity;
+
+import com.sunmnet.mediaroom.common.bean.User;
+import com.sunmnet.mediaroom.common.events.Event;
+import com.sunmnet.mediaroom.common.events.EventType;
+import com.sunmnet.mediaroom.common.events.LoginType;
+import com.sunmnet.mediaroom.common.tools.CommonUtil;
+import com.sunmnet.mediaroom.common.tools.RunningLog;
+import com.sunmnet.mediaroom.common.tools.SharePrefUtil;
+import com.sunmnet.mediaroom.common.tools.ThreadUtils;
+import com.sunmnet.mediaroom.common.tools.ToastUtil;
+import com.sunmnet.mediaroom.device.bean.LoginEvent;
+import com.sunmnet.mediaroom.device.bean.RegisterInfo;
+import com.sunmnet.mediaroom.device.controll.Controller;
+import com.sunmnet.mediaroom.tabsp.R;
+import com.sunmnet.mediaroom.tabsp.TabspApplication;
+import com.sunmnet.mediaroom.tabsp.bean.DialogInfo;
+import com.sunmnet.mediaroom.tabsp.bean.LoginUser;
+import com.sunmnet.mediaroom.tabsp.bean.TabspConfig;
+import com.sunmnet.mediaroom.tabsp.common.Constants;
+import com.sunmnet.mediaroom.tabsp.controll.AbstractActivityUiDispatcher;
+import com.sunmnet.mediaroom.tabsp.controll.service.Dispatcher;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import java.io.IOException;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 登录界面，账号密码登录界面
+ */
+@Route(path = Constants.ROUTERPATH_LOGIN_MAIN)
+public class LoginDispatcher extends AbstractActivityUiDispatcher {
+    @BindView(R.id.login_container)
+    View contentView;
+    @BindView(R.id.tabsp_logo)
+    ImageView logo;
+    @BindView(R.id.info_input)
+    View inputInfo;
+    @BindView(R.id.loginResult)
+    TextView loginResult;
+    @BindView(R.id.user_name)
+    EditText userName;
+    @BindView(R.id.user_password)
+    EditText password;
+    @BindView(R.id.scan_text)
+    TextView scanText;
+
+    LoginUser user;
+
+    // 默认超级用户名
+    public static final String DEFAULT_SUPER_ACCOUNT = "super";
+    // 默认超级密码
+    public static final String DEFAULT_SUPER_PASSWORD = "123456";
+
+    // sharePreference
+    public static final String SUPER_USER_SP_NAME = "super_user_sp_name";
+    public static final String SUPER_ACCOUNT_SP_KEY = "super_account_sp_key";
+    public static final String SUPER_PASSWORD_SP_KEY = "super_password_sp_key";
+
+    @Override
+    public void invisible() {
+        if (EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().unregister(this);
+        }
+    }
+
+    @Override
+    public void onReady() {
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    public void release() {
+        if (EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().unregister(this);
+        }
+    }
+
+    /**
+     * 事件回调
+     */
+    @Subscribe(threadMode = ThreadMode.MAIN, priority = 10, sticky = true)
+    public void onLoginResult(LoginEvent event) {
+        switch (event.getEventType()) {
+            case ON_LOGIN_FAILURE:
+                User user = event.getMessage();
+                loginResult.setText(user.getMessgae());
+                break;
+            case ON_LOGIN:
+                EventBus.getDefault().removeStickyEvent(event);
+                User user1 = event.getMessage();
+                loginResult.setText(user1.getMessgae());
+                break;
+            case ON_CLASS:
+                RunningLog.run("LoginDispatcher." + event.getEventType());
+                EventBus.getDefault().postSticky(event.getMessage());
+                ARouter.getInstance().build(Constants.ROUTERPATH_ACTIVITY).withString(Dispatcher.PAGE_KEY, Dispatcher.PAGE_REDIRECT_CONTENT).navigation();
+                this.activity.finish();
+                release();
+                break;
+        }
+    }
+
+    @Override
+    public void dispatch(BaseActivity activity) {
+        super.dispatch(activity);
+        activity.setContentView(getLayout());
+        TabspConfig config = TabspApplication.getInstance().getConfig();
+        ButterKnife.bind(this, activity);
+        // 判断横竖屏
+        if (activity.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // 横屏
+            CommonUtil.loadBackgroundImageWithoutCache(activity, config.getBaseLoginBackground(), R.drawable.tabsp_login_background, contentView);
+        } else {
+            // 竖屏
+            CommonUtil.loadBackgroundImageWithoutCache(activity, config.getBaseLoginBackground(), R.drawable.activity_login_enter_background, contentView);
+        }
+        //加载logo
+        CommonUtil.loadResourceIntoImageWithoutCache(activity, config.getLoginLogo(), R.drawable.tabsp_logo, logo);
+        this.user = new LoginUser("", "");
+        userName.setText(this.user.getUser());
+        password.setText(this.user.getPassword());
+
+        scanText.setVisibility(config.isQrcode() ? View.VISIBLE : View.INVISIBLE);
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.tabsp_login_enter_layout;
+    }
+
+    @OnClick({R.id.languageswitcher, R.id.switchLogintype, R.id.tabsp_logo, R.id.scan_text})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.languageswitcher:
+                Event event = new Event();
+                event.setEventType(EventType.CHANGE_LANGUAGE);
+                EventBus.getDefault().post(event);
+                break;
+            case R.id.switchLogintype:
+                String tipes = "不能为空!!";
+                if (TextUtils.isEmpty(userName.getText().toString())) {
+                    tipes = "账户" + tipes;
+                    loginResult.setText(tipes);
+                    this.activity.toastMessage(tipes);
+                    //toastMessage(tipes);
+                    // binding.userName.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(password.getText().toString())) {
+                    tipes = "密码" + tipes;
+                    loginResult.setText(tipes);
+                    this.activity.toastMessage(tipes);
+                    //binding.userPassword.requestFocus();
+                    return;
+                }
+                // 普通账号密码登陆
+                RegisterInfo registerInfo = TabspApplication.getInstance().getConfig().getRegisterInfo();
+                if (registerInfo != null) {
+                    String superAccount = (SharePrefUtil.getString(this.activity, SUPER_USER_SP_NAME, SUPER_ACCOUNT_SP_KEY) != null &&
+                            !SharePrefUtil.getString(this.activity, SUPER_USER_SP_NAME, SUPER_ACCOUNT_SP_KEY).isEmpty()) ?
+                            SharePrefUtil.getString(this.activity, SUPER_USER_SP_NAME, SUPER_ACCOUNT_SP_KEY) : DEFAULT_SUPER_ACCOUNT;
+                    String superPassword = (SharePrefUtil.getString(this.activity, SUPER_USER_SP_NAME, SUPER_PASSWORD_SP_KEY) != null &&
+                            !SharePrefUtil.getString(this.activity, SUPER_USER_SP_NAME, SUPER_PASSWORD_SP_KEY).isEmpty()) ?
+                            SharePrefUtil.getString(this.activity, SUPER_USER_SP_NAME, SUPER_PASSWORD_SP_KEY) : DEFAULT_SUPER_PASSWORD;
+                    if (userName.getText().toString().equals(superAccount) && password.getText().toString().equals(superPassword)) {
+                        view.setEnabled(false);
+                        // 使用超级用户解锁面板
+                        unlockBySuperUser(view, registerInfo);
+                    } else {
+                        String url = "http://" + registerInfo.getPlatformIp() + ":" + registerInfo.getPlatformPort() + "/sys-svr/account/login/terminal/tabsp";
+                        Controller.getInstance().doLogin(url, userName.getText().toString(), password.getText().toString(), registerInfo.getClassroomCode());
+                    }
+                } else {
+                    Toast.makeText(activity, "平台数据加载异常，请检查是否注册！！", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.tabsp_logo:
+                openEditMode();
+                break;
+            case R.id.scan_text:
+                this.activity.finish();
+                break;
+        }
+    }
+
+    /**
+     * 使用超级用户解锁面板
+     */
+    private void unlockBySuperUser(View view, RegisterInfo registerInfo) {
+        new Thread(() -> {
+            try {
+                this.activity.runOnUiThread(() -> {
+                    ToastUtil.show(this.activity, "处理中.....");
+                });
+                Process process = Runtime.getRuntime().exec("/system/bin/ping -c 1 -w 2 " + registerInfo.getPlatformIp());
+                int status = process.waitFor();
+                if (status == 0) {
+                    RunningLog.run("未满足紧急情况下解锁面板的条件");
+                    this.activity.runOnUiThread(() -> {
+                        view.setEnabled(true);
+                        ToastUtil.show(this.activity, "未满足紧急情况下解锁面板的条件");
+                    });
+                } else {
+                    RunningLog.run("满足紧急情况下解锁面板的条件");
+                    User user = new User();
+                    LoginEvent event = new LoginEvent();
+                    user.setUserName("admin");
+                    user.setLoginType(LoginType.CARD);
+                    event.setEventType(EventType.ON_CLASS);
+                    event.setMessage(user);
+                    EventBus.getDefault().postSticky(event);
+                    this.activity.runOnUiThread(() -> {
+                        view.setEnabled(true);
+                        ToastUtil.show(this.activity, "紧急情况下解锁面板");
+                    });
+                }
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+                RunningLog.error(e.getMessage());
+                this.activity.runOnUiThread(() -> {
+                    view.setEnabled(true);
+                });
+            }
+        }).start();
+    }
+}

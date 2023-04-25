@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../Matrix/src/main/res/drawable/circle_default_drawable.xml" value="0.12" />
+        <entry key="../Matrix/src/main/res/layout/matrix_layout.xml" value="0.15737864176432287" />
+        <entry key="../Matrix/src/standardUi/res/layout/matrix_layout_main.xml" value="0.2824457804361979" />
+        <entry key="../Record/src/main/res/layout-land/record_ava_layout.xml" value="0.1" />
+        <entry key="../Record/src/main/res/layout-land/record_default_container.xml" value="0.27420806884765625" />
+        <entry key="../Record/src/main/res/layout-land/record_hik_layout.xml" value="0.1" />
+        <entry key="../Record/src/main/res/layout/record_default_container.xml" value="0.1" />
+        <entry key="../WirelessProjection/src/main/res/drawable/wireless_item_circle.xml" value="0.158" />
+        <entry key="../WirelessProjection/src/main/res/drawable/wireless_option_click_effective.xml" value="0.1095" />
+        <entry key="../WirelessProjection/src/main/res/layout/activity_main.xml" value="0.43642832438151047" />
+        <entry key="app/src/jlu/res/layout/tabsp_login_enter_input_layout.xml" value="0.5620432535807292" />
+        <entry key="app/src/main/res/drawable/btn_forward_effect.xml" value="0.145" />
+        <entry key="app/src/main/res/drawable/drawable_one_key_on_class_select.xml" value="0.1435" />
+        <entry key="app/src/main/res/layout-land/tabsp_classover_opt_dialog.xml" value="0.13580246913580246" />
+        <entry key="app/src/main/res/layout-land/tabsp_device_closing_dialog.xml" value="0.13580246913580246" />
+        <entry key="app/src/main/res/layout-land/tabsp_device_openning_dialog.xml" value="0.13580246913580246" />
+        <entry key="app/src/main/res/layout-land/tabsp_menu_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/tabsp_title_layout.xml" value="0.47550659179687504" />
+        <entry key="app/src/main/res/layout-land/tabsp_version1_course_layout.xml" value="0.22049607099112822" />
+        <entry key="app/src/main/res/layout-land/tabsp_version1_mainpage_layout.xml" value="0.2009765625" />
+        <entry key="app/src/main/res/layout-land/tabsp_version3_main_content_layout.xml" value="0.12853393554687503" />
+        <entry key="app/src/main/res/layout-land/tabsp_version3_onekey_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/tabsp_wireless_horizontal_option.xml" value="0.298936170212766" />
+        <entry key="app/src/main/res/layout-land/tabsp_wireless_item_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-land/tabsp_wireless_layout.xml" value="0.20072479248046876" />
+        <entry key="app/src/main/res/layout/tabsp_classover_opt_dialog.xml" value="0.381567891438802" />
+        <entry key="app/src/main/res/layout/tabsp_content_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/tabsp_detail_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/tabsp_device_closing_dialog.xml" value="0.41882476806640623" />
+        <entry key="app/src/main/res/layout/tabsp_device_openning_dialog.xml" value="0.6403712296983759" />
+        <entry key="app/src/main/res/layout/tabsp_interactive_layout.xml" value="0.12900390625000002" />
+        <entry key="app/src/main/res/layout/tabsp_login_v1_layout.xml" value="0.37731628417968754" />
+        <entry key="app/src/main/res/layout/tabsp_matrix_interface_item_layout.xml" value="0.7840342203776043" />
+        <entry key="app/src/main/res/layout/tabsp_matrix_layout.xml" value="0.10885416666666667" />
+        <entry key="app/src/main/res/layout/tabsp_menu_layout.xml" value="0.33051910400390627" />
+        <entry key="app/src/main/res/layout/tabsp_network_disconnect_dialog.xml" value="0.7054263565891473" />
+        <entry key="app/src/main/res/layout/tabsp_title_layout.xml" value="0.3394668579101563" />
+        <entry key="app/src/main/res/layout/tabsp_version1_course_layout.xml" value="0.21223907470703127" />
+        <entry key="app/src/main/res/layout/tabsp_version1_mainpage_layout.xml" value="0.3027803282806839" />
+        <entry key="app/src/main/res/layout/tabsp_version1_media_layout.xml" value="0.10960144927536232" />
+        <entry key="app/src/main/res/layout/tabsp_version1_scene_item_layout.xml" value="0.10885416666666667" />
+        <entry key="app/src/main/res/layout/tabsp_version3_onekey_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/tabsp_wireless_drawer_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/tabsp_wireless_drawer_layout.xml" value="0.2783370971679688" />
+        <entry key="app/src/main/res/layout/tabsp_wireless_horizontal_option.xml" value="0.24336283185840707" />
+        <entry key="app/src/main/res/layout/tabsp_wireless_item_layout.xml" value="0.11770833333333333" />
+        <entry key="app/src/main/res/layout/tabsp_wireless_layout.xml" value="0.16912575655205303" />
+        <entry key="app/src/main/res/layout/tabsp_wireless_option_layout.xml" value="0.46689453125" />
+        <entry key="app/src/standard/res/layout-land/tabsp_login_default.xml" value="0.11816578483245149" />
+        <entry key="app/src/standard/res/layout/tabsp_login_default.xml" value="0.13958333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

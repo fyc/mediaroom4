@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lecture_computer" type="id"></item>
+    <item name="lecture_notebook" type="id"></item>
+    <item name="lecture_dpzj" type="id"></item>
+    <item name="lecture_portable" type="id"></item>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="SettingAdapterMatcher">
+
+        <import type="com.sunmnet.mediaroom.tabsp.ui.adapter.HolderAdapter" />
+
+        <variable
+            name="adapter"
+            type="HolderAdapter" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/settingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/px_10">
+
+            <View
+                android:layout_width="@dimen/px_14"
+                android:layout_height="@dimen/px_25"
+                android:background="@drawable/mediaroom4_back_image" />
+
+            <TextView
+                android:id="@+id/device_setting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:text="@string/back"
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/setting_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_20"
+            android:adapter="@{adapter}"
+            android:numColumns="10">
+
+        </GridView>
+
+        <FrameLayout
+            android:id="@+id/setting_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/px_20">
+
+        </FrameLayout>
+    </LinearLayout>
+</layout>

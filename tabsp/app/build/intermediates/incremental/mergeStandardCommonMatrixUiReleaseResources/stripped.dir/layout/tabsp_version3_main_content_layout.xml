@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                                                              
+
+                                                                           
+
+                 
+                                
+                                   
+
+                 
+                            
+                                     
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/px_20" android:tag="layout/tabsp_version3_main_content_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_382"
+            android:layout_marginBottom="@dimen/px_20"
+            android:orientation="horizontal" android:tag="binding_1">
+
+            <include
+                android:id="@id/envirment_layout"
+                layout="@layout/tabsp_version1_envirment_layout"
+                android:layout_width="@dimen/px_226"
+                android:layout_height="@dimen/px_382"
+                                            
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/onekey_layout"
+                layout="@layout/tabsp_version3_onekey_layout"
+                android:layout_width="@dimen/px_226"
+                android:layout_height="@dimen/px_382"
+                app:layout_constraintLeft_toRightOf="@id/envirment_layout"
+                app:layout_constraintRight_toLeftOf="@id/tabsp_volumn_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@id/tabsp_volumn_layout"
+                layout="@layout/tabsp_version1_volumn_layout"
+                android:layout_width="@dimen/px_226"
+                android:layout_height="@dimen/px_382"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <include
+            layout="@layout/tabsp_version3_main_matrix_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_382"
+            android:layout_marginBottom="@dimen/px_20"
+                                          />
+
+        <include
+            layout="@layout/tabsp_version3_quick_device_controlls"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+         

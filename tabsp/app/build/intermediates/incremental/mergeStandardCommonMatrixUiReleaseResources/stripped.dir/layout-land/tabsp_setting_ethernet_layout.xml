@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                 
+                          
+                                                                  
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_color_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/px_20" android:tag="layout-land/tabsp_setting_ethernet_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:minWidth="@dimen/px_600">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="@dimen/dp_5"
+                android:text="@string/name_ip"
+                android:textColor="?login_enter_input_title_main"
+                android:textSize="?common_menu_text_size" />
+
+            <FrameLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="@dimen/px_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/name_please_account"
+                    android:minHeight="@dimen/px_18"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:tag="binding_1"           
+                    android:textColor="?attr/login_enter_tips_textcolor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="?attr/common_text_size" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="@dimen/dp_5"
+                android:text="@string/name_gateway"
+                android:textColor="?login_enter_input_title_main"
+                android:textSize="?common_menu_text_size" />
+
+            <FrameLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/name_please_account"
+                    android:minHeight="@dimen/px_18"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:tag="binding_2"           
+                    android:textColor="?attr/login_enter_tips_textcolor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="?attr/common_text_size"
+
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="@dimen/dp_5"
+                android:text="@string/name_netmask"
+                android:textColor="?login_enter_input_title_main"
+                android:textSize="?common_menu_text_size" />
+
+            <FrameLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/name_please_account"
+                    android:minHeight="@dimen/px_18"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:tag="binding_3"           
+                    android:textColor="?attr/login_enter_tips_textcolor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="?attr/common_text_size" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="@dimen/dp_5"
+                android:text="@string/name_dns1"
+                android:textColor="?login_enter_input_title_main"
+                android:textSize="?common_menu_text_size" />
+
+            <FrameLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/name_please_account"
+                    android:minHeight="@dimen/px_18"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:tag="binding_4"        
+                    android:textColor="?attr/login_enter_tips_textcolor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="?attr/common_text_size" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="@dimen/dp_5"
+                android:text="@string/name_dns2"
+                android:textColor="?login_enter_input_title_main"
+                android:textSize="?common_menu_text_size" />
+
+            <FrameLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/name_please_account"
+                    android:minHeight="@dimen/px_18"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:tag="binding_5"        
+                    android:textColor="?attr/login_enter_tips_textcolor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="?attr/common_text_size" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px_20"
+                android:background="@drawable/btn_onclick_effect_blue"
+                android:paddingLeft="@dimen/px_35"
+                android:paddingTop="@dimen/px_14"
+                android:paddingRight="@dimen/px_35"
+                android:paddingBottom="@dimen/px_14"
+                android:text="@string/name_enbale"
+                android:textColor="@android:color/white"
+                android:textSize="?common_text_size" />
+
+            <Button
+                android:id="@+id/disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px_20"
+                android:background="@drawable/btn_onclick_effect_grey"
+                android:paddingLeft="@dimen/px_35"
+                android:paddingTop="@dimen/px_14"
+                android:paddingRight="@dimen/px_35"
+                android:paddingBottom="@dimen/px_14"
+                android:text="@string/name_disable"
+                android:textSize="?common_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+         

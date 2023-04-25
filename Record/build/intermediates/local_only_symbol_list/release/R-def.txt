@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+drawable player_pause
+drawable player_pause_disable
+drawable player_start
+drawable player_start_disable
+drawable player_stop
+drawable player_stop_disable
+drawable player_wakeup
+id capturing_part
+id play_container
+id record_pause
+id record_start
+id record_stop
+id record_wakeup
+id recording_time
+id tipes
+id vlc_playview
+layout record_ava_layout
+layout record_default_container
+layout record_hik_interacitve_layout
+layout record_hik_layout
+layout record_layout
+layout record_simple_layout
+string app_name
+string record_no_server
+string record_wakeup

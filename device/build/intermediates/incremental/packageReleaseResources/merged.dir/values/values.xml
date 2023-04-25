@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lecture_computer" type="id"/>
+    <item name="lecture_dpzj" type="id"/>
+    <item name="lecture_notebook" type="id"/>
+    <item name="lecture_portable" type="id"/>
+    <string name="app_name">device</string>
+    <string name="name_ILLUMINANCE">光照传感器</string>
+    <string name="name_REMOTEINTERACTION">远程互动</string>
+    <string name="name_ROSTRUMLOCKER">讲台锁</string>
+    <string name="name_airconditioner">空调</string>
+    <string name="name_airquality">空气质量检测仪</string>
+    <string name="name_curtain">窗帘</string>
+    <string name="name_dimmer">调光器</string>
+    <string name="name_door">门</string>
+    <string name="name_fan">风扇</string>
+    <string name="name_freshair">新风机</string>
+    <string name="name_hygrothernograph">温湿度计</string>
+    <string name="name_interactive">交互屏</string>
+    <string name="name_interceptacle">备用</string>
+    <string name="name_light">灯光</string>
+    <string name="name_matrix">视频矩阵</string>
+    <string name="name_pc">讲台电脑</string>
+    <string name="name_projector">投影机</string>
+    <string name="name_recorded">录播</string>
+    <string name="name_screen">幕布</string>
+    <string name="name_smarttv">智能电视</string>
+    <string name="name_sound">功放</string>
+    <string name="name_stupc">学生机</string>
+    <string name="name_wireless">无线投屏</string>
+</resources>

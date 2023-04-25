@@ -1,0 +1,60 @@
+com/sunmnet/mediaroom/matrix/utils/MatrixUtils.java
+ com.sunmnet.mediaroom.matrix.utils.MatrixUtils
+com/sunmnet/mediaroom/matrix/anotherUi/ui/MarqueTextView.java
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.MarqueTextView
+com/sunmnet/mediaroom/matrix/anotherUi/adapter/EmptyHolder.java
+ com.sunmnet.mediaroom.matrix.anotherUi.adapter.EmptyHolder
+com/sunmnet/mediaroom/matrix/ui/adapter/MatrixSceneAdapter.java
+ com.sunmnet.mediaroom.matrix.ui.adapter.MatrixSceneAdapter
+com/sunmnet/mediaroom/matrix/anotherUi/adapter/MatrixSceneHolder.java
+ com.sunmnet.mediaroom.matrix.anotherUi.adapter.MatrixSceneHolder
+com/sunmnet/mediaroom/matrix/anotherUi/ui/MatrixTextView.java
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.MatrixTextView
+com/sunmnet/mediaroom/matrix/BuildConfig.java
+ com.sunmnet.mediaroom.matrix.BuildConfig
+com/sunmnet/mediaroom/matrix/databinding/MatrixLayoutEditBinding.java
+ com.sunmnet.mediaroom.matrix.databinding.MatrixLayoutEditBinding
+com/sunmnet/mediaroom/matrix/anotherUi/bean/MatrixSceneForGridView.java
+ com.sunmnet.mediaroom.matrix.anotherUi.bean.MatrixSceneForGridView
+com/sunmnet/mediaroom/matrix/anotherUi/interfaces/IMatrixInit.java
+ com.sunmnet.mediaroom.matrix.anotherUi.interfaces.IMatrixInit
+com/sunmnet/mediaroom/matrix/anotherUi/interfaces/OnMatrixCheckListener.java
+ com.sunmnet.mediaroom.matrix.anotherUi.interfaces.OnMatrixCheckListener
+com/sunmnet/mediaroom/matrix/anotherUi/ui/MyHorizontalScrollView.java
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.MyHorizontalScrollView
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.MyHorizontalScrollView$ScrollChangedListener
+com/sunmnet/mediaroom/matrix/anotherUi/interfaces/IMatrixLayout.java
+ com.sunmnet.mediaroom.matrix.anotherUi.interfaces.IMatrixLayout
+ com.sunmnet.mediaroom.matrix.anotherUi.interfaces.IMatrixLayout$MatrixChangedListener
+com/sunmnet/mediaroom/matrix/anotherUi/ui/AutoTextView.java
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.AutoTextView
+com/sunmnet/mediaroom/matrix/anotherUi/ui/DiagonalView.java
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.DiagonalView
+com/sunmnet/mediaroom/matrix/ui/widget/MatrixSceneOneLineLayout.java
+ com.sunmnet.mediaroom.matrix.ui.widget.MatrixSceneOneLineLayout
+ com.sunmnet.mediaroom.matrix.ui.widget.MatrixSceneOneLineLayout$ItemClickListener
+com/sunmnet/mediaroom/matrix/databinding/MatrixLayoutMainBinding.java
+ com.sunmnet.mediaroom.matrix.databinding.MatrixLayoutMainBinding
+com/sunmnet/mediaroom/matrix/anotherUi/ui/ColorfulMatrixLayout.java
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.ColorfulMatrixLayout
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.ColorfulMatrixLayout$1
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.ColorfulMatrixLayout$2
+com/sunmnet/mediaroom/matrix/DataBindingTriggerClass.java
+ com.sunmnet.mediaroom.matrix.DataBindingTriggerClass
+com/sunmnet/mediaroom/matrix/anotherUi/ui/MatrixImageView.java
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.MatrixImageView
+com/sunmnet/mediaroom/matrix/impl/MatrixInit.java
+ com.sunmnet.mediaroom.matrix.impl.MatrixInit
+ com.sunmnet.mediaroom.matrix.impl.MatrixInit$1
+com/sunmnet/mediaroom/matrix/anotherUi/interfaces/IHolder.java
+ com.sunmnet.mediaroom.matrix.anotherUi.interfaces.IHolder
+com/sunmnet/mediaroom/matrix/MatrixView.java
+ com.sunmnet.mediaroom.matrix.MatrixView
+ com.sunmnet.mediaroom.matrix.MatrixView$InterafaceHolder
+ com.sunmnet.mediaroom.matrix.MatrixView$OnMatrixSelectListener
+com/sunmnet/mediaroom/matrix/databinding/MatrixLayoutBinding.java
+ com.sunmnet.mediaroom.matrix.databinding.MatrixLayoutBinding
+com/sunmnet/mediaroom/matrix/anotherUi/ui/MatrixTableLayout.java
+ com.sunmnet.mediaroom.matrix.anotherUi.ui.MatrixTableLayout
+com/sunmnet/mediaroom/matrix/anotherUi/adapter/CommonAdapter.java
+ com.sunmnet.mediaroom.matrix.anotherUi.adapter.CommonAdapter

@@ -1,0 +1,1554 @@
+[
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_drawer_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_drawer_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_light_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_light_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_black_board.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/black_board.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_login_edit_password.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_login_edit_password.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_vga_notebook_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_vga_notebook_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_scene_item_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/scene_item_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_menu_mainpage_unselect.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_menu_mainpage_unselect.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_main_matrix_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_main_matrix_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_matrix_interface_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_matrix_interface_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_switch_custom_thumb_on.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/switch_custom_thumb_on.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_onclick_effect_grey.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_onclick_effect_grey.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_device_closing_dialog.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_device_closing_dialog.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_menu_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_setting_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_setting_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_matrix_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_matrix_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_light_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_light_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_rate_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_rate_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_custom_indicator_bg_oval_alpha.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/custom_indicator_bg_oval_alpha.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_custom_output_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_custom_output_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_device_common_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_device_common_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_device_closing_dialog.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_device_closing_dialog.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_language_switcher.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_language_switcher.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_doorlock_open.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/doorlock_open.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_device_batch_opt_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/device_batch_opt_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_envirment_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_envirment_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_password_invisible.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_password_invisible.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_custom_input_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_custom_input_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_volumndrawer_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_volumndrawer_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_classover_opt_dialog.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_classover_opt_dialog.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_door_open.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/door_open.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_devicype_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_devicype_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_detail_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_detail_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_poor_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_poor_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_grey_bottom_border.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/grey_bottom_border.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_title_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_title_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_menu_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_rollingtext_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_rollingtext_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_custom_device_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_custom_device_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_login_center_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_login_center_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_custom_device_detail_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_custom_device_detail_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_door_magnetic_status_open.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/door_magnetic_status_open.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-hdpi_ic_onekey_class_on_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-hdpi/ic_onekey_class_on_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_excellent.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_excellent.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_login_qrcode.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_login_qrcode.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_device_common_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_device_common_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/color_color_fault_description_rb.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/color/color_fault_description_rb.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_language_switcher.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_language_switcher.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_vga_other_unselect.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_vga_other_unselect.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_mainpage_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_mainpage_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_login_enter_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/layout-land/tabsp_login_enter_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_default_door_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_default_door_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_freshair_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_freshair_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_interactive_pc_unselect.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_interactive_pc_unselect.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_device_listviewitem_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_device_listviewitem_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_freshair_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_freshair_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_poor.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_poor.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_discussion_output_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_discussion_output_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_network_disconnect_dialog.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_network_disconnect_dialog.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_login_qrcode.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_login_qrcode.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_menu_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_discusstion_group_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_discusstion_group_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_classover_opt_dialog.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_classover_opt_dialog.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_login_connect_lock.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_login_connect_lock.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_dialog_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/dialog_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_quick_device_controlls.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_quick_device_controlls.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_minus.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/minus.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_freshair_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_freshair_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_class_switcher_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_class_switcher_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_display_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_display_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xxxhdpi_ic_onekey_class_on_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xxxhdpi/ic_onekey_class_on_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_switch_custom_thumb_selector.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/switch_custom_thumb_selector.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_horizontal_option.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_horizontal_option.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_matrix_scene_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_matrix_scene_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_lecture_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_lecture_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xhdpi_ic_onekey_class_on_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xhdpi/ic_onekey_class_on_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_circle_grey.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/circle_grey.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_class_switcher_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_class_switcher_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/anim_tabsp_login_spinning.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/anim/tabsp_login_spinning.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_devicype_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_devicype_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_discussion_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/discussion_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xxxhdpi_ic_onekey_class_on_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xxxhdpi/ic_onekey_class_on_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_user_login_edit_logo.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/user_login_edit_logo.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_fault_description_rg_bg.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/fault_description_rg_bg.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_option_stop.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_option_stop.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_detail_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_detail_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_volumn_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_volumn_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_login_default.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/layout/tabsp_login_default.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_vga_other_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_vga_other_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_display_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_display_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_custom_thumb_bg_oval_alpha.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/custom_thumb_bg_oval_alpha.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_rate_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_rate_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_mode_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_mode_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_volumn.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_volumn.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_device_openning_dialog.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_device_openning_dialog.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_drawer_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_drawer_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_login_enter_input_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/layout-land/tabsp_login_enter_input_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_airconditioner_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_airconditioner_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_switch_custom_track_selector.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/switch_custom_track_selector.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_custom_output_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_custom_output_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_item.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_item.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-anydpi-v24_ic_onekey_class_over_white.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-anydpi-v24/ic_onekey_class_over_white.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_option_file.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_option_file.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_circle_select_effective.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/circle_select_effective.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_select_matrix_main_out_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/select_matrix_main_out_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_vga_showcase_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_vga_showcase_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_login_enter_input_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/layout/tabsp_login_enter_input_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_main_acitivity_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_main_acitivity_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_door_lock_status_close.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/door_lock_status_close.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_grey_bottom_border_transparent_bg.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/grey_bottom_border_transparent_bg.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_listview_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_listview_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_course_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_course_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_disable_no_padding.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_disable_no_padding.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_rate_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_rate_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_grey_right_bottom_border_transparent_bg.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/grey_right_bottom_border_transparent_bg.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_detail_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_detail_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-ldpi_ic_onekey_class_on_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-ldpi/ic_onekey_class_on_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_option_unlock.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_option_unlock.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_option_resume.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_option_resume.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_abc_btn_check_material.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_circle_selected.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/circle_selected.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_discussion_input_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_discussion_input_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xxxhdpi_ic_onekey_class_over_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xxxhdpi/ic_onekey_class_over_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_switch_custom_thumb_off.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/switch_custom_thumb_off.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_volumn_backward_effective.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/volumn_backward_effective.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_envirment_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_envirment_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_scene_item_select_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/scene_item_select_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_main_acitivity_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_main_acitivity_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_default_logo_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_default_logo_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_grey_border.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/grey_border.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_option_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_option_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_good.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_good.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_activity_login_background.jpg.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/activity_login_background.jpg"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_bottom_border_dash.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/bottom_border_dash.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_scene_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_scene_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_title_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_title_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_door_lock_status_open.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/door_lock_status_open.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_door_close.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/door_close.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_vga_notebook_unselect.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_vga_notebook_unselect.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_menu_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_login_swip_card_tips.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_login_swip_card_tips.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_horizontal_option.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_horizontal_option.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_mediar_vga_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_mediar_vga_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_version3_envirment_unselect.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_version3_envirment_unselect.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_main_content_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_main_content_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xhdpi_ic_onekey_class_over_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xhdpi/ic_onekey_class_over_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_scene_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_scene_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_mainpage_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_mainpage_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_lecture_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_lecture_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_version3_record_unselect.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_version3_record_unselect.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_media_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_media_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_forward_effect.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_forward_effect.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_main_device_batch_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_main_device_batch_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-hdpi_ic_onekey_class_on_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-hdpi/ic_onekey_class_on_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_plus_btn_primary.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_plus_btn_primary.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xxhdpi_ic_onekey_class_over_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xxhdpi/ic_onekey_class_over_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_door_magnetic_status_close.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/door_magnetic_status_close.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_opt_closing.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_opt_closing.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_line_dotted.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/line_dotted.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_vga_pc_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_vga_pc_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_main_content_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_main_content_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_option_mark.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_option_mark.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_common_press_effect.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/common_press_effect.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_device_listviewitem_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_device_listviewitem_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_volumn_setting_plus.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/volumn_setting_plus.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_volumn.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_volumn.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_main_logo.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/drawable/tabsp_main_logo.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_version3_detail_btn.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_version3_detail_btn.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_content_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_content_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_enter_uneffective_border_ratius.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_enter_uneffective_border_ratius.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-anydpi-v24_ic_onekey_class_on_blue.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-anydpi-v24/ic_onekey_class_on_blue.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_setting_quit_app_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_setting_quit_app_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_switch_custom_track_off.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/switch_custom_track_off.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_drawable_one_key_class_white_bg.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/drawable_one_key_class_white_bg.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_good_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_good_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_custom_discuss_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_custom_discuss_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_login_default.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/layout-land/tabsp_login_default.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_radius_15_transparent_drawable.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/radius_15_transparent_drawable.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_matrix_interface_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_matrix_interface_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/color_color_one_key_class_text_unselect_color.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/color/color_one_key_class_text_unselect_color.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_option_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_option_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_confrence_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_confrence_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-hdpi_ic_onekey_class_over_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-hdpi/ic_onekey_class_over_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_selection_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_selection_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_minus_btn_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_minus_btn_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xxhdpi_ic_onekey_class_over_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xxhdpi/ic_onekey_class_over_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_device_off_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/device_off_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_login_v1_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_login_v1_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_record_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_record_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_main_device_batch_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_main_device_batch_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_onekey_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_onekey_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_matrix_for_free.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_matrix_for_free.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_custom_input_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_custom_input_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_drawable_one_key_over_class_unselect.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/drawable_one_key_over_class_unselect.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_top_grey_border.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/top_grey_border.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_activity_login_enter_lock.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/activity_login_enter_lock.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_version3_envirment_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_version3_envirment_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_matrix_scene_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_matrix_scene_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_lecture_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_lecture_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_vga_showcase_unselect.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_vga_showcase_unselect.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_interactive_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_interactive_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_discussion_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_discussion_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_button_disable.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/button_disable.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_login_edit_user.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_login_edit_user.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_unknow_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_unknow_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_discussion_input_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_discussion_input_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xxxhdpi_ic_onekey_class_over_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xxxhdpi/ic_onekey_class_over_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_scene_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_scene_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_drawer_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_drawer_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_device_on_corner_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/device_on_corner_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_login_spining.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_login_spining.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_dialog_select_main_out_screen.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/dialog_select_main_out_screen.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_dimmer_controll_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_dimmer_controll_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_setting_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_setting_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-mdpi_ic_onekey_class_on_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-mdpi/ic_onekey_class_on_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_drawable_one_key_on_class_select.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/drawable_one_key_on_class_select.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_button_disable_two.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/button_disable_two.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_setting_ethernet_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_setting_ethernet_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/anim_rotate_progressing.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/anim/rotate_progressing.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_selector_thumb_ripple_drawable.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/selector_thumb_ripple_drawable.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_volumn_add_normal.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/volumn_add_normal.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xhdpi_ic_onekey_class_over_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xhdpi/ic_onekey_class_over_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_matrix_scene_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_matrix_scene_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_activity_login_enter_cardswipe.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/activity_login_enter_cardswipe.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_display_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_display_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_volumn_minus_normal.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/volumn_minus_normal.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_interactive_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_interactive_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_interactive_pc_select.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_interactive_pc_select.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_device_controll_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_device_controll_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-mdpi_ic_onekey_class_over_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-mdpi/ic_onekey_class_over_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_mode_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_mode_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_option_volumn.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_option_volumn.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_discussion_output_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_discussion_output_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_lecture_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_lecture_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_option_lock.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_option_lock.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_item_selected_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/item_selected_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_login_enter_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/layout/tabsp_login_enter_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_login_center_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_login_center_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_volumn_text_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/volumn_text_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_activity_login_enter_background.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/drawable/activity_login_enter_background.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_course_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_course_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_activity_main_background.jpg.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/activity_main_background.jpg"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_media_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_media_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_door_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_door_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_volumn_opt_normal.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/volumn_opt_normal.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-anydpi-v24_ic_onekey_class_over_blue.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-anydpi-v24/ic_onekey_class_over_blue.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_airconditioner_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_airconditioner_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_plus_btn_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_plus_btn_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_door_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_door_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_login_background.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/drawable/tabsp_login_background.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_volumndrawer_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_volumndrawer_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_content_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_content_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_title_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_title_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_scene_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_scene_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_airconditioner_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_airconditioner_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_custom_discuss_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_custom_discuss_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_matrix_output_select.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/matrix_output_select.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xhdpi_ic_onekey_class_on_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xhdpi/ic_onekey_class_on_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_volumn_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_volumn_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_device_close_drawable.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/device_close_drawable.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_enabled.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_enabled.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-hdpi_ic_onekey_class_over_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-hdpi/ic_onekey_class_over_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_quick_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_quick_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_matrix_main_out_spinner_bg.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/matrix_main_out_spinner_bg.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_wireless_option_whiteboard.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_wireless_option_whiteboard.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_abc_btn_radio_material.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_login_v1_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_login_v1_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_device_off_corner_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/device_off_corner_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_record_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_record_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_version3_record_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_version3_record_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xxhdpi_ic_onekey_class_on_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xxhdpi/ic_onekey_class_on_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_device_controll_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_device_controll_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_device_controll_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_device_controll_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_interactive_vga_unselect.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_interactive_vga_unselect.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_menu_onselected_drawable.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/menu_onselected_drawable.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_main_color_border.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/main_color_border.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_custom_discuss_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_custom_discuss_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_device_on_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/device_on_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_rollingtext_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_rollingtext_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-mdpi_ic_onekey_class_over_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-mdpi/ic_onekey_class_over_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_onclick_effect_blue.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_onclick_effect_blue.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_reverse_effective_two.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_reverse_effective_two.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_reverse_effective.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_reverse_effective.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_onclick_effect_black_trasparent.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_onclick_effect_black_trasparent.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_plus.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/plus.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_quick_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_quick_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_onekey_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_onekey_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_selection_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_selection_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_quick_device_controlls.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_quick_device_controlls.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_scene_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_scene_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_door_locker_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/door_locker_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_dimmer_controll_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_dimmer_controll_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_vga_pc_unselected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_vga_pc_unselected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_listview_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_listview_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_unknow_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_unknow_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_media_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_media_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_scene_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_scene_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_drawable_one_key_over_class_select.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/drawable_one_key_over_class_select.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-ldpi_ic_onekey_class_over_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-ldpi/ic_onekey_class_over_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_freshair_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_freshair_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_circle_rate_default.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/circle_rate_default.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_matrix_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_matrix_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version2_confrence_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version2_confrence_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_custom_device_detail_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_custom_device_detail_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-xxhdpi_ic_onekey_class_on_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-xxhdpi/ic_onekey_class_on_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_custom_device_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_custom_device_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_network_disconnect_dialog.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_network_disconnect_dialog.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_login_paycard.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_login_paycard.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_minus_btn_primary.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_minus_btn_primary.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_logo.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/standard/res/drawable/tabsp_logo.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_disable.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_disable.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_custom_discuss_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_custom_discuss_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_average_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_average_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_circle_rate_selected.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/circle_rate_selected.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_activity_login_enter_locke.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/activity_login_enter_locke.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-ldpi_ic_onekey_class_on_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-ldpi/ic_onekey_class_on_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_average.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_average.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_btn_enable_no_padding.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/btn_enable_no_padding.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_drawable_one_key_on_class_unselect.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/drawable_one_key_on_class_unselect.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_title_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_title_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_matrix_scene_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_matrix_scene_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_device_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_device_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_wireless_drawer_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_wireless_drawer_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_matrix_for_free.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_matrix_for_free.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_enter_effective_border_radius.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_enter_effective_border_radius.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_device_openning_dialog.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_device_openning_dialog.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_mediaroom4_unlock.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_mediaroom4_unlock.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_custom_device_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_custom_device_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_interactive_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_interactive_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_doorlock_close.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/doorlock_close.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_airconditioner_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_airconditioner_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_device_open_drawable.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/device_open_drawable.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_detail_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_detail_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_volumn_forward_effective.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/volumn_forward_effective.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_interactive_hdmi_select.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_interactive_hdmi_select.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_rate_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_rate_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_progressing_image.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/progressing_image.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version1_mediar_vga_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version1_mediar_vga_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/color_color_one_key_class_text_select_color.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/color/color_one_key_class_text_select_color.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_menu_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_switch_custom_track_on.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/switch_custom_track_on.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version3_menu_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version3_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_excellent_selected.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_excellent_selected.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_door_lock.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/door_lock.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_setting_ethernet_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_setting_ethernet_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_selection_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_selection_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-mdpi_ic_onekey_class_on_white.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-mdpi/ic_onekey_class_on_white.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_device_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_device_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_interactive_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_interactive_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_volumn_setting_minus.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/volumn_setting_minus.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_dialog_fault_description.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/dialog_fault_description.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_version3_normal_back.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_version3_normal_back.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_display_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_display_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_version2_discussion_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_version2_discussion_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version1_media_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version1_media_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_circle_12px.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/circle_12px.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-ldpi_ic_onekey_class_over_blue.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-ldpi/ic_onekey_class_over_blue.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_settingmenu_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_settingmenu_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_device_controll_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_device_controll_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_login_enter_account_effect.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_login_enter_account_effect.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_triangle_down.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/triangle_down.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_wireless_selection_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_wireless_selection_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_mediaroom4_interactive_vga_select.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/mediaroom4_interactive_vga_select.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable_tabsp_default_logo.png.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/drawable/tabsp_default_logo.png"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_version3_main_matrix_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_version3_main_matrix_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_login_swip_card_tips.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_login_swip_card_tips.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_default_door_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_default_door_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/drawable-anydpi-v24_ic_onekey_class_on_white.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/generated/res/pngs/standardCommonMatrixUi/release/drawable-anydpi-v24/ic_onekey_class_on_white.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_discusstion_group_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_discusstion_group_item.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout_tabsp_custom_device_item_layout.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout/tabsp_custom_device_item_layout.xml"
+    },
+    {
+        "merged": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/build/intermediates/res/merged/standardCommonMatrixUi/release/layout-land_tabsp_settingmenu_item.xml.flat",
+        "source": "/Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/res/layout-land/tabsp_settingmenu_item.xml"
+    }
+]

@@ -1,0 +1,34 @@
+                                                                   
+
+    
+
+                                                                                           
+                 
+                       
+                                
+           
+
+    <FrameLayout
+        android:layout_width="match_parent" android:id="@+id/mode_container"
+        android:layout_height="match_parent" android:tag="layout-land/tabsp_version3_devicype_item_layout_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <View
+            android:id="@+id/selectTag"
+            android:layout_width="@dimen/px_2"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="?colorPrimary"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" android:id="@+id/mode_name"
+            android:gravity="center"
+            android:paddingTop="@dimen/px_20"
+            android:paddingBottom="@dimen/px_20"
+            android:tag="binding_1"              
+            android:textColor="?device_black_text_color"
+            android:textSize="?common_menu_text_size" />
+    </FrameLayout>
+         

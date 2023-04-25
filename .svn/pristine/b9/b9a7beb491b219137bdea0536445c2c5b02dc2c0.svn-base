@@ -1,0 +1,152 @@
+package com.sunmnet.mediaroom.tabsp.ui.dispatch.fragmentDispatcher;
+
+import android.os.CountDownTimer;
+import android.view.View;
+import android.widget.Chronometer;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.sunmnet.mediaroom.common.BaseActivity;
+import com.sunmnet.mediaroom.common.events.Event;
+import com.sunmnet.mediaroom.common.events.EventType;
+import com.sunmnet.mediaroom.common.tools.CommonUtil;
+import com.sunmnet.mediaroom.common.tools.DateUtil;
+import com.sunmnet.mediaroom.common.tools.RunningLog;
+import com.sunmnet.mediaroom.tabsp.R;
+import com.sunmnet.mediaroom.tabsp.TabspApplication;
+import com.sunmnet.mediaroom.tabsp.bean.TabspConfig;
+import com.sunmnet.mediaroom.tabsp.common.Constants;
+import com.sunmnet.mediaroom.tabsp.ui.dialog.FaultDescriptionDialog;
+import com.sunmnet.mediaroom.tabsp.ui.dialog.SelectMatrixMainOutDialog;
+
+import org.greenrobot.eventbus.EventBus;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 标题分发
+ */
+
+@Route(path = Constants.ROUTERPATH_CONTROLLER_TITLE)
+public class TitleDispatcher extends AbstractFragmentDispatcher {
+    Calendar calendar = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+    @BindView(R.id.classRoomName)
+    TextView classRoomName;
+    @BindView(R.id.date)
+    TextView date;
+    @BindView(R.id.time)
+    Chronometer time;
+    @BindView(R.id.tabsp_logo)
+    ImageView logo;
+
+    BaseActivity activity;
+
+    // 最多点击次数
+    private static final int MAX_CLICK_TIMES = 5;
+    // 点击次数
+    private int click_times = 0;
+    // 点击弹出弹窗倒计时
+    private CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+        @Override
+        public void onTick(long millisUntilFinished) {
+
+        }
+
+        @Override
+        public void onFinish() {
+            click_times = 0;
+        }
+    };
+
+    @OnClick({R.id.languageswitcher, R.id.classRoomName, R.id.tabsp_logo, R.id.tabsp_report_fault})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.languageswitcher:
+                Event event = new Event();
+                event.setEventType(EventType.CHANGE_LANGUAGE);
+                EventBus.getDefault().post(event);
+                break;
+            case R.id.classRoomName:
+            case R.id.tabsp_logo:
+                countDownTimer.cancel();
+                click_times++;
+                if (click_times == MAX_CLICK_TIMES) {
+                    if (activity != null) {
+                        RunningLog.run("弹出提示框");
+                        SelectMatrixMainOutDialog dialog = new SelectMatrixMainOutDialog();
+                        dialog.show(activity.getSupportFragmentManager(), "select_main_out");
+                    }
+                }
+                countDownTimer.start();
+                break;
+            case R.id.tabsp_report_fault:
+                FaultDescriptionDialog dialog = new FaultDescriptionDialog();
+                dialog.show(activity.getSupportFragmentManager(), "fault_description");
+                break;
+        }
+    }
+
+    private String getDateOfWeek(int week) {
+        String[] weeks = new String[]{
+                "周日", "周一", "周二", "周三", "周四", "周五", "周六",
+                "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        };
+        return weeks[week];
+    }
+
+    private String getDate(Date date) {
+        String datestr = null;
+        TabspConfig config = TabspApplication.getInstance().getConfig();
+        calendar.setTime(date);
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+        if (config.getLang() == Locale.ENGLISH) {
+            datestr = DateUtil.getNowDateString("yyyy-MM-dd");
+            datestr += "  " + getDateOfWeek(dayOfWeek - 1 + 7);
+        } else {
+            datestr = DateUtil.getNowDateString("MM月dd日");
+            datestr += "  " + getDateOfWeek(dayOfWeek - 1);
+        }
+        return datestr;
+    }
+
+    @Override
+    public void invisible() {
+        countDownTimer.cancel();
+    }
+
+    @Override
+    public void onReady() {
+        time.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+            @Override
+            public void onChronometerTick(Chronometer chronometer) {
+                Date dt = new Date();
+                date.setText(getDate(dt));
+                chronometer.setText(sdf.format(dt));
+            }
+        });
+        time.start();
+    }
+
+    @Override
+    public <E> void dispatch(View view, E e) {
+        super.dispatch(view, e);
+        if (e instanceof BaseActivity) this.activity = (BaseActivity) e;
+        ButterKnife.bind(this, view);
+        classRoomName.setText(TabspApplication.getInstance().getConfig().getRegisterInfo().getClassroomName());
+        CommonUtil.loadResourceIntoImageWithoutCache(TabspApplication.getInstance(), TabspApplication.getInstance().getConfig().getBaseLogo(), R.drawable.tabsp_main_logo, logo);
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.tabsp_title_layout;
+    }
+}

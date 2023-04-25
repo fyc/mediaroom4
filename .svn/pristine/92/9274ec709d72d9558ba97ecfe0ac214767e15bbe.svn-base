@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sunmnet.mediaroom.matrix.ui.widget.SecondMatrixLayout
+            android:id="@+id/sml_matrix"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/iv_left_navigation"
+            app:layout_constraintEnd_toStartOf="@id/iv_right_navigation"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_marginRight="@dimen/px_20"/>
+
+        <ImageView
+            android:id="@+id/iv_left_navigation"
+            android:layout_width="@dimen/px_48"
+            android:layout_height="@dimen/px_70"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/px_28"
+            android:layout_marginBottom="@dimen/px_20"
+            android:padding="@dimen/px_15"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/left_navigation"
+            tools:ignore="RtlHardcoded,UnusedAttribute" />
+
+        <ImageView
+            android:id="@+id/iv_right_navigation"
+            android:layout_width="@dimen/px_48"
+            android:layout_height="@dimen/px_70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/px_28"
+            android:layout_marginBottom="@dimen/px_20"
+            android:padding="@dimen/px_15"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/right_navigation"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/tv_page_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/px_20"
+            android:textSize="@dimen/px_30"
+            android:textColor="@color/color_477ED7"
+            tools:text="12/13"
+            tools:textColor="@android:color/white"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

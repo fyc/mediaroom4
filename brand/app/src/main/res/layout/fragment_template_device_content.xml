@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/device_type_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="设备控制"
+        android:textColor="#FFF"
+        android:textSize="@dimen/px_18"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_20"
+        android:background="@color/bg_template_content"
+        android:paddingLeft="@dimen/px_20"
+        android:paddingTop="@dimen/px_12"
+        android:paddingRight="@dimen/px_20"
+        android:paddingBottom="@dimen/px_12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#FFF"
+            android:text="全局控制"
+            android:textStyle="bold"
+            android:textSize="@dimen/px_16" />
+
+        <Button
+            android:id="@+id/all_open"
+            android:layout_width="@dimen/px_110"
+            android:layout_height="@dimen/px_50"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_20"
+            android:layout_toLeftOf="@id/all_close"
+            android:background="@drawable/selector_control_center_button"
+            android:text="全开"
+            android:textSize="@dimen/px_16" />
+
+        <Button
+            android:id="@+id/all_close"
+            android:layout_width="@dimen/px_110"
+            android:layout_height="@dimen/px_50"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_control_center_button"
+            android:text="全关"
+            android:textSize="@dimen/px_16" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/px_10" />
+
+</LinearLayout>

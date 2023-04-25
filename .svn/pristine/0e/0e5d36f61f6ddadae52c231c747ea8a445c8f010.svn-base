@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/px_30">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_20"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_dialog_header" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_10"
+            android:layout_toRightOf="@id/header"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/searchType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="80dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/search_textColor" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp">
+
+                <com.sunmnet.mediaroom.brand.view.DropEditText
+                    android:id="@+id/unionText"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_query"
+                    android:ellipsize="marquee"
+                    android:hint="点击输入查询条件"
+                    android:padding="@dimen/query_dialog_input_padding"
+                    android:singleLine="true"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/query_dialog_text_size"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/searchText"
+                    android:layout_width="@dimen/px_270"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_query"
+                    android:maxLines="1"
+                    android:padding="@dimen/query_dialog_input_padding"
+                    android:textSize="@dimen/query_dialog_text_size" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/searchConfirm"
+                android:layout_width="@dimen/px_106"
+                android:layout_height="@dimen/px_40"
+                android:background="@drawable/bg_btn_query_confirm"
+                android:gravity="center"
+                android:text="搜索"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/query_dialog_btn_text_size" />
+
+            <Button
+                android:id="@+id/searchClear"
+                android:layout_width="@dimen/px_106"
+                android:layout_height="@dimen/px_40"
+                android:layout_marginLeft="@dimen/px_10"
+                android:background="@drawable/bg_btn_query_clear"
+                android:text="清空"
+                android:textSize="@dimen/query_dialog_btn_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dialog_margin_top"
+        android:background="@drawable/round_rect_shadow"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dialog_padding_left_right"
+        android:paddingTop="@dimen/dialog_padding_top"
+        android:paddingRight="@dimen/dialog_padding_left_right"
+        android:paddingBottom="@dimen/dialog_padding_bottom">
+
+        <LinearLayout
+            android:id="@+id/dateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/prevDate"
+                android:layout_width="@dimen/px_48"
+                android:layout_height="@dimen/px_48"
+                android:padding="@dimen/px_12"
+                android:src="@drawable/icon_query_course_direction" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="10dp"
+                android:layout_weight="0.36"
+                android:background="@drawable/bg_query_course_dash_line"
+                android:layerType="software" />
+
+            <TextView
+                android:id="@+id/search_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="2019-05-17"
+                android:textColor="@color/search_textColor"
+                android:textSize="@dimen/px_24" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="10dp"
+                android:layout_weight="0.36"
+                android:background="@drawable/bg_query_course_dash_line"
+                android:layerType="software" />
+
+            <ImageView
+                android:id="@+id/nextDate"
+                android:layout_width="@dimen/px_48"
+                android:layout_height="@dimen/px_48"
+                android:padding="@dimen/px_12"
+                android:rotation="180"
+                android:src="@drawable/icon_query_course_direction" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dialog_margin_top">
+
+            <com.haibin.calendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:visibility="invisible"
+                app:calendar_height="54dp"
+                app:calendar_padding="10dp"
+                app:current_month_lunar_text_color="#CFCFCF"
+                app:current_month_text_color="#333333"
+                app:min_year="2004"
+                app:month_view="com.sunmnet.mediaroom.brand.view.SimpleMonthView"
+                app:other_month_text_color="#e1e1e1"
+                app:scheme_text_color="#333"
+                app:scheme_theme_color="#333"
+                app:selected_text_color="#fff"
+                app:selected_theme_color="#F0BB1A"
+                app:week_background="#fff"
+                app:week_text_color="#111"
+                app:week_view="com.sunmnet.mediaroom.brand.view.SimpleWeekView"
+                app:year_view_day_text_color="#333333"
+                app:year_view_day_text_size="9sp"
+                app:year_view_month_text_color="#ff0000"
+                app:year_view_month_text_size="20sp"
+                app:year_view_scheme_color="#f17706" />
+
+            <FrameLayout
+                android:id="@+id/searchContentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="300dp">
+
+                <FrameLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <FrameLayout
+                    android:id="@+id/searchingTips"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/search_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_query_course_no_data" />
+
+                    <ProgressBar
+                        android:id="@+id/search_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="invisible" />
+                </FrameLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

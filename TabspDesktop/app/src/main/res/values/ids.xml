@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="platform_ip" type="id"></item>
+    <item name="id_ethernet" type="id"></item>
+    <item name="id_wireless" type="id"></item>
+    <item name="id_version_fragment" type="id"></item>
+    <item name="id_platform_IP" type="id"></item>
+    <item name="id_platform_port" type="id"></item>
+    <item name="id_gateway" type="id"></item>
+    <item name="id_ip" type="id"></item>
+    <item name="id_dns1" type="id"></item>
+    <item name="id_dns2" type="id"></item>
+    <item name="id_netmask" type="id"></item>
+    <item name="id_ssid" type="id"></item>
+    <item name="id_pwd" type="id"></item>
+    <item name="id_check" type="id"></item>
+    <item name="id_enable" type="id"></item>
+    <item name="id_update" type="id"></item>
+</resources>

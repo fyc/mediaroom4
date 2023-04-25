@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml:1:1-2:52
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml:1:1-2:52
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml:1:1-2:52
+	package
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml:2:5-49
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/src/main/AndroidManifest.xml

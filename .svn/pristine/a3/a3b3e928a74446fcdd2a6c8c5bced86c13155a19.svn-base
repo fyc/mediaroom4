@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--登录页面背景-->
+    <attr name="activity_login_background" format="reference|color"></attr>
+    <attr name="activity_login_enter_background" format="reference|color"></attr>
+    <!--首页页面背景-->
+    <attr name="activity_main_background" format="color|reference"></attr>
+
+    <attr name="login_enter_btn_textsize" format="dimension"></attr>
+    <attr name="login_enter_tips_textsize" format="dimension"></attr>
+
+    <attr name="login_enter_tips_textcolor" format="color"></attr>
+
+    <attr name="login_enter_input_title_main" format="color"></attr>
+    <attr name="login_enter_input_title_main_size" format="dimension"></attr>
+    <attr name="login_enter_input_title_other" format="color"></attr>
+    <attr name="login_enter_input_title_other_size" format="dimension"></attr>
+    <attr name="login_enter_input_tipse" format="color"></attr>
+    <attr name="login_enter_input_tipse_size" format="dimension"></attr>
+    <attr name="error_text_color" format="color"></attr>
+    <attr name="title_background" format="color"></attr>
+    <attr name="login_input_rect_border_color" format="color"></attr>
+    <attr name="colorPrimary" format="color"></attr>
+    <attr name="inside_background" format="color"></attr>
+    <!--通用普通文字大小-->
+    <attr name="common_text_size" format="dimension"></attr>
+    <!--通用文字字体颜色-->
+    <attr name="common_text_color" format="color"></attr>
+    <!--菜单文字大小-->
+    <attr name="common_menu_text_size" format="dimension"></attr>
+    <!--通用菜单字体颜色-->
+    <attr name="common_menu_text_color" format="color"></attr>
+    <attr name="selected_menu_text_color" format="color"></attr>
+    <attr name="selected_menu_background" format="color|reference"></attr>
+    <!--通用标题大小-->
+    <attr name="common_title_text_size" format="dimension"></attr>
+    <attr name="common_title_text_color" format="color"></attr>
+
+    <!--通用选中字体颜色-->
+    <attr name="common_selected_text_color" format="color"></attr>
+    <!--标题重要文字大小-->
+    <attr name="title_important_text_size" format="dimension"></attr>
+    <!--标题不重要的文字大小-->
+    <attr name="title_useless_text_size" format="dimension"></attr>
+    <attr name="default_edittext_style" format="reference"></attr>
+
+    <attr name="default_title_background" format="color|reference"></attr>
+    <attr name="default_title_weather_img_size" format="dimension"></attr>
+    <attr name="default_menu_background" format="color"></attr>
+    <attr name="default_matrix_interface_color" format="color"></attr>
+    <attr name="default_matrix_interface_selected_color" format="color"></attr>
+    <attr name="mediaroom4_menu_selected_color" format="color"></attr>
+    <attr name="mediaroom4_menu_unselected_color" format="color"></attr>
+    <attr name="device_off_background_color" format="color"></attr>
+    <attr name="device_batch_off_background_color" format="color"></attr>
+    <attr name="device_black_text_color" format="color"></attr>
+    <attr name="version1_scene_text_color" format="color"></attr>
+    <attr name="item_select_background_color" format="color"></attr>
+    <attr name="dimmer_power_less" format="color"></attr>
+    <attr name="door_item_locker_background" format="color"></attr>
+    <attr name="class_switcher_color" format="color"></attr>
+    <attr name="version2_discusstion_color" format="color"></attr>
+    <attr name="disable_color" format="color"></attr>
+    <attr name="matrix_output_select" format="color"></attr>
+</resources>

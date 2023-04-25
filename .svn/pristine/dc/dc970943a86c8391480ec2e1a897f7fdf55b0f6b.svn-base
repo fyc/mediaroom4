@@ -1,0 +1,112 @@
+package com.sunmnet.mediaroom.device.controll;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.sunmnet.mediaroom.common.bean.User;
+import com.sunmnet.mediaroom.common.events.EventType;
+import com.sunmnet.mediaroom.common.events.UserType;
+import com.sunmnet.mediaroom.common.tools.OkHttpUtil;
+import com.sunmnet.mediaroom.common.tools.RunningLog;
+import com.sunmnet.mediaroom.common.tools.ThreadUtils;
+import com.sunmnet.mediaroom.device.bean.LoginEvent;
+import com.sunmnet.mediaroom.device.controll.service.ITransformer;
+import com.sunmnet.mediaroom.device.controll.service.LoginService;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+
+import okhttp3.Response;
+
+public class LoginServiceImpl implements LoginService {
+    ITransformer sender;
+
+    public LoginServiceImpl(ITransformer sender) {
+        this.sender = sender;
+        EventBus.getDefault().register(this);
+    }
+
+    @Subscribe
+    public void receivLoginResult(LoginEvent event) {
+    }
+
+    @Override
+    public void doLogin(String userName, String pwd) {
+    }
+
+    private JsonObject findJsonObject(JsonObject object, String... tags) {
+        JsonObject value = null;
+        for (int i = 0; i < tags.length; i++) {
+            if (object.has(tags[i])) {
+                object = object.get(tags[i]).getAsJsonObject();
+                value = object;
+            } else {
+                value = null;
+                break;
+            }
+        }
+        return value;
+    }
+
+    @Override
+    public void doLogin(final String url, final String userName, final String pwd, final String classroomCode) {
+        ThreadUtils.execute(new Runnable() {
+            @Override
+            public void run() {
+                JsonObject jsonObject = new JsonObject();
+                jsonObject.addProperty("username", userName);
+                jsonObject.addProperty("password", pwd);
+                jsonObject.addProperty("classroomCode", classroomCode);
+                LoginEvent loginEvent = new LoginEvent();
+                User user = new User();
+                loginEvent.setMessage(user);
+                try {
+                    Response response = OkHttpUtil.postJson(url, jsonObject.toString());
+                    if (response.isSuccessful()) {
+                        String res = response.body().string();
+                        jsonObject = new JsonParser().parse(res).getAsJsonObject();
+                        boolean isSuccess = jsonObject.get("success").getAsBoolean();
+                        if (isSuccess) {
+                            //登录成功
+                            JsonObject value = findJsonObject(jsonObject, new String[]{"obj", "accountDto"});
+                            if (value != null) {
+                                user.setUserType(UserType.LEVEL_3);
+                                loginEvent.setEventType(EventType.ON_LOGIN);
+                                user.setMessgae("登录成功！！");
+                                jsonObject = new JsonObject();
+                                jsonObject.addProperty("type", "1");
+                                jsonObject.addProperty("accountId", value.get("code").getAsString());
+                                //登录成功后转发登录结果到中控处理
+                                Controller.getInstance().sendMsg("8f", jsonObject.toString());
+                            } else {
+                                user.setUserType(UserType.LEVEL_4);
+                                loginEvent.setEventType(EventType.ON_LOGIN_FAILURE);
+                                user.setMessgae("无法匹配账号信息！！");
+                            }
+
+                        } else {
+                            //登录失败
+                            user.setUserType(UserType.LEVEL_4);
+                            loginEvent.setEventType(EventType.ON_LOGIN_FAILURE);
+                            user.setMessgae(jsonObject.get("msg").getAsString());
+                        }
+                    } else {
+                        user.setUserType(UserType.LEVEL_4);
+                        loginEvent.setEventType(EventType.ON_LOGIN_FAILURE);
+                        user.setMessgae(response.message());
+                    }
+                } catch (Exception e) {
+                    RunningLog.error(e);
+                    loginEvent.setEventType(EventType.ON_LOGIN_FAILURE);
+                    user.setMessgae("网络异常！无法登录！");
+                    user.setUserType(UserType.LEVEL_4);
+                }
+                EventBus.getDefault().postSticky(loginEvent);
+            }
+        });
+    }
+
+    @Override
+    public void release() {
+        EventBus.getDefault().unregister(this);
+    }
+}

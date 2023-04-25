@@ -1,0 +1,7 @@
+include ':app', ':Common', ':Record', ':Matrix',':Device',':WirelessProjection',':ijkplayer'
+project(':Common').projectDir = file('../Common')
+project(':Device').projectDir = file('../Device')
+project(':Record').projectDir = file('../Record')
+project(':Matrix').projectDir = file('../Matrix')
+project(':WirelessProjection').projectDir = file('../WirelessProjection')
+project(':ijkplayer').projectDir = file('../ijkplayer-lib')

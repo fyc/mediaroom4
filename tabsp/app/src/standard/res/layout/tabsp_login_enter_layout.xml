@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/login_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/px_100">
+
+        <ImageView
+            android:id="@id/tabsp_logo"
+            android:layout_width="@dimen/px_114"
+            android:layout_height="@dimen/px_62"
+            android:layout_marginLeft="@dimen/px_30"
+            android:layout_marginTop="@dimen/px_30" />
+
+        <include
+            layout="@layout/tabsp_language_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/name_app_name"
+                android:textColor="?login_enter_input_title_main"
+                android:textSize="?login_enter_input_title_main_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_app_function"
+                android:textColor="?login_enter_input_title_other"
+                android:textSize="?login_enter_input_title_other_size" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/info_input"
+            layout="@layout/tabsp_login_enter_input_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_30" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_40"
+            android:text="@string/tipse_scan_ic_card"
+            android:textColor="?login_enter_input_tipse"
+            android:textSize="@dimen/px_25" />
+
+        <TextView
+            android:id="@+id/scan_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="@dimen/px_5"
+            android:paddingTop="@dimen/px_10"
+            android:paddingEnd="@dimen/px_5"
+            android:paddingBottom="@dimen/px_10"
+            android:text="@string/tipse_scan_qrcode"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/px_25"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</FrameLayout>

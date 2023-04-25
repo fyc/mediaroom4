@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.sunmnet.mediaroom.matrix.anotherUi.ui.MarqueTextView
+        android:id="@+id/tv_main_out_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/px_10"
+        android:paddingBottom="@dimen/px_10"
+        android:paddingStart="@dimen/px_10"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textSize="@dimen/px_25"
+        android:textColor="@android:color/black"
+        tools:text="输出口1输出口1输出口1"/>
+
+</LinearLayout>

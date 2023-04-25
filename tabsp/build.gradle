@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.alibaba.arouter'
+buildscript {
+    ext.kotlin_version = '1.5.30'
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "com.alibaba:arouter-register:1.0.2"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+
+}
+ext {
+    COMPILE_SDK_VERSION = compileSdkVersion = 30
+    BUILD_TOOLS_VERSION = buildToolsVersion = "30.0.3"
+    TARGET_SDK_VERSION = targetSdkVersion = 30
+    MIN_SDK_VERSION = minSdkVersion = 21
+    ANDROID_SUPPORT_VERSION = "28.+"
+    JarSign = [
+            "outputDirectory": './',
+            "outputVersionName" : '',
+            //"pk8": 'F:\\sunmnet\\workspace\\mediaroom4\\mediaroom4-android\\tabsp\\app\\release\\7inch\\platform.pk8',//文件路径
+            //"pem": 'F:\\sunmnet\\workspace\\mediaroom4\\mediaroom4-android\\tabsp\\app\\release\\7inch\\platform.x509.pem',//pem文件路径
+            "pk8": '../../智能面板-系统APP签名方式/platform.pk8',//文件路径
+            "pem": '../../智能面板-系统APP签名方式/platform.x509.pem',//pem文件路径
+            //"pk8": 'F:\\sunmnet\\workspace\\mediaroom4\\mediaroom4-android\\tabsp\\app\\release\\8.1\\platform.pk8',//文件路径
+            //"pem": 'F:\\sunmnet\\workspace\\mediaroom4\\mediaroom4-android\\tabsp\\app\\release\\8.1\\platform.x509.pem',//pem文件路径
+            "jar": '../../智能面板-系统APP签名方式/signapk.jar',//java sign.jar路径
+            "jks":"../../sunm.jks"
+            //"jks":"F:\\sunmnet\\workspace\\mediaroom4\\mediaroom4-android\\tabsp\\app\\release\\8.1\\sunm.jks"
+    ]
+}
+
+allprojects {
+    configurations.all {
+        // check for updates every build
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'http://rd.sunmnet.com:9002/nexus/content/repositories/public/' }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

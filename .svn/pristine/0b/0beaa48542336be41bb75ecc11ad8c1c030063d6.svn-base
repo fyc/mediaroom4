@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="matrix_scene_one" type="id"/>
+    <item name="matrix_scene_two" type="id"/>
+    <item name="matrix_scene_three" type="id"/>
+    <item name="matrix_scene_four" type="id"/>
+    <item name="matrix_scene_five" type="id"/>
+    <item name="matrix_scene_six" type="id"/>
+    <item name="matrix_scene_layout_guideline_one" type="id"/>
+    <item name="matrix_scene_layout_guideline_two" type="id"/>
+</resources>

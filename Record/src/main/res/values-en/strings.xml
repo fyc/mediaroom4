@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Record</string>
+    <string name="record_no_server">NO SERVER CONNECTED</string>
+    <string name="record_wakeup">WAKE</string>
+</resources>

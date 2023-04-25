@@ -1,0 +1,31 @@
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0'
+    }
+}
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = "28.0.3"
+    targetSdkVersion = 19
+    androidSupportVersion = "26.+"
+    minSdkVersion=15
+}
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://www.jitpack.io'
+        }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

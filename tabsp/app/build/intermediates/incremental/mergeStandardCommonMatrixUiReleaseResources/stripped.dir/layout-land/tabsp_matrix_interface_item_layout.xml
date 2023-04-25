@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+                                                                           
+
+                 
+                        
+                                     
+           
+
+    <com.sunmnet.mediaroom.tabsp.ui.widget.RollingTextView
+        android:layout_width="@dimen/px_78"
+        android:layout_height="@dimen/px_78"
+        android:background="@drawable/circle_default_drawable"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxEms="6"
+        android:padding="@dimen/px_2"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+                                         
+        android:textColor="?version1_scene_text_color"
+        android:textSize="?common_menu_text_size" android:tag="layout-land/tabsp_matrix_interface_item_layout_0" xmlns:android="http://schemas.android.com/apk/res/android"></com.sunmnet.mediaroom.tabsp.ui.widget.RollingTextView>
+         

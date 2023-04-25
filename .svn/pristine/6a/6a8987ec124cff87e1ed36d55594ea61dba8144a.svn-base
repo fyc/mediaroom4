@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MatrixView">
+        <attr name="radius" format="dimension"></attr>
+        <attr name="offset" format="integer"></attr>
+        <attr name="dashed_color" format="color"></attr>
+        <attr name="selected_background" format="reference|color"></attr>
+        <attr name="unselect_background" format="reference|color"></attr>
+        <attr name="selected_text_color" format="color"></attr>
+        <attr name="unselect_text_color" format="color"></attr>
+        <attr name="center_view_selected" format="color|reference"></attr>
+    </declare-styleable>
+</resources>

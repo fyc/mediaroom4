@@ -1,0 +1,126 @@
+package com.sunmnet.mediaroom.tabsp.ui;
+
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.sunmnet.mediaroom.common.BaseDialogFragment;
+import com.sunmnet.mediaroom.common.tools.RunningLog;
+import com.sunmnet.mediaroom.common.tools.ThreadUtils;
+import com.sunmnet.mediaroom.tabsp.R;
+import com.sunmnet.mediaroom.tabsp.bean.DialogInfo;
+import com.sunmnet.mediaroom.tabsp.ui.widget.CountDownProgress;
+
+import butterknife.OnClick;
+
+/**
+ * 确认 按钮必须指定为  R.id.dialog_confirm
+ * 取消按钮 必须指定为 R.id.dialog_cancel
+ * 关闭按钮 必须指定为 R.id.dialog_close
+ */
+public class TabspDialogFragment extends BaseDialogFragment implements View.OnClickListener {
+    DialogInfo dialogInfo;
+    public View contentView;
+    CountDownProgress countDownProgress;
+
+    public void setDialogInfo(DialogInfo dialogInfo) {
+        this.dialogInfo = dialogInfo;
+    }
+
+    @OnClick({R.id.dialog_confirm, R.id.dialog_cancel, R.id.dialog_close})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.dialog_confirm:
+                if (dialogInfo.getListener() != null) {
+                    dialogInfo.getListener().onConfirmed(this);
+                }
+                dismiss();
+                break;
+            case R.id.dialog_cancel:
+            case R.id.dialog_close:
+                if (dialogInfo.getListener() != null) {
+                    dialogInfo.getListener().onCancel();
+                }
+                dismiss();
+                break;
+        }
+    }
+
+    public void interrupt() {
+        count = 0;
+    }
+
+    int count = 0;
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            try {
+                int waitingTime = countDownProgress.getCountDownWaitTime();
+                while (count > 0) {
+                    countDownProgress.setProgress(count);
+                    count--;
+                    Thread.sleep(waitingTime);
+                }
+                countDownProgress.setProgress(count);
+                if (dialogInfo.getListener() != null) dialogInfo.getListener().onConfirmed(null);
+
+            } catch (Exception e) {
+                if (dialogInfo.getListener() != null) dialogInfo.getListener().onCancel();
+                RunningLog.error(e);
+            }
+            try {
+
+                dismiss();
+            } catch (Exception e) {
+                RunningLog.error(e);
+            }
+        }
+    };
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (countDownProgress != null && dialogInfo.getCountDownTime() > 0) {
+            count = dialogInfo.getCountDownTime();
+            countDownProgress.setTotalProgress(count);
+            ThreadUtils.execute(runnable);
+        }
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        switch (this.dialogInfo.getType()) {
+            case DEVICE_CLOSING:
+                this.contentView = inflater.inflate(R.layout.tabsp_device_closing_dialog, null, false);
+                countDownProgress = contentView.findViewById(R.id.dialog_countdown);
+                break;
+            case DEVICE_OPENNING:
+                this.contentView = inflater.inflate(R.layout.tabsp_device_openning_dialog, null, false);
+                countDownProgress = contentView.findViewById(R.id.dialog_countdown);
+                break;
+            case CONFIRM_CLASSOVER:
+                this.contentView = inflater.inflate(R.layout.tabsp_classover_opt_dialog, null, false);
+                setOnClick(contentView.findViewById(R.id.dialog_cancel), this);
+                setOnClick(contentView.findViewById(R.id.dialog_confirm), this);
+                setOnClick(contentView.findViewById(R.id.dialog_close), this);
+                break;
+        }
+        //赋予自定义内容
+        if (!TextUtils.isEmpty(this.dialogInfo.getDialogContent())) {
+            switch (this.dialogInfo.getType()) {
+                case DEVICE_CLOSING:
+                case DEVICE_OPENNING:
+                case CONFIRM_CLASSOVER:
+                    TextView textView = contentView.findViewById(R.id.dialog_content);
+                    textView.setText(this.dialogInfo.getDialogContent());
+                    break;
+            }
+        }
+        return contentView;
+    }
+}

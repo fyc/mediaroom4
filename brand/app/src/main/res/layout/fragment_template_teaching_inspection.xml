@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/px_30"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="巡查模板："
+            android:textColor="#FFF"
+            android:textSize="@dimen/px_20" />
+
+        <Spinner
+            android:id="@+id/spinner_template"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_50" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="@dimen/px_160"
+        android:layout_height="@dimen/px_65"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px_30"
+        android:background="@drawable/selector_template_btn_background"
+        android:text="提交"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/template_btn_text_size"
+        android:visibility="gone" />
+
+</LinearLayout>

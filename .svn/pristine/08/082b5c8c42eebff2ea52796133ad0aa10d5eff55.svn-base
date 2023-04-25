@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center" android:background="@drawable/main_color_border"
+    android:paddingLeft="@dimen/px_20" android:id="@+id/languageswitcher"
+    android:paddingTop="@dimen/px_10"
+    android:paddingRight="@dimen/px_20"
+    android:paddingBottom="@dimen/px_10"
+    android:text="@string/switch_language"
+    android:textColor="@color/colorPrimary"
+    android:textSize="?common_text_size">
+
+</TextView>

@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    signingConfigs {
+        release {
+            keyAlias 'sunmnet123'
+            keyPassword 'sunmnet123'
+            storeFile file('../../sunm.jks')
+            storePassword 'sunmnet123'
+        }
+    }
+    dataBinding{
+        enabled=true
+    }
+    defaultConfig {
+        applicationId "com.sunmnet.mediaroom.tabsp.desktop"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 190501001
+        //master-->自动匹配菜单，matrix-->只有基本设备操作菜单和视频矩阵菜单，
+        // record-->只有基本设备操作菜单和录播菜单，refreshing-->只有基本操作菜单
+        ndk {
+            //abiFilters  'armeabi-v8a'
+            abiFilters 'armeabi-v7a'
+            //abiFilters  'armeabi'
+            //abiFilters  'x86'
+            //abiFilters  'x86_64'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.+'
+    implementation project(path: ':Common')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+}

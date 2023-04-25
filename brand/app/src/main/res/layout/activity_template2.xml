@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/template_background">
+
+    <FrameLayout
+        android:id="@+id/layout"
+        android:layout_width="@dimen/px_400"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/px_40"
+        android:layout_marginTop="@dimen/px_40"
+        android:layout_marginBottom="@dimen/px_40"
+        android:background="@drawable/template_background_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.sunmnet.mediaroom.brand.view.ChildVisibilityGridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignmentMode="alignBounds"
+            app:columnCount="3">
+
+            <FrameLayout
+                android:id="@+id/layout_course_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_course_table"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_course_table" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="课程表"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_ask_for_leave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_ask_for_leave"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_ask_for_leave" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="请假"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_attendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_attendance"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_attendance" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="考勤结果"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_control_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_control_center"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_control_center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="控制中心"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_monitor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_monitor"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_monitor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="视频监控"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_report_fault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_report_fault"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_failure" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="故障申报"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_query_classroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_query_classroom"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_query_classroom" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="教室查询"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_borrow_classroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_borrow_classroom"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_borrow_classroom" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="教室借用"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_query_exam_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_query_exam_room"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_query_exam_room" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="考场查询"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_query_exam_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_query_exam_score"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_query_exam_score" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="成绩查询"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_teaching_inspection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_teaching_inspection"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_patrol_teaching" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="教学巡查"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_academic_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_columnWeight="1"
+                app:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBtn_academic_manage"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/template_tab_background"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/icon_academic_manage" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="教务管理"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="18px" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </com.sunmnet.mediaroom.brand.view.ChildVisibilityGridLayout>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_50"
+        android:drawableLeft="@drawable/icon_square_point"
+        android:drawablePadding="5dp"
+        android:text="课程表"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/px_28"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/layout"
+        app:layout_constraintTop_toTopOf="@id/layout" />
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/px_40"
+        android:clickable="true"
+        android:drawableLeft="@drawable/icon_back"
+        android:drawablePadding="2dp"
+        android:onClick="onBackClick"
+        android:padding="6px"
+        android:text="返回"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/px_24"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layout" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="back,title" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:background="#FF3EF2C3"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintRight_toRightOf="@id/back"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+    <FrameLayout
+        android:id="@+id/fragmentLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/px_18"
+        android:layout_marginBottom="@dimen/px_40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintRight_toRightOf="@id/back"
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+</android.support.constraint.ConstraintLayout>

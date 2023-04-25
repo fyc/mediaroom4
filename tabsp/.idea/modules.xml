@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tabsp.iml" filepath="$PROJECT_DIR$/.idea/modules/tabsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1893888909/tabsp.Common.iml" filepath="$PROJECT_DIR$/.idea/modules/1893888909/tabsp.Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1913546744/tabsp.Device.iml" filepath="$PROJECT_DIR$/.idea/modules/1913546744/tabsp.Device.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2127503005/tabsp.Matrix.iml" filepath="$PROJECT_DIR$/.idea/modules/-2127503005/tabsp.Matrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1981172237/tabsp.Record.iml" filepath="$PROJECT_DIR$/.idea/modules/-1981172237/tabsp.Record.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1380633359/tabsp.WirelessProjection.iml" filepath="$PROJECT_DIR$/.idea/modules/1380633359/tabsp.WirelessProjection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/tabsp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/tabsp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1594110113/tabsp.ijkplayer.iml" filepath="$PROJECT_DIR$/.idea/modules/1594110113/tabsp.ijkplayer.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px_90"
+    android:layout_height="@dimen/px_90"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/matrix_unselect_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="@dimen/px_52"
+        android:layout_height="@dimen/px_52"
+        android:src="@drawable/matrix_logo_bg"
+        android:scaleType="centerInside" />
+
+    <com.sunmnet.mediaroom.matrix.anotherUi.ui.MarqueTextView
+        android:id="@+id/item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:marqueeRepeatLimit="marquee_forever"
+        tools:text="输入口1输入口1输入口1"
+        android:textColor="@color/matrix_text_color"
+        android:textSize="@dimen/px_16" />
+
+</LinearLayout>

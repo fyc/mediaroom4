@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="record_pause" type="id"/>
+    <item name="record_start" type="id"/>
+    <item name="record_stop" type="id"/>
+    <item name="recording_time" type="id"/>
+    <item name="vlc_playview" type="id"/>
+    <string name="app_name">Record</string>
+    <string name="record_no_server">未能连接到服务器</string>
+    <string name="record_wakeup">唤醒</string>
+</resources>

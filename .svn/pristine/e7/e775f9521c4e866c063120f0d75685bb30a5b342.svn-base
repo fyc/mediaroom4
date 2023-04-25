@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="record_stop" type="id"></item>
+    <item name="record_start" type="id"></item>
+    <item name="record_pause" type="id"></item>
+    <item name="recording_time" type="id"></item>
+    <item name="vlc_playview" type="id"></item>
+</resources>

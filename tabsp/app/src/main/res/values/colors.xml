@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#477ED7</color>
+    <color name="colorPrimaryDark">#376BCD</color>
+    <color name="colorAccent">#A3BFEB</color>
+    <color name="colorTitle">#104A84E3</color>
+    <color name="transparent_black_50">#50000000</color>
+    <color name="transparent_black_30">#30000000</color>
+    <color name="transparent_black_70">#70000000</color>
+    <color name="btn_enabled_color">#200095ff</color>
+    <color name="btn_enable_border_color">#0095ff</color>
+    <color name="btn_disable_color">#20ffffff</color>
+    <color name="btn_disable_border_color">#ffffff</color>
+    <color name="alert_text_color">#FE6663</color>
+    <color name="matrix_on_select_border_color">#01FF00</color>
+    <color name="common_text_color">?common_text_color</color>
+    <color name="default_selected_color">#3fd9ff</color>
+    <color name="default_unselect_color">#FFFFFF</color>
+    <color name="mediaroom4_menu_selected_color">#2167DA</color>
+    <color name="color_5B5F65">#5B5F65</color>
+    <color name="color_E4E4E4">#E4E4E4</color>
+    <color name="color_FDFEFF">#FDFEFF</color>
+    <color name="color_7C7C7C">#7C7C7C</color>
+    <color name="color_EBEBEB">#EBEBEB</color>
+    <color name="color_9C9C9C">#9C9C9C</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_4086FC">#4086FC</color>
+    <color name="color_FF0F306E">#FF0F306E</color>
+    <color name="color_252525">#252525</color>
+    <color name="color_7FFFFFFF">#7FFFFFFF</color>
+    <color name="color_A7A7A7">#A7A7A7</color>
+    <color name="color_585858">#585858</color>
+    <color name="color_B1B1B1">#B1B1B1</color>
+    <color name="color_515151">#515151</color>
+    <color name="color_0B4BF9">#0B4BF9</color>
+    <color name="color_FF989BA8">#FF989BA8</color>
+</resources>

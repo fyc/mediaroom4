@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginRight="15dp"
+                android:text="请假类型："
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/template_input_background">
+
+                <Spinner
+                    android:id="@+id/spinner_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:entries="@array/ask_for_leave_type"
+                    android:padding="2dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginRight="15dp"
+                android:text="请假时段："
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_start_date"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/template_input_background"
+                android:gravity="center_vertical"
+                android:hint="请选择日期"
+                android:padding="2dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#EEEEEE"
+                android:textSize="12dp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/template_input_background">
+
+                <Spinner
+                    android:id="@+id/spinner_start_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:entries="@array/class_no_array"
+                    android:padding="2dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="至"
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/template_input_background"
+                android:gravity="center_vertical"
+                android:hint="请选择日期"
+                android:padding="2dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#EEEEEE"
+                android:textSize="12dp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/template_input_background">
+
+                <Spinner
+                    android:id="@+id/spinner_end_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:entries="@array/class_no_array"
+                    android:padding="2dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginRight="15dp"
+                android:text="请假理由："
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/et_reason"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/template_input_background"
+                android:gravity="start"
+                android:hint="请输入请假理由（必填，50字内）"
+                android:padding="2dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#EEEEEE"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="@dimen/px_160"
+            android:layout_height="@dimen/px_65"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_template_btn_background"
+            android:text="提交"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/template_btn_text_size" />
+
+    </LinearLayout>
+</ScrollView>

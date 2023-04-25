@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/px_10">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="@dimen/px_575"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/px_10"
+                android:paddingBottom="@dimen/px_10"
+                android:background="#FFE6EDF6"
+                android:textSize="@dimen/px_25"
+                android:textColor="@android:color/black"
+                android:text="调试功能"/>
+
+            <LinearLayout
+                android:id="@+id/ll_part_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                android:layout_marginTop="@dimen/px_80"
+                android:paddingTop="@dimen/px_2"
+                android:paddingBottom="@dimen/px_2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/px_25"
+                    android:textColor="@android:color/black"
+                    android:text="选择显示设备EDID:"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_20"
+                    android:padding="@dimen/px_3"
+                    android:background="@drawable/matrix_main_out_spinner_bg">
+
+                    <Spinner
+                        android:id="@+id/sp_select_out"
+                        android:layout_width="@dimen/px_200"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/px_10"
+                        android:paddingBottom="@dimen/px_10"
+                        android:dropDownWidth="@dimen/px_200"
+                        android:drawSelectorOnTop="false"
+                        tools:listitem="@layout/select_matrix_main_out_item"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/px_30"
+                        android:layout_height="@dimen/px_30"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/triangle_down" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gl_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_50"
+                app:layout_constraintEnd_toStartOf="@id/gl_one"
+                app:layout_constraintTop_toBottomOf="@id/ll_part_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/px_30"
+                android:layout_marginTop="@dimen/px_80"
+                android:layout_marginBottom="@dimen/px_50"
+                android:paddingStart="@dimen/px_40"
+                android:paddingEnd="@dimen/px_40"
+                android:textColor="@android:color/white"
+                android:background="@color/color_2167DA"
+                android:textSize="@dimen/px_20"
+                android:text="保存"/>
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_50"
+                app:layout_constraintStart_toEndOf="@id/gl_one"
+                app:layout_constraintTop_toBottomOf="@id/ll_part_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/px_30"
+                android:layout_marginTop="@dimen/px_80"
+                android:layout_marginBottom="@dimen/px_50"
+                android:paddingStart="@dimen/px_40"
+                android:paddingEnd="@dimen/px_40"
+                android:textColor="@android:color/white"
+                android:background="@color/color_FF989BA8"
+                android:textSize="@dimen/px_20"
+                android:text="取消"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

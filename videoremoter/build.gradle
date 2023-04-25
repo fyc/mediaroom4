@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+
+}
+ext {
+    COMPILE_SDK_VERSION = compileSdkVersion = 28
+    BUILD_TOOLS_VERSION = buildToolsVersion = "28.0.3"
+    TARGET_SDK_VERSION = targetSdkVersion = 19
+    MIN_SDK_VERSION = minSdkVersion = 15
+    ANDROID_SUPPORT_VERSION = "28.+"
+}
+allprojects {
+    configurations.all {
+        // check for updates every build
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+    repositories {
+        google()
+        jcenter()
+        maven { url 'http://rd.sunmnet.com:9002/nexus/content/repositories/public/' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

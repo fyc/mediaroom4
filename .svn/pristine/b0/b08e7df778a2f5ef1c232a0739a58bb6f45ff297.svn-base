@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.sunmnet.mediaroom.tabsp.ui.adapter.HolderAdapter" />
+
+        <variable
+            name="adapter"
+            type="HolderAdapter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/device_off_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/px_2"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_16"
+                android:text="@string/name_classroom_detect"
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size" />
+        </LinearLayout>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adapter="@{adapter}"
+            android:numColumns="5"></GridView>
+    </LinearLayout>
+</layout>

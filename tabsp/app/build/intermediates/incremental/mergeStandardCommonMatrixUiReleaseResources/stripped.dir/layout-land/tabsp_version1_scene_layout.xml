@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+                                                                              
+
+                 
+                          
+                                   
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/device_off_background"
+        android:orientation="vertical" android:tag="layout-land/tabsp_version1_scene_layout_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/px_10"
+            android:paddingBottom="@dimen/px_10">
+
+            <View
+                android:layout_width="@dimen/px_2"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_16"
+                android:text="@string/name_device_scene"
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/controll_scene_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:tag="binding_1"     
+            android:horizontalSpacing="@dimen/px_20"
+            android:numColumns="4"
+            android:padding="@dimen/px_10"
+            android:verticalSpacing="@dimen/px_20"></GridView>
+    </LinearLayout>
+         

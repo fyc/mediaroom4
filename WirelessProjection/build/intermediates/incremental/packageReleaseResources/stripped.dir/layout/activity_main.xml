@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                   
+
+    
+
+                                                               
+
+                 
+                        
+                                      
+           
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:tag="layout/activity_main_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="beforeDescendants"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/startServerFinder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_1"                      
+                    android:text="开启服务端发现" />
+
+                <Button
+                    android:id="@+id/stopServerFinder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_2"                     
+                    android:text="关闭发现" />
+
+                <EditText
+                    android:id="@+id/host_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_25" />
+
+                <Button
+                    android:id="@+id/connectServerFinder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_3"                        
+                    android:text="连接服务端" />
+
+                <Button
+                    android:id="@+id/disConnectServerFinder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_4"                           
+                    android:text="断开服务端" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/requestServerAuthorize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_5"                           
+                    android:text="请求服务端认证" />
+
+
+                <Button
+                    android:id="@+id/cancelAuthorize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_6"                    
+                    android:text="取消认证" />
+
+
+                <Button
+                    android:id="@+id/requestAnDisplayInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_7"                         
+                    android:text="请求连接的设备信息" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestUpdatePermitStatusAsk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_8"                                 
+                    android:text="请求更新上屏权限 --> 询问" />
+
+                <Button
+                    android:id="@+id/requestUpdatePermitStatusAlwaysAccepted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_9"                                            
+                    android:text="--> 一直同意" />
+
+                <Button
+                    android:id="@+id/requestUpdatePermitStatusAlwaysRejected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_10"                                           
+                    android:text="--> 一直拒绝" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/requestUpdateLockStatusLocked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_11"                                 
+                    android:text="请求更新锁定状态 --> 锁定" />
+
+                <Button
+                    android:id="@+id/requestUpdateLockStatusUnLocked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_12"                                   
+                    android:text=" --> 未锁定" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/requestUpdateClassRoomWorkOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_13"                                
+                    android:text="请求更新授课状态 --> 授课" />
+
+                <Button
+                    android:id="@+id/requestUpdateClassRoomWorkOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_14"                                 
+                    android:text=" --> 未授课" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestSwitchDeviceStateSharing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_15"                                   
+                    android:text="请求切换设备投屏状态 --> 进行投屏" />
+
+                <Button
+                    android:id="@+id/requestSwitchDeviceStateReady"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_16"                                 
+                    android:text=" --> 断开投屏" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestClassroomAllClientsOnScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_17"                                      
+                    android:text="所有小组上屏" />
+
+                <Button
+                    android:id="@+id/requestClassroomAllClientsOffScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_18"                                       
+                    android:text="所有小组下屏" />
+
+                <Button
+                    android:id="@+id/requestClassroomKickAllClients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_19"                                  
+                    android:text="一键踢人" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestClassRoomAllClientsWorkOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_20"                                    
+                    android:text="一键授课" />
+
+                <Button
+                    android:id="@+id/requestClassRoomAllClientsWorkOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_21"                                     
+                    android:text="一键讨论" />
+
+                <Button
+                    android:id="@+id/requestAllClientsLock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_22"                         
+                    android:text="一键锁定" />
+
+                <Button
+                    android:id="@+id/requestAllClientsUnLock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_23"                           
+                    android:text="一键解锁" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestAnDisplaySettingInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_24"                               
+                    android:text="请求Setting信息" />
+
+                <Button
+                    android:id="@+id/requestAnDisplaySettingInfoChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_25"                                     
+                    android:text="请求更改Setting信息" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestSystemInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_26"                     
+                    android:text="请求系统信息" />
+
+                <Button
+                    android:id="@+id/requestClassroomKickClient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_27"                              
+                    android:text="请求某小组踢人" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestTeacherStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_28"                      
+                    android:text="教师端停止" />
+
+                <Button
+                    android:id="@+id/requestTeacherRecovery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_29"                          
+                    android:text="教师端恢复" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestAppWriter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_30"                    
+                    android:text="白板" />
+
+                <Button
+                    android:id="@+id/requestAppMark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_31"                  
+                    android:text="批注" />
+
+                <Button
+                    android:id="@+id/requestAppFiles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_32"                   
+                    android:text="文件" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestWorkOnModeSingle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_33"                           
+                    android:text="单人展示" />
+
+                <Button
+                    android:id="@+id/requestWorkOnModeMulti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_34"                          
+                    android:text="多人展示" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestDeviceVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_35"                       
+                    android:text="获取音量" />
+
+                <Button
+                    android:id="@+id/requestUpdateDeviceVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_36"                             
+                    android:text="修改音量" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/requestLockRootDevice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_37"                         
+                    android:text="lock root device" />
+
+                <Button
+                    android:id="@+id/requestUnlockRootDevice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_38"                           
+                    android:text="unlock root device" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+         

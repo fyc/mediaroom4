@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="V3Content">
+
+        <import type="com.sunmnet.mediaroom.tabsp.ui.adapter.HolderAdapter" />
+
+        <import type="com.sunmnet.mediaroom.device.bean.EnvirmentDevice" />
+
+        <variable
+            name="holderAdapter"
+            type="HolderAdapter" />
+
+        <variable
+            name="envirment"
+            type="EnvirmentDevice" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/px_20">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_382"
+            android:layout_marginBottom="@dimen/px_20"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@id/envirment_layout"
+                layout="@layout/tabsp_version1_envirment_layout"
+                android:layout_width="@dimen/px_226"
+                android:layout_height="@dimen/px_382"
+                app:envirment="@{envirment}"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/onekey_layout"
+                layout="@layout/tabsp_version3_onekey_layout"
+                android:layout_width="@dimen/px_226"
+                android:layout_height="@dimen/px_382"
+                android:layout_marginLeft="@dimen/px_20"
+                app:layout_constraintLeft_toRightOf="@id/envirment_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                layout="@layout/tabsp_version3_main_matrix_layout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/px_382"
+                app:adapter="@{holderAdapter}"
+                android:layout_marginLeft="@dimen/px_20"
+                android:layout_marginRight="@dimen/px_20"
+                app:layout_constraintLeft_toRightOf="@id/onekey_layout"
+                app:layout_constraintRight_toLeftOf="@id/tabsp_volumn_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@id/tabsp_volumn_layout"
+                layout="@layout/tabsp_version1_volumn_layout"
+                android:layout_width="@dimen/px_226"
+                android:layout_height="@dimen/px_382"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <include
+            layout="@layout/tabsp_version3_quick_device_controlls"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_278" />
+    </LinearLayout>
+</layout>

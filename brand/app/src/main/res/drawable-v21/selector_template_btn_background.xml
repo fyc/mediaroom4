@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#20000000">
+
+    <item
+        android:drawable="@drawable/template_btn_background_enable"
+        android:state_checked="true"
+        android:state_pressed="true" />
+    <item
+        android:drawable="@drawable/template_btn_background_enable"
+        android:state_checked="true"
+        android:state_pressed="false" />
+
+    <item
+        android:drawable="@drawable/template_btn_background_enable"
+        android:state_pressed="true"
+        android:state_selected="true" />
+    <item
+        android:drawable="@drawable/template_btn_background_enable"
+        android:state_pressed="false"
+        android:state_selected="true" />
+
+
+    <item
+        android:drawable="@drawable/template_btn_background_enable"
+        android:state_checked="false"
+        android:state_pressed="true" />
+    <item
+        android:drawable="@drawable/template_btn_background_enable"
+        android:state_checked="false"
+        android:state_pressed="false" />
+
+    <item
+        android:drawable="@drawable/template_btn_background_enable"
+        android:state_pressed="true"
+        android:state_selected="false" />
+    <item
+        android:drawable="@drawable/template_btn_background_enable"
+        android:state_pressed="false"
+        android:state_selected="false" />
+</ripple>

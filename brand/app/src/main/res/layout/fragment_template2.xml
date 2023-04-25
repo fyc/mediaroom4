@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232F49"
+    android:orientation="vertical"
+    android:padding="@dimen/px_30">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_80"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/template_sunmnet_logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_building"
+            android:layout_width="@dimen/px_240"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_100"
+            android:layout_marginLeft="@dimen/px_100"
+            android:background="@drawable/bg_template2_building_spinner"
+            android:entries="@array/sample_building"
+            android:padding="@dimen/px_6"
+            app:layout_constraintBottom_toBottomOf="@+id/logo"
+            app:layout_constraintLeft_toRightOf="@id/logo"
+            app:layout_constraintTop_toTopOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="教室当前状态"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintBottom_toBottomOf="@+id/spinner_building"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spinner_building" />
+
+
+        <View
+            android:id="@+id/icon_status_has_course"
+            android:layout_width="@dimen/px_20"
+            android:layout_height="@dimen/px_20"
+            android:layout_marginStart="@dimen/px_14"
+            android:layout_marginLeft="@dimen/px_14"
+            android:background="@color/status_has_course"
+            app:layout_constraintBottom_toBottomOf="@+id/text_status"
+            app:layout_constraintLeft_toRightOf="@id/text_status"
+            app:layout_constraintStart_toEndOf="@+id/text_status"
+            app:layout_constraintTop_toTopOf="@+id/text_status" />
+
+        <TextView
+            android:id="@+id/text_status_has_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_5"
+            android:layout_marginLeft="@dimen/px_5"
+            android:text="有课"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_status_has_course"
+            app:layout_constraintLeft_toRightOf="@id/icon_status_has_course"
+            app:layout_constraintStart_toEndOf="@+id/icon_status_has_course"
+            app:layout_constraintTop_toTopOf="@+id/icon_status_has_course" />
+
+
+        <View
+            android:id="@+id/icon_status_borrowed"
+            android:layout_width="@dimen/px_20"
+            android:layout_height="@dimen/px_20"
+            android:layout_marginStart="@dimen/px_20"
+            android:layout_marginLeft="@dimen/px_20"
+            android:background="@color/status_borrowed"
+            app:layout_constraintBottom_toBottomOf="@+id/text_status_has_course"
+            app:layout_constraintLeft_toRightOf="@id/text_status_has_course"
+            app:layout_constraintStart_toEndOf="@+id/text_status_has_course"
+            app:layout_constraintTop_toTopOf="@+id/text_status_has_course" />
+
+        <TextView
+            android:id="@+id/text_status_borrowed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_5"
+            android:layout_marginLeft="@dimen/px_5"
+            android:text="借用"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_status_borrowed"
+            app:layout_constraintLeft_toRightOf="@id/icon_status_borrowed"
+            app:layout_constraintStart_toEndOf="@+id/icon_status_borrowed"
+            app:layout_constraintTop_toTopOf="@+id/icon_status_borrowed" />
+
+        <View
+            android:id="@+id/icon_status_unused"
+            android:layout_width="@dimen/px_20"
+            android:layout_height="@dimen/px_20"
+            android:layout_marginStart="@dimen/px_20"
+            android:layout_marginLeft="@dimen/px_20"
+            android:background="@color/status_unused"
+            app:layout_constraintBottom_toBottomOf="@+id/text_status_borrowed"
+            app:layout_constraintLeft_toRightOf="@id/text_status_borrowed"
+            app:layout_constraintStart_toEndOf="@+id/text_status_borrowed"
+            app:layout_constraintTop_toTopOf="@+id/text_status_borrowed" />
+
+        <TextView
+            android:id="@+id/text_status_unused"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_5"
+            android:layout_marginLeft="@dimen/px_5"
+            android:text="空闲"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_status_unused"
+            app:layout_constraintLeft_toRightOf="@id/icon_status_unused"
+            app:layout_constraintStart_toEndOf="@+id/icon_status_unused"
+            app:layout_constraintTop_toTopOf="@+id/icon_status_unused" />
+
+        <View
+            android:id="@+id/icon_status_reserved"
+            android:layout_width="@dimen/px_20"
+            android:layout_height="@dimen/px_20"
+            android:layout_marginStart="@dimen/px_20"
+            android:layout_marginLeft="@dimen/px_20"
+            android:background="@color/status_reserved"
+            app:layout_constraintBottom_toBottomOf="@+id/text_status_unused"
+            app:layout_constraintLeft_toRightOf="@id/text_status_unused"
+            app:layout_constraintStart_toEndOf="@+id/text_status_unused"
+            app:layout_constraintTop_toTopOf="@+id/text_status_unused" />
+
+        <TextView
+            android:id="@+id/text_status_reserved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_5"
+            android:layout_marginLeft="@dimen/px_5"
+            android:text="预约"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_status_reserved"
+            app:layout_constraintLeft_toRightOf="@id/icon_status_reserved"
+            app:layout_constraintStart_toEndOf="@+id/icon_status_reserved"
+            app:layout_constraintTop_toTopOf="@+id/icon_status_reserved" />
+
+        <LinearLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#495E83"
+            android:orientation="horizontal"
+            android:padding="@dimen/px_10"
+            app:layout_constraintBottom_toBottomOf="@+id/text_status_reserved"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_status_reserved">
+
+            <TextView
+                android:id="@+id/text_date_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018.10.17 第4周"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/px_18" />
+
+            <com.sunmnet.mediaroom.brand.control.text.WeekControl
+                android:id="@+id/text_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_15"
+                android:layout_marginLeft="@dimen/px_15"
+                android:text="星期三"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/px_18" />
+
+            <com.sunmnet.mediaroom.brand.control.text.TimeControl
+                android:id="@+id/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_15"
+                android:layout_marginLeft="@dimen/px_15"
+                android:text="09:28"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/px_18" />
+        </LinearLayout>
+
+        <com.sunmnet.mediaroom.brand.control.text.ClassNoControl
+            android:id="@+id/text_class_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/px_17"
+            android:layout_marginRight="@dimen/px_17"
+            android:text="第8节"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/px_18"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+            app:layout_constraintEnd_toStartOf="@+id/frameLayout"
+            app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="WirelessData">
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/wireless_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_7_5"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <android.support.v4.widget.DrawerLayout
+                android:id="@+id/wire_device_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_265">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_265"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.714"
+                        android:background="@drawable/device_off_background"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/showing_mode"
+                            android:layout_width="@dimen/dp_264"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/wireless_bottom_radius"
+                            android:gravity="center"
+                            android:textColor="?device_black_text_color"
+                            android:textSize="@dimen/dp_9" />
+
+                        <GridView
+                            android:id="@+id/wireless_devices"
+                            android:layout_width="@dimen/dp_257"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@drawable/device_off_background"
+                            android:horizontalSpacing="@dimen/dp_44"
+                            android:numColumns="2"
+                            android:verticalSpacing="@dimen/dp_10"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--左侧滑菜单栏-->
+                <include
+                    layout="@layout/tabsp_wireless_drawer_item"
+                    android:layout_width="@dimen/dp_125"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right" />
+
+            </android.support.v4.widget.DrawerLayout>
+
+            <include
+                layout="@layout/tabsp_wireless_option_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:layout_marginTop="@dimen/px_10"
+                android:orientation="vertical" />
+
+            <include
+                layout="@layout/tabsp_wireless_horizontal_option"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:layout_marginTop="@dimen/px_10"
+                android:background="@drawable/device_off_background"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/wireless_disconnect_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/record_no_server"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="@dimen/dp_24" />
+    </FrameLayout>
+</layout>

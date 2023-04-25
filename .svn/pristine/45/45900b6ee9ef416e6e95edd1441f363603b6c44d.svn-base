@@ -1,0 +1,244 @@
+plugins {
+    id 'com.android.application'
+    id 'org.greenrobot.greendao'
+}
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILD_TOOLS_VERSION
+    defaultConfig {
+        applicationId "com.sunmnet.mediaroom.electronicbrand"
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+                arguments = [eventBusIndex: 'com.sunmnet.mediaroom.brand.MyEventBusIndex']
+            }
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/DEPENDENCIES' // will not include DEPENDENCIES file
+        exclude 'LICENSE-EDL-1.0.txt' // will not include DEPENDENCIES file
+        exclude 'LICENSE-EPL-1.0.txt' // will not include DEPENDENCIES file
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/io.netty.versions.properties'
+    }
+    signingConfigs {
+        release {
+            keyAlias 'sunmnet123'
+            keyPassword 'sunmnet123'
+            storeFile file('../../sunm.jks')
+            storePassword 'sunmnet123'
+        }
+    }
+
+    def verCode = "4.0.0"
+    def appType = "MR_BRAND"
+    def appName = "电子班牌"
+    def date = new Date().format("yyMMdd")
+    def apkVerCode = Integer.parseInt(getVersionCode(date))
+    def apkVerName = "${verCode}_${date}_beta"
+    def verName = "${appType}_${verCode}_${date}"
+
+    defaultConfig {
+        versionCode apkVerCode
+        versionName apkVerName
+        //resValue("string", "app_name", appName)
+
+        ndk {
+            abiFilters "armeabi-v7a"
+//            abiFilters "x86"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            jni.srcDirs = []
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+//        faceRelease {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+//        }
+//
+//        noneFaceRelease {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+//            aaptOptions {
+//                ignoreAssetsPattern '!face'
+//
+//            }
+//        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //多特性编译打包
+    productFlavors {
+        flavorDimensions("face", "custom")//定义组合特性
+
+        face {
+            dimension "face"
+        }//主特性
+
+        noneFace {
+//            buildTypes {
+//                release {
+//                    aaptOptions {
+//                        ignoreAssetsPattern '!face'
+//                    }
+//                }
+//                debug {
+//                    aaptOptions {
+//                        ignoreAssetsPattern '!face'
+//                    }
+//                }
+//            }
+            dimension "face"
+        }
+
+        // 无客制化，标准版
+        std {
+            dimension "custom"
+            manifestPlaceholders = [
+                    mainActivity : "com.sunmnet.mediaroom.brand.MainActivity"
+            ]
+        }
+
+        // 武汉广播电视大学
+        whtvu {
+            dimension "custom"
+            manifestPlaceholders = [
+                    mainActivity : "com.sunmnet.mediaroom.brand.WhtvuMainActivity"
+            ]
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def fileName
+            if (variant.buildType.name == 'release') {
+                def flavorName = ""
+                if (!variant.flavorName.toLowerCase().contains("master"))
+                    flavorName = "." + variant.flavorName
+                fileName = "${verName}_${variant.flavorName}_beta.apk"
+            } else {
+                fileName = "MR_BRAND_debug.apk"
+            }
+            if (variant.flavorName.toLowerCase().contains('noneface')) {
+                println('build flavor :' + variant.flavorName)
+                fileName = "${verName}_${variant.flavorName}_beta.apk"
+                variant.mergeAssetsProvider.configure {
+                    doLast {
+                        delete(fileTree(dir: outputDir, includes: ['face/*.param','face/*.bin']))
+                    }
+                }
+            }
+            outputFileName = fileName;
+        }
+    }
+
+    greendao {
+        schemaVersion 5
+        targetGenDir 'src/main/java'
+        daoPackage 'com.sunmnet.mediaroom.brand.data.database.gen'
+    }
+}
+
+dependencies {
+    api "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    api "com.android.support:support-v4:$ANDROID_SUPPORT_VERSION"
+    api "com.android.support:support-v13:$ANDROID_SUPPORT_VERSION"
+    api "com.android.support:gridlayout-v7:$ANDROID_SUPPORT_VERSION"
+    api "com.android.support:design:$ANDROID_SUPPORT_VERSION"
+    implementation "com.android.support:recyclerview-v7:$ANDROID_SUPPORT_VERSION"
+    implementation project(':Common')
+    implementation project(':device')
+    implementation project(':brand-common')
+    implementation project(':libvlc-android')
+    implementation 'com.github.huangyanbin:SmartTable:2.2.0'
+    implementation ('com.haibin:calendarview:3.6.8') {
+        exclude group: "com.android.support"
+    }
+    implementation 'com.google.zxing:core:3.3.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.5'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.10.5'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.5'
+    implementation files('libs/dmb.jar')
+//    api project(':mediaroom_device')
+    implementation project(':face')
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    annotationProcessor "org.greenrobot:eventbus-annotation-processor:3.2.0"
+
+    implementation("com.github.bumptech.glide:glide:4.9.0") {
+        exclude group: "com.android.support"
+    }
+
+    api "org.greenrobot:greendao:$greendaoVersion"
+
+    implementation 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
+    implementation 'com.permissionx.guolindev:permission-support:1.4.0'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+def getVersionCode(String date) {
+    File versionPropsFile = file('version.properties');
+
+    if (!versionPropsFile.exists()) {
+        versionPropsFile.createNewFile();
+    }
+
+    if (versionPropsFile.canRead()) {
+        def Properties p = new Properties();
+        p.load(new FileInputStream(versionPropsFile));
+
+        String versionTimes = p.getProperty("version", "001");
+        String oldBuildTime = p.getProperty("buildTime", "");
+        String newBuildTime = date;
+        def runTasks = gradle.startParameter.taskNames
+        boolean isRelease = runTasks.any { s ->
+            s.contains("Release")
+        }
+        if (newBuildTime.equals(oldBuildTime)) {
+            if (isRelease)
+                versionTimes = String.format("%03d", Integer.parseInt(versionTimes) + 1);
+        } else {
+            versionTimes = "001";
+        }
+        p.setProperty("version", versionTimes);
+        p.setProperty("buildTime", newBuildTime);
+        p.setProperty("oldTime", oldBuildTime);
+        p.store(versionPropsFile.newWriter(), null);
+        return newBuildTime + versionTimes;
+    }
+}

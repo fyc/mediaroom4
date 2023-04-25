@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./../Record/libs/PlayerSDK.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Record/libs/PlayerSDK.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

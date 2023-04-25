@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                                                               
+
+                 
+                          
+                                    
+           
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/device_off_background" android:tag="layout/tabsp_version3_matrix_scene_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <GridView
+            android:id="@+id/matrixSceneGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="@dimen/px_20"
+            android:numColumns="4"
+            android:padding="@dimen/dp_10"
+            android:verticalSpacing="@dimen/px_20"
+            android:tag="binding_1" ></GridView>
+    </FrameLayout>
+         

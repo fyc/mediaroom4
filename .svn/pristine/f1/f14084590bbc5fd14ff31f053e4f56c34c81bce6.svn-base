@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--是否使用定时开关机，true允许使用，false则强制使用熄屏-->
+    <bool name="usePowerOnOff">true</bool>
+</resources>

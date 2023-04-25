@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+                                                                            
+
+                 
+                       
+                                 
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" android:tag="layout-land/tabsp_mode_item_layout_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <FrameLayout
+            android:id="@id/device_image_holder"
+            android:layout_width="@dimen/px_96"
+            android:layout_height="@dimen/px_96"
+            android:background="@drawable/device_off_background">
+
+            <ImageView
+                android:id="@id/device_img"
+                android:layout_width="@dimen/px_50"
+                android:layout_height="@dimen/px_50"
+                android:layout_gravity="center"
+                android:scaleType="centerInside" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="@dimen/px_30"
+            android:tag="binding_1"         
+            android:textColor="?device_black_text_color"
+            android:textSize="?common_menu_text_size" />
+    </LinearLayout>
+         

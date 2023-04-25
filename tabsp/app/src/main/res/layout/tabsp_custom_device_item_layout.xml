@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="CustomDeviceItem">
+
+        <import type="com.sunmnet.mediaroom.device.bean.CustomDevice.ComponentItem" />
+
+        <variable
+            name="component"
+            type="ComponentItem" />
+    </data>
+
+    <com.sunmnet.mediaroom.tabsp.ui.widget.RollingTextView
+        android:id="@+id/rollingText"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_60"
+        android:background="@drawable/scene_item_background"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="@dimen/px_120"
+        android:maxEms="8"
+        android:minWidth="@dimen/px_100"
+        android:padding="@dimen/px_10"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@{component.getName()}"
+        android:textColor="?device_black_text_color"
+        android:textSize="?common_menu_text_size"/>
+</layout>

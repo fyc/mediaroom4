@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="name_text_id" type="id"/>
+    <item name="name_edittext_id" type="id"/>
+    <item name="confirm" type="id"></item>
+    <item name="cancel" type="id"></item>
+    <item name="close" type="id"></item>
+    <item name="validate" type="id"></item>
+    <item name="back" type="id"></item>
+
+    <item name="CLASS_UPDATE" type="id"></item>
+    <item name="CLASS_OVER_CLOCK" type="id"></item>
+    <item name="CLASS_ON_CLOCK" type="id"></item>
+    <item name="MID_NIGHT" type="id"></item>
+    <item name="CLASS_PRE_ON_CLOCK" type="id"></item>
+    <item name="CLASS_ON_QUARTER_CLOCK" type="id"></item>
+
+</resources>

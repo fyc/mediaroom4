@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="envirment"
+            type="com.sunmnet.mediaroom.device.bean.EnvirmentDevice" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/device_off_background"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/px_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/px_2"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_16"
+                android:text="@string/name_classroom_detect"
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_20"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/px_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{envirment.hourAqi}"
+                android:textColor="?version1_scene_text_color"
+                android:textSize="?common_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{envirment.tempture}"
+                android:textColor="?version1_scene_text_color"
+                android:textSize="?common_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{envirment.humidity}"
+                android:textColor="?version1_scene_text_color"
+                android:textSize="?common_text_size" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{envirment.pm}"
+                android:textColor="?version1_scene_text_color"
+                android:textSize="?common_text_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

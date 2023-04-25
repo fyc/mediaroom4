@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="RadioButtonItem">
+
+        <import type="com.bozee.managerappsdk.models.ClientDevice" />
+
+        <variable
+            name="devive"
+            type="ClientDevice" />
+    </data>
+
+    <CheckedTextView
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="@{devive.mName}"
+        android:gravity="center_vertical"
+        android:textColor="?device_black_text_color"
+        android:textSize="@dimen/dp_11"/>
+</layout>

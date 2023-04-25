@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Matrix</string>
+    <string name="all_select">全选</string>
+    <string name="name_default">默认</string>
+    <string name="allClear">全 清</string>
+    <string name="setting_matrix_scene">矩阵场景设置</string>
+    <string name="preview">预 览</string>
+    <string name="save">保 存</string>
+    <string name="select_input">请选择输入端</string>
+</resources>

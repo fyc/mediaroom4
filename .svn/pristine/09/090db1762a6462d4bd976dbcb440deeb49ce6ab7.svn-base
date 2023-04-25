@@ -1,0 +1,128 @@
+<resources>
+
+    <style name="progressbar_style">
+        <item name="android:indeterminateDrawable">@anim/rotate_progressing</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="activity_login_background">@drawable/tabsp_login_background</item>
+        <item name="activity_login_enter_background">@drawable/activity_login_enter_background
+        </item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--首页页面背景-->
+        <item name="activity_main_background">@null</item>
+        <item name="login_enter_btn_textsize">20px</item>
+        <item name="login_enter_tips_textsize">28px</item>
+
+        <item name="login_enter_tips_textcolor">#AFAFAF</item>
+
+        <item name="login_enter_input_title_main">#010101</item>
+        <item name="login_enter_input_title_other">#333333</item>
+        <item name="login_enter_input_tipse">#232F49</item>
+        <item name="login_enter_input_title_main_size">44px</item>
+        <item name="login_enter_input_title_other_size">40px</item>
+        <item name="login_enter_input_tipse_size">18px</item>
+        <item name="error_text_color">#FF3C3C</item>
+        <item name="login_input_rect_border_color">#D7D9E4</item>
+        <item name="title_background">#104A84E3</item>
+        <item name="inside_background">#50EDF2FC</item>
+        <!--通用普通文字大小-->
+        <item name="common_text_size">@dimen/px_24</item>
+        <!--通用文字字体颜色-->
+        <item name="common_text_color" format="color">#ffffff</item>
+        <!--菜单文字大小-->
+        <item name="common_menu_text_size">@dimen/px_22</item>
+        <!--通用菜单字体颜色-->
+        <item name="common_menu_text_color">#FFFFFF</item>
+
+        <!--通用标题大小-->
+        <item name="common_title_text_size">@dimen/px_42</item>
+        <item name="common_title_text_color">#FFFFFF</item>
+
+        <!--通用选中字体颜色-->
+        <item name="common_selected_text_color">#3fd9ff</item>
+        <!--标题重要文字大小-->
+        <item name="title_important_text_size">@dimen/px_30</item>
+        <!--标题不重要的文字大小-->
+        <item name="title_useless_text_size">@dimen/px_16</item>
+        <item name="default_title_background">#18202D</item>
+        <item name="default_title_weather_img_size">@dimen/px_30</item>
+        <item name="selected_menu_background">@drawable/menu_onselected_drawable</item>
+        <item name="default_menu_background">#50000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="default_matrix_interface_color">@android:color/darker_gray</item>
+        <item name="default_matrix_interface_selected_color">@color/matrix_on_select_border_color
+        </item>
+        <item name="mediaroom4_menu_selected_color">#1A54B0</item>
+        <item name="device_off_background_color">#EFF3F9</item>
+        <item name="device_batch_off_background_color">#989CA8</item>
+        <item name="device_black_text_color">#384C82</item>
+        <item name="version1_scene_text_color">#384C82</item>
+        <item name="item_select_background_color">#DBE4F6</item>
+        <item name="dimmer_power_less">#DDE2E9</item>
+        <item name="door_item_locker_background">#E0E7F6</item>
+        <item name="class_switcher_color">#71A7FF</item>
+        <item name="version2_discusstion_color">#F7F7F7</item>
+        <item name="disable_color">#979BA7</item>
+        <item name="matrix_output_select">#0EC1CC</item>
+    </style>
+
+    <style name="large_style" parent="BaseAppTheme">
+        <item name="common_text_size">26dp</item>
+        <item name="common_menu_text_size">31dp</item>
+        <item name="common_title_text_size">46dp</item>
+    </style>
+
+    <style name="xlarge_style" parent="BaseAppTheme">
+        <item name="common_text_size">28.8dp</item>
+        <item name="common_menu_text_size">33.6dp</item>
+        <item name="common_title_text_size">50.4dp</item>
+    </style>
+
+    <style name="xxlarge_style" parent="BaseAppTheme">
+        <item name="common_text_size">31.2dp</item>
+        <item name="common_menu_text_size">36.4dp</item>
+        <item name="common_title_text_size">54.6dp</item>
+    </style>
+
+    <style name="large_menu_style" parent="BaseAppTheme">
+        <item name="common_text_size">26dp</item>
+        <item name="common_menu_text_size">31dp</item>
+    </style>
+
+    <style name="xlarge_menu_style" parent="BaseAppTheme">
+        <item name="common_text_size">28.8dp</item>
+        <item name="common_menu_text_size">33.6dp</item>
+    </style>
+
+    <style name="xxlarge_menu_style" parent="BaseAppTheme">
+        <item name="common_text_size">31.2dp</item>
+        <item name="common_menu_text_size">36.4dp</item>
+    </style>
+
+    <declare-styleable name="MatrixFrameLayout">
+        <attr name="selected_color" format="color"></attr>
+        <attr name="unselect_color" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="VerticalSelectView">
+        <attr name="highlight_selected_color" format="color"></attr>
+        <attr name="low_unselect_color" format="color"></attr>
+        <attr name="line_count" format="integer"></attr>
+    </declare-styleable>
+    <declare-styleable name="DimmerPowerView">
+        <attr name="power_full" format="color"></attr>
+        <attr name="power_empty" format="color"></attr>
+        <attr name="power_value" format="integer"></attr>
+    </declare-styleable>
+    <declare-styleable name="CountDownProgress">
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="circleColor" format="color" />
+        <attr name="ringColor" format="color" />
+        <attr name="ringBgColor" format="color" />
+        <attr name="ringTextColor" format="color"></attr>
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="countTime" format="integer"></attr>
+        <attr name="countdown_radius" format="dimension"></attr>
+        <attr name="countdown_wait_time" format="integer"></attr>
+    </declare-styleable>
+</resources>

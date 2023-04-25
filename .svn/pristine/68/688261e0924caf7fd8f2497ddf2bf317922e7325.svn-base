@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">电子班牌</string>
+    <string name="main_activity">com.sunmnet.mediaroom.brand.MainActivity</string>
+    <string name="flavor_maker">com.sunmnet.mediaroom.brand.utils.FlavorMaker</string>
+    <string name="name_light">灯光</string>
+    <string name="name_media">多媒体</string>
+    <string name="name_airconditioner">空调</string>
+    <string name="name_curtain">窗帘</string>
+    <string name="name_fan">风扇</string>
+    <string name="name_newfan">新风机</string>
+    <string name="name_doorlocker">门锁</string>
+    <string name="name_record">录播</string>
+    <string name="name_matrix">视频矩阵</string>
+    <string name="name_setting">设置</string>
+    <string name="name_pc">讲台电脑</string>
+    <string name="name_stupc">学生机</string>
+    <string name="name_procjector">投影机</string>
+    <string name="name_screen">幕布</string>
+    <string name="name_sound">功放</string>
+    <string name="name_dimmer">灯光</string>
+    <string name="name_interactive">交互屏</string>
+    <string name="name_bak">备用</string>
+    <string name="common_setting">统一设置</string>
+    <string name="setting_mode">模式设定</string>
+    <string name="setting_aircondtioner_cold">制冷</string>
+    <string name="setting_aircondtioner_heat">制热</string>
+    <string name="setting_aircondtioner_wind">送风</string>
+    <string name="setting_aircondtioner_dehumidification">除湿</string>
+    <string name="setting_auto">自动</string>
+
+    <string name="minSimilarity">0.88</string>
+    <string name="bioThreshold">0.5</string>
+</resources>

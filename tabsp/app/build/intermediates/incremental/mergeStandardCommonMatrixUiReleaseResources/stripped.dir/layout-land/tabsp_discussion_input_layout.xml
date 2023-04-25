@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                                                               
+
+                 
+                               
+                                    
+
+                 
+                                    
+                                    
+           
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout-land/tabsp_discussion_input_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <FrameLayout
+            android:id="@+id/tipse_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/inputGrid"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/tipes_please_select_lecture"
+                android:textColor="?device_black_text_color"
+                android:textSize="?title_important_text_size" />
+        </FrameLayout>
+
+
+        <GridView
+            android:id="@+id/inputGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="binding_1"          
+            android:divider="@android:color/darker_gray"
+            android:horizontalSpacing="@dimen/px_221"
+            android:listSelector="@null"
+            android:numColumns="2"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tipse_input"></GridView>
+
+        <GridView
+            android:id="@+id/outputGroup"
+            android:layout_width="@dimen/px_200"
+            android:layout_height="wrap_content"
+            android:tag="binding_2"               
+            android:numColumns="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></GridView>
+    </android.support.constraint.ConstraintLayout>
+         

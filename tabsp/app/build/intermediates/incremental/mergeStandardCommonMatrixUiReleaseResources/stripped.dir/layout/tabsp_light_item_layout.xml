@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                                                                          
+
+                 
+                         
+                                    
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" android:tag="layout/tabsp_light_item_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <FrameLayout
+            android:id="@+id/device_image_holder"
+            android:layout_width="@dimen/px_160"
+            android:layout_height="@dimen/px_160">
+
+            <!--<ImageView
+                android:id="@id/device_img"
+                android:layout_width="@dimen/px_86"
+                android:layout_height="@dimen/px_86"
+                android:layout_gravity="center"
+                android:scaleType="center" />-->
+            <FrameLayout
+                android:layout_width="@dimen/px_88"
+                android:layout_height="@dimen/px_88"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@id/device_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mediaroom4_light_close" />
+            </FrameLayout>
+
+            <ProgressBar
+                android:id="@id/controll_processing"
+                android:layout_width="@dimen/px_100"
+                android:layout_height="@dimen/px_100"
+                android:layout_gravity="center"
+                android:indeterminateTint="#5ADAFF"
+                android:indeterminateTintMode="src_atop" />
+
+            <LinearLayout
+                android:id="@+id/dimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/dimmer_minus_frame"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/px_33"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/dimmer_minus"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:focusable="auto"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/mediaroom4_tempeture_minus" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px_33"
+                    android:gravity="center">
+
+                    <com.sunmnet.mediaroom.tabsp.ui.widget.DimmerPowerView
+                        android:id="@+id/dimmer_power"
+                        android:layout_width="@dimen/px_58"
+                        android:layout_height="@dimen/px_22"
+                        android:layout_marginLeft="@dimen/px_10"
+                        android:layout_marginRight="@dimen/px_10"
+                        app:power_empty="?dimmer_power_less"
+                        app:power_full="?colorPrimary" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dimmer_plus_frame"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/px_33"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/dimmer_plus"
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:layout_gravity="center"
+                        android:src="@drawable/mediaroom4_tempeture_plus" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="@dimen/px_18"
+            android:tag="binding_1"            
+            android:textColor="@android:color/black"
+            android:textSize="?common_menu_text_size" />
+    </LinearLayout>
+         

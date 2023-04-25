@@ -1,0 +1,477 @@
+package com.sunmnet.mediaroom.common.tools;
+
+import android.util.SparseArray;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
+
+public class DateUtil {
+
+    public final static String DEFAULT_FORMAT = "yyyy-MM-dd HH:mm:ss";
+    public final static String DEFAULT_FORMAT_DATE = "yyyy-MM-dd";
+    public final static String DEFAULT_FORMAT_TIME = "HH:mm:ss";
+
+    public final static String DEFAULT_FORMAT_MINUTE_SECOND = "mm:ss";
+    public final static String DEFAULT_FORMAT_HOUR_MINUTE = "HH:mm";
+
+    private final static SparseArray<Integer> weekNo = new SparseArray<>();
+
+    /**
+     * 默认一周的第一天是星期一
+     */
+    private static int DEFAULT_FIRST_DAY = Calendar.MONDAY;
+
+    /**
+     * 获取默认一周第一天是星期几
+     *
+     * @return Calendar.MONDAY etc.
+     */
+    public static int getDefaultFirstDay() {
+        return DEFAULT_FIRST_DAY;
+    }
+
+    /**
+     * 设置默认一周第一天是星期几
+     *
+     * @param defaultFirstDay Calendar.MONDAY etc.
+     */
+    public static void setDefaultFirstDay(int defaultFirstDay) {
+        DEFAULT_FIRST_DAY = defaultFirstDay;
+    }
+
+    static {
+        weekNo.put(Calendar.MONDAY, 1);
+        weekNo.put(Calendar.TUESDAY, 2);
+        weekNo.put(Calendar.WEDNESDAY, 3);
+        weekNo.put(Calendar.THURSDAY, 4);
+        weekNo.put(Calendar.FRIDAY, 5);
+        weekNo.put(Calendar.SATURDAY, 6);
+        weekNo.put(Calendar.SUNDAY, 7);
+    }
+
+    public static boolean isNight(Date date) {
+        //晚6点到次日6点
+        String holder = formatDate(date, "yyyy-MM-dd");
+        Date nightStart = parseDateStr(holder + " 18:00:00", "yyyy-MM-dd HH:mm:ss");
+        Date nigthEnd = parseDateStr(holder, "yyyy-MM-dd");
+        nigthEnd.setDate(nigthEnd.getDate() + 1);
+        nigthEnd.setHours(6);
+        nigthEnd.setMinutes(0);
+        nigthEnd.setSeconds(0);
+        return isNight(date, nightStart, nigthEnd);
+    }
+
+    public static boolean isNight(Date date, Date start, Date end) {
+        return date.after(start) && date.before(end);
+    }
+
+    public static void isDay() {
+        //早6点到晚6点
+    }
+
+    public static SimpleDateFormat getDateFormat(String format, Locale locale) {
+        return new SimpleDateFormat(format, locale);
+    }
+
+    public static SimpleDateFormat getDateFormat(String format) {
+        return new SimpleDateFormat(format, Locale.getDefault());
+    }
+
+    /**
+     * 对date进行格式化后的
+     *
+     * @return
+     */
+    public static Date getAfterFormatDate(Date date, String format) {
+        String formatStr = (format == null || format.equals("")) ? DEFAULT_FORMAT : format;
+        return parseDateStr(getDateFormat(formatStr).format(date), formatStr);
+    }
+
+    /**
+     * @param format
+     * @return
+     */
+    public static String getNowDateString(String format) {
+        String formatStr = (format == null || format.equals("")) ? DEFAULT_FORMAT : format;
+        return getDateFormat(formatStr).format(new Date());
+    }
+
+
+    /**
+     * 按所给格式,格式化时间对象
+     */
+    public static String formatDate(Date date, String format) {
+        try {
+            return getDateFormat(format).format(date);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 按给定格式解析字符串为时间对象
+     */
+    public static Date parseDateStr(String dateStr, String format) {
+        try {
+            return getDateFormat(format).parse(dateStr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    /**
+     * 获取指定日期距离开始日期是第几周
+     *
+     * @param dateN      指定日期
+     * @param sStartTime 开始日期
+     */
+    public static int getWeekRangeByDate(String sStartTime, String format, Date dateN) {
+        int iWeek = -1;
+        SimpleDateFormat formatter = getDateFormat(format);
+        try {
+            Date date = formatter.parse(sStartTime);
+            long hourL = getDiffTime_hour(date, dateN);
+            long dayMod = hourL % 24;
+            long dayDiv = hourL / 24;
+            if (dayMod > 0) {
+                dayDiv = dayDiv + 1;
+            }
+            long weekMod = dayDiv % 7;
+            long weekL = dayDiv / 7;
+            if (weekMod > 0) {
+                weekL = weekL + 1;
+            }
+            String weekStr = String.valueOf(weekL);
+            iWeek = Integer.valueOf(weekStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return iWeek;
+    }
+
+    /**
+     * 获取指定日期的教学周，计算方式为：计算指定日期与学期开始日期的天数差，除于7取整并+1，即为周数
+     *
+     * @param date      指定日期
+     * @param startTime 学期开始日期
+     */
+    public static int getWeekOfSemester(String startTime, String format, Date date) {
+        Date startDate = parseDateStr(startTime, format);
+        if (startDate != null) {
+            return getDiffTime_Week(startDate, date);
+        }
+        return 0;
+    }
+
+    //星期
+    public static int getDiffTime_Week(Date date, Date compareDate) {
+        Date midnightDate = getMidnightDate(date);
+        Date compareMidnightDate = getMidnightDate(compareDate);
+        int startWeekNo = getWeekNo(midnightDate);
+        int compareWeekNo = getWeekNo(compareMidnightDate);
+        long diffTime_day = getDiffTime_day(midnightDate, compareMidnightDate);
+        long weekL = (diffTime_day + (startWeekNo - 1) + (7 - compareWeekNo) + 1) / 7;
+        return (int) weekL;
+    }
+
+
+    //天
+    public static long getDiffTime_day(Date sTime, Date eTime) {
+        long sTimNum = sTime.getTime();
+        long eTimNum = eTime.getTime();
+        long diffNum = eTimNum - sTimNum;
+        return TimeUnit.MILLISECONDS.toDays(diffNum);
+    }
+
+    //小时
+    public static long getDiffTime_hour(Date sTime, Date eTime) {
+        long sTimNum = sTime.getTime();
+        long eTimNum = eTime.getTime();
+        long diffNum = eTimNum - sTimNum;
+        return TimeUnit.MILLISECONDS.toHours(diffNum);
+    }
+
+    //分钟
+    public static long getDiffTime_minute(Date sTime, Date eTime) {
+        long sTimNum = sTime.getTime();
+        long eTimNum = eTime.getTime();
+        long diffNum = eTimNum - sTimNum;
+        return TimeUnit.MILLISECONDS.toMinutes(diffNum);
+    }
+
+    //秒
+    public static long getDiffTime_second(Date sTime, Date eTime) {
+        long sTimNum = sTime.getTime();
+        long eTimNum = eTime.getTime();
+        long diffNum = eTimNum - sTimNum;
+        return TimeUnit.MILLISECONDS.toSeconds(diffNum);
+    }
+
+    //毫秒
+    public static long getDiffTime_msec(Date sTime, Date eTime) {
+        long sTimNum = sTime.getTime();
+        long eTimNum = eTime.getTime();
+        long diffNum = eTimNum - sTimNum;
+        return diffNum;
+    }
+
+
+    /**
+     * 获取当前时间是周几
+     *
+     * @return Calendar.MONDAY etc.
+     */
+    public static int getDayOfWeekNow() {
+        return Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+    }
+
+    public static String dayOfWeek(Date date){
+        Calendar calendar =Calendar.getInstance();
+        calendar.setTime(date);
+        final String week[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+        return week[calendar.get(java.util.Calendar.DAY_OF_WEEK)-1];
+    }
+    /**
+     * 获取当前时间是周几
+     *
+     * @return Calendar.MONDAY etc.
+     */
+    public static int getDayOfWeek(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        return calendar.get(Calendar.DAY_OF_WEEK);
+    }
+
+    /**
+     * 传入Calendar的周几数值，返回对应周一到周日的1-7数值
+     *
+     * @param dayOfWeek Calendar.MONDAY etc.
+     * @return 1-7，对应周一到周日
+     */
+    public static int getWeekNo(int dayOfWeek) {
+        return weekNo.get(dayOfWeek);
+    }
+
+    /**
+     * 获取指定日期是周几，1-7对应周一到周日
+     */
+    public static int getWeekNo(Date date) {
+        return getWeekNo(getDayOfWeek(date));
+    }
+
+    /**
+     * 获取当前日期是周几，1-7对应周一到周日
+     */
+    public static int getWeekNoNow() {
+        return getWeekNo(getDayOfWeekNow());
+    }
+
+    /**
+     * 取得指定日期所在周的第一天
+     *
+     * @param date     指定日期
+     * @param firstDay Calendar.MONDAY etc. 一周的第一天是星期几
+     */
+    public static Date getFirstDayOfWeek(Date date, int firstDay) {
+        Calendar c = new GregorianCalendar();
+        c.setFirstDayOfWeek(firstDay);
+        c.setTime(date);
+        c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek());
+        return c.getTime();
+    }
+
+    /**
+     * 取得日期所在周的第一天，一周的第一天为星期一
+     */
+    public static Date getFirstDayOfWeek(Date date) {
+        return getFirstDayOfWeek(date, DEFAULT_FIRST_DAY);
+    }
+
+
+    public static boolean isBetween(Date compare, Date start, Date end) {
+        try {
+            return compare.getTime() >= start.getTime() && end.getTime() >= compare.getTime();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static boolean isBetween(String compare, String start, String end, String format) {
+        SimpleDateFormat df = getDateFormat(format);
+        Date compareTime;
+        Date beginTime;
+        Date endTime;
+        try {
+            compareTime = df.parse(compare);
+            beginTime = df.parse(start);
+            endTime = df.parse(end);
+            return isBetween(compareTime, beginTime, endTime);
+        } catch (Exception e) {
+
+        }
+        return false;
+    }
+
+    /**
+     * @param compare
+     * @param start
+     * @param end
+     * @param startDeviation 比较的开始时间偏差
+     * @return
+     */
+    public static boolean isBetween(Date compare, Date start, Date end, long startDeviation) {
+        try {
+            boolean isBetween = isBetween(compare, start, end);
+            if (!isBetween && startDeviation != 0) {
+                Date compareEx = new Date(compare.getTime() + startDeviation);
+                isBetween = isBetween(compareEx, start, end);
+            }
+            return isBetween;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * 判断compare时间是否在beCompared之前，包含相等
+     *
+     * @param compare    比较的时间
+     * @param beCompared 被比较的时间
+     */
+    public static boolean isBefore(Date compare, Date beCompared) {
+        try {
+            return compare.getTime() <= beCompared.getTime();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * 判断compare时间是否在beCompared之前，包含相等
+     *
+     * @param compare    比较的时间
+     * @param beCompared 被比较的时间
+     * @param format     格式
+     */
+    public static boolean isBefore(String compare, String beCompared, String format) {
+        SimpleDateFormat df = getDateFormat(format);
+        Date compareTime;
+        Date beComparedTime;
+        try {
+            compareTime = df.parse(compare);
+            beComparedTime = df.parse(beCompared);
+            return isBefore(compareTime, beComparedTime);
+        } catch (Exception e) {
+
+        }
+        return false;
+    }
+
+    /**
+     * 判断compare时间是否在beCompared之后，包含相等
+     *
+     * @param compare    比较的时间
+     * @param beCompared 被比较的时间
+     */
+    public static boolean isAfter(Date compare, Date beCompared) {
+        try {
+            return compare.getTime() >= beCompared.getTime();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * 判断compare时间是否在beCompared之后，包含相等
+     *
+     * @param compare    比较的时间
+     * @param beCompared 被比较的时间
+     * @param format     格式
+     */
+    public static boolean isAfter(String compare, String beCompared, String format) {
+        SimpleDateFormat df = getDateFormat(format);
+        Date compareTime;
+        Date beComparedTime;
+        try {
+            compareTime = df.parse(compare);
+            beComparedTime = df.parse(beCompared);
+            return isAfter(compareTime, beComparedTime);
+        } catch (Exception e) {
+
+        }
+        return false;
+    }
+
+
+    /**
+     * 基于baseDate，获取时间部分的时间戳
+     *
+     * @param baseDate
+     * @param ignoreMilliSecond 是否忽视毫秒部分
+     * @return
+     */
+    public static long getTimePartMillis(Date baseDate, boolean ignoreMilliSecond) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(baseDate);
+        calendar.set(Calendar.YEAR, 1970);
+        calendar.set(Calendar.MONTH, Calendar.JANUARY);
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        if (ignoreMilliSecond) {
+            calendar.set(Calendar.MILLISECOND, 0);
+        }
+        return calendar.getTimeInMillis();
+    }
+
+    /**
+     * 基于baseDate，获取时间部分的时间戳，忽视毫秒部分
+     */
+    public static long getTimePartMillis(Date baseDate) {
+        return getTimePartMillis(baseDate, true);
+    }
+
+    /**
+     * 基于baseDate，获取日期部分的时间戳
+     *
+     * @param baseDate
+     * @return
+     */
+    public static long getDatePartMillis(Date baseDate) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(baseDate);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        return calendar.getTimeInMillis();
+    }
+
+    /**
+     * 获取凌晨0时整点Date
+     */
+    public static Date getMidnightDate(Date baseDate) {
+        return new Date(getDatePartMillis(baseDate));
+    }
+
+    /**
+     * 是否是晚上
+     * */
+    public static boolean isNight(){
+        Calendar cal = Calendar.getInstance();
+        int hour = cal.get(Calendar.HOUR_OF_DAY);
+        return hour < 6 || hour > 20;
+    }
+
+}

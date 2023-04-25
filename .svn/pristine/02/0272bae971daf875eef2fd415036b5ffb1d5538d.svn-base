@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="matrix_input_layout" type="id"/>
+    <item name="matrix_output_layout" type="id"/>
+    <item name="matrix_input_scroll_view" type="id"/>
+    <item name="matrix_output_scroll_view" type="id"/>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="MenuAdapterBinding">
+
+        <import type="com.sunmnet.mediaroom.tabsp.ui.adapter.MenuHolderAdapter" />
+
+        <variable
+            name="adapter"
+            type="MenuHolderAdapter" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <GridView
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:adapter="@{adapter}"
+            android:divider="@android:color/darker_gray"
+            android:numColumns="1"
+            tools:listitem="@layout/tabsp_menu_item_layout"/>
+
+        <FrameLayout
+            android:id="@+id/other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/holo_red_light"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="asdasdasd" />
+        </FrameLayout>
+    </RelativeLayout>
+    <!--
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark">
+
+            <GridView
+                android:id="@+id/menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adapter="@{adapter}"
+                android:divider="@android:color/darker_gray"
+                android:horizontalSpacing="@dimen/px_2"
+                android:listSelector="@null"
+                android:numColumns="2"
+                android:verticalSpacing="@dimen/px_2"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toTopOf="@id/other"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside"></GridView>
+
+            <FrameLayout
+                android:id="@+id/other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/menu">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="asdasdasd" />
+            </FrameLayout>
+        </android.support.constraint.ConstraintLayout>-->
+</layout>

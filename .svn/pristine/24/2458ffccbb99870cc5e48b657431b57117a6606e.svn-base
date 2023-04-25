@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/px_100">
+
+        <ImageView
+            android:id="@+id/tabsp_logo"
+            android:layout_width="@dimen/px_114"
+            android:layout_height="@dimen/px_62"
+            android:layout_marginLeft="@dimen/px_30"
+            android:layout_marginTop="@dimen/px_30"/>
+
+        <include
+            layout="@layout/tabsp_language_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@id/allowcard"
+                layout="@layout/tabsp_login_swip_card_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left" />
+
+            <include
+                android:id="@id/spinning"
+                layout="@layout/tabsp_login_center_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <include
+                android:id="@+id/qrcode_container"
+                layout="@layout/tabsp_login_qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@id/switchLogintype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/px_87"
+            android:background="@drawable/tabsp_login_enter_account_effect"
+            android:gravity="center"
+            android:paddingLeft="@dimen/px_122"
+            android:paddingTop="@dimen/px_19"
+            android:paddingRight="@dimen/px_122"
+            android:paddingBottom="@dimen/px_19"
+            android:text="@string/opt_login_account"
+            android:textColor="?attr/common_text_color"
+            android:textSize="?attr/login_enter_btn_textsize" />
+    </LinearLayout>
+</FrameLayout>

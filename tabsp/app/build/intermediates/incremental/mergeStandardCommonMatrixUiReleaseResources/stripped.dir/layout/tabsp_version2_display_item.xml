@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+                                                                          
+
+                 
+                         
+                                    
+           
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" android:tag="layout/tabsp_version2_display_item_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="@dimen/px_540"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/discussion_background"
+            android:orientation="horizontal"
+            android:padding="@dimen/px_38">
+
+            <TextView
+                android:id="@+id/controll_name"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="?device_black_text_color"
+                android:textSize="?common_text_size" />
+
+            <FrameLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/px_30"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/controll_processing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="#5ADAFF"
+                        android:indeterminateTintMode="src_atop"
+                        android:visibility="gone" />
+
+                    <Switch
+                        android:id="@+id/controll_switcher"
+                        android:layout_width="@dimen/px_82"
+                        android:layout_height="@dimen/px_34"
+                        android:layout_gravity="center"
+                        android:thumb="@drawable/switch_custom_thumb_selector"
+                        android:track="@drawable/switch_custom_track_selector" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+         

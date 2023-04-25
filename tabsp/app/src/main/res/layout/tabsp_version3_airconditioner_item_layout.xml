@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="AirconditionerControllItem">
+
+        <import type="com.sunmnet.mediaroom.device.bean.Airconditioner" />
+
+        <import type="com.sunmnet.mediaroom.device.bean.Airconditioner.Setting" />
+
+        <import type="com.sunmnet.mediaroom.tabsp.ui.adapter.BindingAdapter" />
+
+        <variable
+            name="dev"
+            type="Airconditioner" />
+
+        <variable
+            name="setting"
+            type="Setting" />
+
+        <variable
+            name="settingAdapter"
+            type="BindingAdapter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/px_30"
+            android:paddingTop="@dimen/px_15"
+            android:paddingRight="@dimen/px_30"
+            android:paddingBottom="@dimen/px_15">
+
+            <TextView
+                android:id="@id/device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dev.getDeviceName()}"
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/airconditioner_opt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@id/single_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_forward_effect"
+                    android:paddingLeft="@dimen/px_45"
+                    android:paddingTop="@dimen/px_15"
+                    android:paddingRight="@dimen/px_45"
+                    android:paddingBottom="@dimen/px_15"
+                    android:text="@string/name_opt_open"
+                    android:textSize="?common_menu_text_size" />
+
+                <Button
+                    android:id="@id/single_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_30"
+                    android:background="@drawable/btn_reverse_effective"
+                    android:paddingLeft="@dimen/px_45"
+                    android:paddingTop="@dimen/px_15"
+                    android:paddingRight="@dimen/px_45"
+                    android:paddingBottom="@dimen/px_15"
+                    android:text="@string/name_opt_close"
+                    android:textSize="?common_menu_text_size" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/px_30"
+            android:paddingTop="@dimen/px_15"
+            android:paddingRight="@dimen/px_30"
+            android:paddingBottom="@dimen/px_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_tempture"
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@id/volumn_minus_btn"
+                android:layout_width="@dimen/px_38"
+                android:layout_height="@dimen/px_38"
+                android:background="@drawable/volumn_backward_effective"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tempture_value"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mediaroom4_minus_btn_white" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tempture_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/device_off_background"
+                android:gravity="center"
+                android:paddingLeft="@dimen/px_30"
+                android:paddingTop="@dimen/px_15"
+                android:paddingRight="@dimen/px_30"
+                android:paddingBottom="@dimen/px_15"
+                android:text="25℃"
+                android:textColor="?device_black_text_color"
+                android:textSize="?common_title_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/volumn_plus_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@id/volumn_plus_btn"
+                android:layout_width="@dimen/px_38"
+                android:layout_height="@dimen/px_38"
+                android:background="@drawable/volumn_forward_effective"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mediaroom4_plus_btn_primary" />
+            </FrameLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/px_30"
+            android:paddingRight="@dimen/px_30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_mode"
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/modes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </LinearLayout>
+            <!--<GridView
+                android:id="@+id/airconditioner_mode"
+                android:layout_width="@dimen/px_608"
+                android:layout_height="wrap_content"
+                android:adapter="@{settingAdapter}"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></GridView>-->
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</layout>

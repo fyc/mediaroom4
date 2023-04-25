@@ -1,0 +1,423 @@
+-- Merging decision tree log ---
+manifest
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+MERGED from [:Matrix] /Users/fangyichao/Documents/sanmnet/mediaroom4/Matrix/build/intermediates/merged_manifest/standardUiRelease/AndroidManifest.xml:2:1-9:12
+MERGED from [:Device] /Users/fangyichao/Documents/sanmnet/mediaroom4/Device/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-12:12
+MERGED from [:Record] /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:WirelessProjection] /Users/fangyichao/Documents/sanmnet/mediaroom4/WirelessProjection/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-16:12
+MERGED from [com.android.databinding:adapters:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/7a60efa4c21e787ac5a7c3a1d2ecd8fa/adapters-4.2.2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.databinding:library:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/0e6fe5acf8d299612c9166112a66ea13/library-4.2.2/AndroidManifest.xml:17:1-22:12
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-46:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/24e6ca44a1fe14a43735d1920677085c/appcompat-v7-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.alibaba:arouter-api:1.5.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d6b357737c980c5a8e0bf39887355572/arouter-api-1.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.warkiz.widget:indicatorseekbar:2.1.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c9c53aa1b093c5f4b94c561dd4d6ff27/indicatorseekbar-2.1.2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f5fcf122b8c5d5345ccd1dc4cfa32b56/cardview-v7-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.databinding:viewbinding:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4f71585d6aa03908869c3de602788235/viewbinding-4.2.2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/16b5cfc8005ee3aee71e7d3e9243d2be/support-v4-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/792fd1d20e6e606f7ce8ad0335e48933/support-fragment-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/cd40c2fda71d1f39d4f3a2fe11fbdb60/animated-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4fb3116ba11b92e6ae656ca8448a3b9e/support-core-ui-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/a6376784636110e7a15b05f80559fb0e/support-core-utils-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/fab0080a9eb47778d27630ecd726930c/support-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/718eb8f6c0163e323337222447879aff/butterknife-8.8.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:loader:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2a92e9810883c925485bfcc4b0eb3e1d/loader-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/b5287c551a837060797ea47f9c50051b/support-media-compat-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8437e6177581ba97887f235682e92979/viewpager-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/736136a35739bde620740c8775ec7bc8/coordinatorlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/43b08f0334f3f2fe7b193b02cfdea95b/drawerlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f9f0389d48d3e3a4d102dda1407b9e88/slidingpanelayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/1983cd89c69166f2bf6e9b3c107dde57/customview-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/1dc77b53446ca5b2c3cc9669fab89422/swiperefreshlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/ee2d3068f4060b006722661ed27bb526/asynclayoutinflater-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8b71699b8f4b5d9363fd6d4178a2548c/support-compat-28.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4f6148ccadfc33156a4df93d79d08277/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/b77ed8641fb0066eb5ca84f46dd21f64/versionedparcelable-28.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/9aa2adc211a7042b7814194276806545/cursoradapter-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/33c230bce79a0679b2df3fd01f06b5a1/documentfile-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8600176c39989dd03b6e8934d955cbd7/localbroadcastmanager-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/53e74d2e5aa86c8baa4c920ca6f5e93d/print-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/31f9ad114648b35d415531f9f5a549da/viewmodel-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d614c741cfe5183afde4f15aa90b67b3/livedata-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d18472f4b44154a711ddbbbe1866600b/livedata-core-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2fd20d9fc0ae13c4c4056692786ae94e/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/171820c44e680728c8e499f462f01e58/interpolator-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4dd41916c7f21345d0275ebc5ff96267/constraint-layout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/281ab4d6952394559d6f3c3457b18273/glide-4.9.0/AndroidManifest.xml:2:1-12:12
+MERGED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:2:1-24:12
+MERGED from [com.android.support:multidex:1.0.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d7f3aa3632705bcabe01e34dd828c07d/multidex-1.0.3/AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/166daf9b2be60a663b373b76f60ba830/rxandroid-2.1.1/AndroidManifest.xml:15:1-20:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2e1004a3b6a48ea29abeab4ee7294f19/gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
+MERGED from [tv.danmaku.ijk.media:ijkplayer-exo:0.8.8] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/6516bad6d468245a441e9ad76308dee1/ijkplayer-exo-0.8.8/AndroidManifest.xml:2:1-15:12
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f0512c8400aa17c4770581e5b13bc48c/ijkplayer-java-0.8.8/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.exoplayer:exoplayer:r1.5.11] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/5f117c5ca97d9d8d304e172b006b0484/exoplayer-r1.5.11/AndroidManifest.xml:17:1-28:12
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+	package
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:3:5-42
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+	android:sharedUserId
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:4:5-40
+	android:versionName
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:2:1-69:12
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+meta-data#versionDescription
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:32:9-34:63
+	android:value
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:34:13-50
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:33:13-46
+uses-sdk
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+MERGED from [:Matrix] /Users/fangyichao/Documents/sanmnet/mediaroom4/Matrix/build/intermediates/merged_manifest/standardUiRelease/AndroidManifest.xml:5:5-7:41
+MERGED from [:Matrix] /Users/fangyichao/Documents/sanmnet/mediaroom4/Matrix/build/intermediates/merged_manifest/standardUiRelease/AndroidManifest.xml:5:5-7:41
+MERGED from [:Device] /Users/fangyichao/Documents/sanmnet/mediaroom4/Device/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:Device] /Users/fangyichao/Documents/sanmnet/mediaroom4/Device/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:Record] /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:Record] /Users/fangyichao/Documents/sanmnet/mediaroom4/Record/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:WirelessProjection] /Users/fangyichao/Documents/sanmnet/mediaroom4/WirelessProjection/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:WirelessProjection] /Users/fangyichao/Documents/sanmnet/mediaroom4/WirelessProjection/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-8:41
+MERGED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.databinding:adapters:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/7a60efa4c21e787ac5a7c3a1d2ecd8fa/adapters-4.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.databinding:adapters:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/7a60efa4c21e787ac5a7c3a1d2ecd8fa/adapters-4.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.databinding:library:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/0e6fe5acf8d299612c9166112a66ea13/library-4.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.databinding:library:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/0e6fe5acf8d299612c9166112a66ea13/library-4.2.2/AndroidManifest.xml:20:5-44
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/24e6ca44a1fe14a43735d1920677085c/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/24e6ca44a1fe14a43735d1920677085c/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.alibaba:arouter-api:1.5.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d6b357737c980c5a8e0bf39887355572/arouter-api-1.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.alibaba:arouter-api:1.5.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d6b357737c980c5a8e0bf39887355572/arouter-api-1.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.warkiz.widget:indicatorseekbar:2.1.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c9c53aa1b093c5f4b94c561dd4d6ff27/indicatorseekbar-2.1.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.warkiz.widget:indicatorseekbar:2.1.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c9c53aa1b093c5f4b94c561dd4d6ff27/indicatorseekbar-2.1.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f5fcf122b8c5d5345ccd1dc4cfa32b56/cardview-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f5fcf122b8c5d5345ccd1dc4cfa32b56/cardview-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.databinding:viewbinding:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4f71585d6aa03908869c3de602788235/viewbinding-4.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.databinding:viewbinding:4.2.2] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4f71585d6aa03908869c3de602788235/viewbinding-4.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/16b5cfc8005ee3aee71e7d3e9243d2be/support-v4-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/16b5cfc8005ee3aee71e7d3e9243d2be/support-v4-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/792fd1d20e6e606f7ce8ad0335e48933/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/792fd1d20e6e606f7ce8ad0335e48933/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/cd40c2fda71d1f39d4f3a2fe11fbdb60/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/cd40c2fda71d1f39d4f3a2fe11fbdb60/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4fb3116ba11b92e6ae656ca8448a3b9e/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4fb3116ba11b92e6ae656ca8448a3b9e/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/a6376784636110e7a15b05f80559fb0e/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/a6376784636110e7a15b05f80559fb0e/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/fab0080a9eb47778d27630ecd726930c/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/fab0080a9eb47778d27630ecd726930c/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/718eb8f6c0163e323337222447879aff/butterknife-8.8.1/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/718eb8f6c0163e323337222447879aff/butterknife-8.8.1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:loader:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2a92e9810883c925485bfcc4b0eb3e1d/loader-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2a92e9810883c925485bfcc4b0eb3e1d/loader-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/b5287c551a837060797ea47f9c50051b/support-media-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/b5287c551a837060797ea47f9c50051b/support-media-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8437e6177581ba97887f235682e92979/viewpager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8437e6177581ba97887f235682e92979/viewpager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/736136a35739bde620740c8775ec7bc8/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/736136a35739bde620740c8775ec7bc8/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/43b08f0334f3f2fe7b193b02cfdea95b/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/43b08f0334f3f2fe7b193b02cfdea95b/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f9f0389d48d3e3a4d102dda1407b9e88/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f9f0389d48d3e3a4d102dda1407b9e88/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/1983cd89c69166f2bf6e9b3c107dde57/customview-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/1983cd89c69166f2bf6e9b3c107dde57/customview-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/1dc77b53446ca5b2c3cc9669fab89422/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/1dc77b53446ca5b2c3cc9669fab89422/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/ee2d3068f4060b006722661ed27bb526/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/ee2d3068f4060b006722661ed27bb526/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8b71699b8f4b5d9363fd6d4178a2548c/support-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8b71699b8f4b5d9363fd6d4178a2548c/support-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4f6148ccadfc33156a4df93d79d08277/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4f6148ccadfc33156a4df93d79d08277/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/b77ed8641fb0066eb5ca84f46dd21f64/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/b77ed8641fb0066eb5ca84f46dd21f64/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/9aa2adc211a7042b7814194276806545/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/9aa2adc211a7042b7814194276806545/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/33c230bce79a0679b2df3fd01f06b5a1/documentfile-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/33c230bce79a0679b2df3fd01f06b5a1/documentfile-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8600176c39989dd03b6e8934d955cbd7/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8600176c39989dd03b6e8934d955cbd7/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/53e74d2e5aa86c8baa4c920ca6f5e93d/print-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/53e74d2e5aa86c8baa4c920ca6f5e93d/print-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/31f9ad114648b35d415531f9f5a549da/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/31f9ad114648b35d415531f9f5a549da/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d614c741cfe5183afde4f15aa90b67b3/livedata-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d614c741cfe5183afde4f15aa90b67b3/livedata-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d18472f4b44154a711ddbbbe1866600b/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d18472f4b44154a711ddbbbe1866600b/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2fd20d9fc0ae13c4c4056692786ae94e/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2fd20d9fc0ae13c4c4056692786ae94e/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/171820c44e680728c8e499f462f01e58/interpolator-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/171820c44e680728c8e499f462f01e58/interpolator-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4dd41916c7f21345d0275ebc5ff96267/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4dd41916c7f21345d0275ebc5ff96267/constraint-layout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/281ab4d6952394559d6f3c3457b18273/glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/281ab4d6952394559d6f3c3457b18273/glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:multidex:1.0.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d7f3aa3632705bcabe01e34dd828c07d/multidex-1.0.3/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/d7f3aa3632705bcabe01e34dd828c07d/multidex-1.0.3/AndroidManifest.xml:20:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/166daf9b2be60a663b373b76f60ba830/rxandroid-2.1.1/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/166daf9b2be60a663b373b76f60ba830/rxandroid-2.1.1/AndroidManifest.xml:18:5-43
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2e1004a3b6a48ea29abeab4ee7294f19/gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2e1004a3b6a48ea29abeab4ee7294f19/gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-exo:0.8.8] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/6516bad6d468245a441e9ad76308dee1/ijkplayer-exo-0.8.8/AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-exo:0.8.8] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/6516bad6d468245a441e9ad76308dee1/ijkplayer-exo-0.8.8/AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f0512c8400aa17c4770581e5b13bc48c/ijkplayer-java-0.8.8/AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/f0512c8400aa17c4770581e5b13bc48c/ijkplayer-java-0.8.8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.exoplayer:exoplayer:r1.5.11] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/5f117c5ca97d9d8d304e172b006b0484/exoplayer-r1.5.11/AndroidManifest.xml:24:5-26:41
+MERGED from [com.google.android.exoplayer:exoplayer:r1.5.11] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/5f117c5ca97d9d8d304e172b006b0484/exoplayer-r1.5.11/AndroidManifest.xml:24:5-26:41
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INSTALL_PACKAGES
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:6:5-75
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:6:22-72
+uses-permission#android.permission.INTERACT_ACROSS_USERS
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:8:22-77
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:9:22-77
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:10:5-79
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-79
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:11:5-76
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:13:5-76
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:13:5-76
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:11:22-73
+uses-permission#android.permission.INTERNET
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:12:5-67
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-67
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-67
+MERGED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:11:5-67
+MERGED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:12:22-64
+uses-permission#android.permission.REBOOT
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:13:5-65
+MERGED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-65
+MERGED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-65
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:13:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:14:5-81
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-81
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:14:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:15:5-80
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:15:22-77
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:16:5-73
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:16:22-70
+uses-permission#android.permission.WRITE_SECURE_SETTINGS
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:17:22-77
+uses-permission#android.permission.SET_TIME
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:18:5-67
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:18:22-64
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:19:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:20:5-68
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-68
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-68
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:20:22-65
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:21:5-75
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:21:22-72
+application
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:23:5-67:19
+MERGED from [:Device] /Users/fangyichao/Documents/sanmnet/mediaroom4/Device/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-10:19
+MERGED from [:Device] /Users/fangyichao/Documents/sanmnet/mediaroom4/Device/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-10:19
+MERGED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-14:19
+MERGED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-14:19
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-44:19
+MERGED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-44:19
+MERGED from [com.android.support:support-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8b71699b8f4b5d9363fd6d4178a2548c/support-compat-28.0.0/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8b71699b8f4b5d9363fd6d4178a2548c/support-compat-28.0.0/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/b77ed8641fb0066eb5ca84f46dd21f64/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/b77ed8641fb0066eb5ca84f46dd21f64/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4dd41916c7f21345d0275ebc5ff96267/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/4dd41916c7f21345d0275ebc5ff96267/constraint-layout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/281ab4d6952394559d6f3c3457b18273/glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/281ab4d6952394559d6f3c3457b18273/glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:13:5-22:19
+MERGED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:13:5-22:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2e1004a3b6a48ea29abeab4ee7294f19/gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/2e1004a3b6a48ea29abeab4ee7294f19/gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [tv.danmaku.ijk.media:ijkplayer-exo:0.8.8] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/6516bad6d468245a441e9ad76308dee1/ijkplayer-exo-0.8.8/AndroidManifest.xml:9:5-13:19
+MERGED from [tv.danmaku.ijk.media:ijkplayer-exo:0.8.8] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/6516bad6d468245a441e9ad76308dee1/ijkplayer-exo-0.8.8/AndroidManifest.xml:9:5-13:19
+	android:screenOrientation
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:29:9-46
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/8b71699b8f4b5d9363fd6d4178a2548c/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:30:9-35
+	android:label
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:27:9-41
+	android:roundIcon
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:28:9-54
+	android:icon
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:26:9-43
+	android:allowBackup
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:25:9-35
+	android:theme
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:31:9-44
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:24:9-41
+activity#com.sunmnet.mediaroom.tabsp.ui.DispatcherActivity
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:36:9-46:20
+	android:windowSoftInputMode
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:38:13-64
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:37:13-77
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.HOME+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:39:13-45:29
+action#android.intent.action.MAIN
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:40:17-69
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:40:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:42:17-77
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:42:27-74
+category#android.intent.category.HOME
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:43:17-73
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:43:27-70
+category#android.intent.category.DEFAULT
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:44:17-76
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:44:27-73
+receiver#com.sunmnet.mediaroom.tabsp.BootBroadcast
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:55:9-60:20
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:55:19-48
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+category:name:android.intent.category.HOME
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:56:13-59:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:57:17-79
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:57:25-76
+receiver#com.sunmnet.mediaroom.tabsp.UpgradeReceiver
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:61:9-66:20
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:61:19-50
+intent-filter#action:name:android.intent.action.PACKAGE_REPLACED+data:scheme:package
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:62:13-65:29
+action#android.intent.action.PACKAGE_REPLACED
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:63:17-81
+	android:name
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:63:25-78
+data
+ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:64:17-50
+	android:scheme
+		ADDED from /Users/fangyichao/Documents/sanmnet/mediaroom4/tabsp/app/src/main/AndroidManifest.xml:64:23-47
+service#com.sunmnet.mediaroom.common.service.BellService
+ADDED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:13:9-84
+	android:name
+		ADDED from [:Common] /Users/fangyichao/Documents/sanmnet/mediaroom4/Common/build/intermediates/merged_manifest/release/AndroidManifest.xml:13:18-81
+activity#tv.danmaku.ijk.media.player_lib.activities.RecentMediaActivity
+ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:16:9-22:20
+	android:screenOrientation
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-45
+	android:label
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-45
+	android:configChanges
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-74
+	android:theme
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-44
+	android:name
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-90
+activity#tv.danmaku.ijk.media.player_lib.activities.VideoActivity
+ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:23:9-29:20
+	android:screenOrientation
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:27:13-45
+	android:label
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:26:13-45
+	android:configChanges
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:25:13-74
+	android:theme
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:28:13-51
+	android:name
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-84
+activity#tv.danmaku.ijk.media.player_lib.activities.VideoActivity2
+ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:30:9-36:20
+	android:screenOrientation
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:34:13-45
+	android:label
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:33:13-45
+	android:configChanges
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:32:13-74
+	android:theme
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:35:13-51
+	android:name
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:31:13-85
+service#tv.danmaku.ijk.media.player_lib.services.MediaPlayerService
+ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:38:9-43:19
+	android:enabled
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:40:13-36
+	android:label
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:42:13-45
+	android:exported
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [:ijkplayer] /Users/fangyichao/Documents/sanmnet/mediaroom4/ijkplayer-lib/build/intermediates/merged_manifest/release/AndroidManifest.xml:39:13-87
+service#com.litesuits.common.service.NotificationService
+ADDED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:14:9-21:19
+	android:label
+		ADDED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:16:13-45
+	android:permission
+		ADDED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:17:13-87
+	android:name
+		ADDED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:15:13-76
+intent-filter#action:name:android.service.notification.NotificationListenerService
+ADDED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:18:13-20:29
+action#android.service.notification.NotificationListenerService
+ADDED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:19:17-99
+	android:name
+		ADDED from [com.luffykou:android-common-utils:1.1.3] /Users/fangyichao/.gradle/caches/transforms-2/files-2.1/c5d66eacd5aa56ba49923feae0c73df2/android-common-utils-1.1.3/AndroidManifest.xml:19:25-96

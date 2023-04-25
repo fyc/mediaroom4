@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sunmnet.mediaroom.tabsp.ui.widget.WirelessDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/volumn_drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/bottom_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/device_off_background"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_7_5">
+
+        <LinearLayout
+            android:id="@+id/mark"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/wireless_option_click_effective"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_7_5">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/tabsp_wireless_option_mark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/name_mark"
+                android:textColor="?device_black_text_color"
+                android:textSize="@dimen/dp_11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/whiteboard"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/wireless_option_click_effective"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_7_5">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/tabsp_wireless_option_whiteboard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/name_white_board"
+                android:textColor="?device_black_text_color"
+                android:textSize="@dimen/dp_11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/file"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/wireless_option_click_effective"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_7_5">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/tabsp_wireless_option_file" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/name_file"
+                android:textColor="?device_black_text_color"
+                android:textSize="@dimen/dp_11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stop"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/wireless_option_click_effective"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_7_5">
+
+            <ImageView
+                android:id="@+id/icon_stop"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/tabsp_wireless_option_stop" />
+
+            <TextView
+                android:id="@+id/tv_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/name_stop"
+                android:textColor="?device_black_text_color"
+                android:textSize="@dimen/dp_11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/locker"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/wireless_option_click_effective"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_7_5">
+
+            <ImageView
+                android:id="@+id/locker_img"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/tabsp_wireless_option_lock" />
+
+            <TextView
+                android:id="@+id/locker_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/name_lock"
+                android:textColor="?device_black_text_color"
+                android:textSize="@dimen/dp_11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/volumn"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/wireless_option_click_effective"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_7_5">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/tabsp_wireless_option_volumn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="@string/name_volumn"
+                android:textColor="?device_black_text_color"
+                android:textSize="@dimen/dp_11" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+            <com.warkiz.widget.IndicatorStayLayout
+                android:layout_width="@dimen/dp_125"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical">
+
+                <com.warkiz.widget.IndicatorSeekBar
+                    android:id="@+id/volumn_seeker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    app:isb_indicator_color="@color/colorPrimary"
+                    app:isb_max="15"
+                    app:isb_min="0"
+                    app:isb_progress="0"
+                    app:isb_show_indicator="circular_bubble"
+                    app:isb_thumb_drawable="@drawable/selector_thumb_ripple_drawable"
+                    app:isb_thumb_size="@dimen/dp_18"
+                    app:isb_track_background_size="@dimen/dp_10"
+                    app:isb_track_progress_color="@color/colorPrimary" />
+            </com.warkiz.widget.IndicatorStayLayout>
+        </FrameLayout>
+
+    </FrameLayout>
+</com.sunmnet.mediaroom.tabsp.ui.widget.WirelessDrawerLayout>

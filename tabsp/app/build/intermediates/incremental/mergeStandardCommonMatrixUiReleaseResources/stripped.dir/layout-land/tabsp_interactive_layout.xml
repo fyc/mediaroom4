@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                                                               
+
+                 
+                          
+                                    
+
+                 
+                            
+                            
+
+                 
+                                 
+                                    
+           
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/px_20" android:tag="layout-land/tabsp_interactive_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/px_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="@dimen/px_14"
+                android:layout_height="@dimen/px_25"
+                android:background="@drawable/mediaroom4_back_image" />
+
+            <TextView
+                android:id="@+id/device_setting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:tag="binding_1"    
+                android:textColor="?colorPrimary"
+                android:textSize="?common_menu_text_size" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/interactives"
+            android:layout_width="@dimen/px_153"
+            android:layout_height="@dimen/px_611"
+            android:layout_marginTop="@dimen/px_10"
+            android:tag="binding_2"     
+            android:background="@drawable/device_off_background"
+            android:paddingTop="@dimen/px_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_btn"></ListView>
+
+        <LinearLayout
+            android:id="@+id/interactive_options"
+            android:layout_width="@dimen/px_740"
+            android:layout_height="@dimen/px_170"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_marginTop="@dimen/px_20"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@id/interactives"
+            app:layout_constraintTop_toBottomOf="@id/back_btn">
+
+            <FrameLayout
+                android:layout_width="@dimen/px_170"
+                android:layout_height="@dimen/px_170"
+                android:background="@drawable/device_off_background">
+
+                <ProgressBar
+                    android:id="@+id/switcherProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="#5ADAFF"
+                    android:indeterminateTintMode="src_atop"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/switcher"
+                    android:layout_width="@dimen/px_68"
+                    android:layout_height="@dimen/px_68"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/px_170"
+                android:layout_height="@dimen/px_170"
+                android:layout_marginLeft="@dimen/px_20"
+                android:background="@drawable/device_off_background">
+
+                <View
+                    android:id="@+id/volumn_icon"
+                    android:layout_width="@dimen/px_68"
+                    android:layout_height="@dimen/px_68"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/px_170"
+                android:layout_height="@dimen/px_170"
+                android:layout_marginLeft="@dimen/px_20"
+                android:background="@drawable/device_off_background">
+
+                <View
+                    android:id="@+id/volumn_plus_btn"
+                    android:layout_width="@dimen/px_68"
+                    android:layout_height="@dimen/px_68"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/px_170"
+                android:layout_height="@dimen/px_170"
+                android:layout_marginLeft="@dimen/px_20"
+                android:background="@drawable/device_off_background">
+
+                <View
+                    android:id="@+id/volumn_minus_btn"
+                    android:layout_width="@dimen/px_68"
+                    android:layout_height="@dimen/px_68"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px_740"
+            android:layout_height="@dimen/px_421"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_marginTop="@dimen/px_20"
+            android:background="@drawable/device_off_background"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/px_20"
+            android:paddingBottom="@dimen/px_20"
+            app:layout_constraintLeft_toRightOf="@id/interactives"
+            app:layout_constraintTop_toBottomOf="@id/interactive_options">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/px_2"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_16"
+                    android:text="@string/name_interactive_mode"
+                    android:textColor="?colorPrimary"
+                    android:textSize="?common_menu_text_size" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/interactive_modes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="binding_3"            
+                android:horizontalSpacing="@dimen/px_15"
+                android:padding="@dimen/px_20"
+                android:verticalSpacing="@dimen/px_15"></GridView>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+         

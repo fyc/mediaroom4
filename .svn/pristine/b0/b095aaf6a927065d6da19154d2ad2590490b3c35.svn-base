@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:minWidth="420dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/close" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:text="@string/text_download_path" />
+
+            <FrameLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8">
+
+                <EditText
+                    android:id="@+id/downloadfilePath"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:text="@string/text_download_file" />
+
+            <FrameLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8">
+
+                <EditText
+                    android:id="@+id/downloadFileName"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/opt_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="@string/opt_download" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:max="100"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+
+    </LinearLayout>
+</FrameLayout>

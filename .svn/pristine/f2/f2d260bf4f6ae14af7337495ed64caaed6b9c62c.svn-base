@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系别："
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/px_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/layout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:background="@drawable/template_input_background"
+                app:layout_constraintBottom_toBottomOf="@+id/text_department"
+                app:layout_constraintLeft_toRightOf="@id/text_department"
+                app:layout_constraintTop_toTopOf="@+id/text_department">
+
+                <Spinner
+                    android:id="@+id/spinner_department"
+                    android:layout_width="@dimen/px_240"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/sample_department" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_100"
+                android:layout_marginLeft="@dimen/px_100"
+                android:text="班级："
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/px_18"
+                app:layout_constraintBottom_toBottomOf="@+id/layout1"
+                app:layout_constraintLeft_toRightOf="@id/layout1"
+                app:layout_constraintTop_toTopOf="@+id/layout1" />
+
+            <FrameLayout
+                android:id="@+id/layout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:background="@drawable/template_input_background"
+                app:layout_constraintBottom_toBottomOf="@+id/text_grade"
+                app:layout_constraintLeft_toRightOf="@id/text_grade"
+                app:layout_constraintTop_toTopOf="@+id/text_grade">
+
+                <Spinner
+                    android:id="@+id/spinner_grade"
+                    android:layout_width="@dimen/px_240"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_4"
+                    android:layout_marginLeft="@dimen/px_4"
+                    android:entries="@array/sample_grade" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_class_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_100"
+                android:layout_marginLeft="@dimen/px_100"
+                android:text="课节："
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/px_18"
+                app:layout_constraintBottom_toBottomOf="@+id/layout2"
+                app:layout_constraintLeft_toRightOf="@id/layout2"
+                app:layout_constraintTop_toTopOf="@+id/layout2" />
+
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/px_8"
+                android:layout_marginLeft="@dimen/px_8"
+                android:background="@drawable/template_input_background"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_3"
+                android:text="2020/03/05"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/px_20"
+                app:layout_constraintBottom_toBottomOf="@+id/layout2"
+                app:layout_constraintLeft_toRightOf="@id/text_class_no"
+                app:layout_constraintTop_toTopOf="@+id/layout2" />
+
+            <FrameLayout
+                android:id="@+id/layout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:background="@drawable/template_input_background"
+                app:layout_constraintBottom_toBottomOf="@+id/text_date"
+                app:layout_constraintLeft_toRightOf="@id/text_date"
+                app:layout_constraintTop_toTopOf="@+id/text_date">
+
+                <Spinner
+                    android:id="@+id/spinner_class_no"
+                    android:layout_width="@dimen/px_240"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/px_8"
+                    android:layout_marginLeft="@dimen/px_8"
+                    android:entries="@array/class_no_array"
+                    android:text="课节："
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/px_18" />
+            </FrameLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_18"
+            android:drawableLeft="@drawable/icon_square_point"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="实到人员"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="#FF3EF2C3" />
+
+        <com.sunmnet.mediaroom.brand.view.NoScrollGridView
+            android:id="@+id/gv_arrive"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/template_fragment_background"
+            android:columnWidth="@dimen/dp_90"
+            android:horizontalSpacing="@dimen/dp_3"
+            android:listSelector="#00000000"
+            android:numColumns="auto_fit"
+            android:overScrollMode="never"
+            android:verticalSpacing="@dimen/dp_3" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_30"
+            android:drawableLeft="@drawable/icon_square_point"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="请假人员"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dp_2"
+            android:background="#FF3EF2C3" />
+
+        <com.sunmnet.mediaroom.brand.view.NoScrollGridView
+            android:id="@+id/gv_leave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/template_fragment_background"
+            android:columnWidth="@dimen/dp_90"
+            android:horizontalSpacing="@dimen/dp_3"
+            android:listSelector="#00000000"
+            android:numColumns="auto_fit"
+            android:overScrollMode="never"
+            android:verticalSpacing="@dimen/dp_3" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_30"
+            android:drawableLeft="@drawable/icon_square_point"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="迟到人员"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/px_18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dp_2"
+            android:background="#FF3EF2C3" />
+
+        <com.sunmnet.mediaroom.brand.view.NoScrollGridView
+            android:id="@+id/gv_late"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/template_fragment_background"
+            android:columnWidth="@dimen/dp_90"
+            android:horizontalSpacing="@dimen/dp_3"
+            android:listSelector="#00000000"
+            android:numColumns="auto_fit"
+            android:overScrollMode="never"
+            android:verticalSpacing="@dimen/dp_3" />
+
+
+    </LinearLayout>
+</ScrollView>

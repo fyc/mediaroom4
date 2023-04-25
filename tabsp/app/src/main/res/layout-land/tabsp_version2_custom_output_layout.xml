@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/discussion_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/px_20"
+        android:text="@string/tipes_please_select_lecture"
+        android:textColor="?device_black_text_color"
+        android:textSize="?title_important_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_521"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/px_20"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:tag="output1">
+
+                <include
+                    layout="@layout/tabsp_version2_custom_discuss_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="output1" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tag="output2">
+
+                <include
+                    layout="@layout/tabsp_version2_custom_discuss_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="output2" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:tag="output3">
+
+                <include
+                    layout="@layout/tabsp_version2_custom_discuss_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="output3" />
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        layout="@layout/tabsp_version2_custom_discuss_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/px_30"
+                        android:tag="output4">
+
+                        <include
+                            layout="@layout/tabsp_version2_custom_discuss_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="output5">
+
+                        <include
+                            layout="@layout/tabsp_version2_custom_discuss_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/px_20"
+                    android:layout_marginBottom="@dimen/px_20"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="output6">
+
+                        <include
+                            layout="@layout/tabsp_version2_custom_discuss_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/px_30" />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        layout="@layout/tabsp_version2_custom_discuss_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="output7">
+
+                        <include
+                            layout="@layout/tabsp_version2_custom_discuss_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="output7" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:tag="output8">
+
+                <include
+                    layout="@layout/tabsp_version2_custom_discuss_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="output8" />
+            </FrameLayout>
+
+            <FrameLayout
+                layout="@layout/tabsp_version2_custom_discuss_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tag="output9">
+
+                <include
+                    layout="@layout/tabsp_version2_custom_discuss_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="output10" />
+            </FrameLayout>
+
+            <FrameLayout
+                layout="@layout/tabsp_version2_custom_discuss_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:tag="output10">
+
+                <include
+                    layout="@layout/tabsp_version2_custom_discuss_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/device_off_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/px_10">
+
+        <View
+            android:layout_width="@dimen/px_2"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_16"
+            android:text="@string/name_volumn_setting"
+            android:textColor="?colorPrimary"
+            android:textSize="?common_menu_text_size"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@id/volumn_minus_btn"
+                android:layout_width="@dimen/px_55"
+                android:layout_height="@dimen/px_55"
+                android:background="@drawable/btn_onclick_effect_grey"
+                android:padding="@dimen/px_10"
+                android:src="@drawable/volumn_setting_minus" />
+
+            <TextView
+                android:id="@+id/volumn_value"
+                android:layout_width="@dimen/px_104"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_7"
+                android:layout_marginRight="@dimen/px_7"
+                android:background="@drawable/volumn_text_background"
+                android:gravity="center"
+                android:minWidth="@dimen/px_78"
+                android:minHeight="@dimen/px_56"
+                android:paddingLeft="@dimen/px_21"
+                android:paddingTop="@dimen/px_8"
+                android:paddingRight="@dimen/px_21"
+                android:paddingBottom="@dimen/px_8"
+                android:text="30"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/px_32"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <ImageView
+                android:id="@id/volumn_plus_btn"
+                android:layout_width="@dimen/px_55"
+                android:layout_height="@dimen/px_55"
+                android:background="@drawable/btn_onclick_effect_blue"
+                android:padding="@dimen/px_10"
+                android:src="@drawable/volumn_setting_plus" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="#5ADAFF"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+</LinearLayout>

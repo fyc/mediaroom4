@@ -1,0 +1,3 @@
+include ':app',':Common',':ijk'
+project(':Common').projectDir = new File(settingsDir, '../Common')
+project(':ijk').projectDir = new File(settingsDir, '../ijkplayer-lib')

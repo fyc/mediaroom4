@@ -1,0 +1,94 @@
+plugins {
+    id 'com.android.library'
+}
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/DEPENDENCIES' // will not include DEPENDENCIES file
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    //implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "com.android.support:support-v4:$ANDROID_SUPPORT_VERSION"
+    api "com.android.support:appcompat-v7:${ANDROID_SUPPORT_VERSION}"
+    api "com.android.support:support-fragment:${ANDROID_SUPPORT_VERSION}"
+    api "com.android.support:animated-vector-drawable:${ANDROID_SUPPORT_VERSION}"
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+//    api 'com.github.bumptech.glide:glide:3.7.0'
+    api("com.github.bumptech.glide:glide:4.9.0") {
+        exclude group: "com.android.support"
+    }
+    api 'com.jakewharton:butterknife:8.8.1'
+    api files('libs/mediaroom_util-2.9.2.jar')
+    //api files('libs/commons-collections-3.2.1.jar')
+    api files('libs/log4j-api-2.3.jar')
+    api files('libs/log4j-core-2.3.jar')
+    api files('libs/log4j2-support-android-1.3.jar')
+    api 'com.google.code.gson:gson:2.8.5'
+    api 'org.greenrobot:eventbus:3.2.0'
+    api 'com.luffykou:android-common-utils:1.1.3'
+    api 'com.google.zxing:android-core:3.3.0'
+    api 'com.google.zxing:core:3.3.2'
+    api 'com.android.support:multidex:1.0.3'
+
+    api 'io.reactivex.rxjava2:rxjava:2.2.19'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'com.squareup.retrofit2:retrofit:2.6.4'
+    api 'com.squareup.retrofit2:converter-jackson:2.6.4'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.6.4'
+
+    api("com.sunmnet.mediaroom.cloud:mediaroom-common-devicebean:0.0.1-SNAPSHOT") {
+        exclude group: "org.springframework.cloud"
+        exclude group: "org.springframework.boot"
+        exclude group: "de.codecentric"
+        exclude group: "org.projectlombok", module: "lombok"
+        exclude group: "junit"
+        exclude group: "cglib"
+        exclude group: "commons-codec"
+        exclude group: "commons-collections"
+        exclude group: "commons-io"
+        exclude group: "javax.servlet"
+        exclude group: "com.fasterxml.jackson.dataformat"
+    }
+    annotationProcessor 'org.projectlombok:lombok:1.18.6'
+    compileOnly 'org.projectlombok:lombok:1.18.6'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.10.5'
+
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.1' //内存泄漏探测 项目地址：https://square.github.io/leakcanary/getting_started/
+    //implementation 'com.tencent.tinker:tinker-patch-gradle-plugin:1.9.1'
+    api 'com.sunmnet.mediaroom:mediaroom-socket-core:1.0.2-SNAPSHOT'
+    api files('libs/mediaroom-socket-1.0.6.jar')
+}
+
+repositories {
+    maven { url 'http://rd.sunmnet.com:9002/nexus/content/repositories/public/' }
+}

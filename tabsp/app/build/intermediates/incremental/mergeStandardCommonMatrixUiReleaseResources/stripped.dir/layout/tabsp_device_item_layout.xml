@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    
+
+                                                                          
+
+                 
+                         
+                                    
+
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" android:tag="layout/tabsp_device_item_layout_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <FrameLayout
+            android:id="@+id/device_image_holder"
+            android:layout_width="@dimen/px_160"
+            android:layout_height="@dimen/px_160">
+
+            <FrameLayout
+                android:layout_width="@dimen/px_88"
+                android:layout_height="@dimen/px_88"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@id/device_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mediaroom4_light_close" />
+
+            </FrameLayout>
+
+            <ProgressBar
+                android:id="@id/controll_processing"
+                android:layout_width="@dimen/px_100"
+                android:layout_height="@dimen/px_100"
+                android:layout_gravity="center"
+                android:indeterminateTint="#5ADAFF"
+                android:indeterminateTintMode="src_atop" />
+
+        </FrameLayout>
+
+        <com.sunmnet.mediaroom.tabsp.ui.widget.MarqueTextView
+            android:id="@id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="@dimen/px_18"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:tag="binding_1"            
+            android:textColor="@android:color/black"
+            android:textSize="?common_menu_text_size" />
+
+    </LinearLayout>
+
+         
